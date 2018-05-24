@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    
+    <appender name="consola" class="org.apache.log4j.ConsoleAppender">
+        <param name="target" value="System.out" />
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{dd MMM yyyy - HH:mm:ss} [%-5p] %c{2} - %m%n" />
+        </layout>
+
+        <filter class="org.apache.log4j.varia.LevelMatchFilter">
+            <param name="LevelToMatch" value="warn" />
+            <param name="AcceptOnMatch" value="false" />
+        </filter>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="info" />
+            <param name="LevelMax" value="error" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+            
+    <appender name="archivo" class="org.apache.log4j.FileAppender">
+        <param name="file" value="JSEvaluaXml.log" />
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{DATE} [%-5p] %c{2} - %m%n" />
+        </layout>
+    </appender>
+    
+    
+    <logger name="log4j.xml">
+        <level value="trace" />
+        <appender-ref ref="archivo" />
+    </logger>
+    
+    <root>
+        <priority value="trace" />
+        <appender-ref ref="consola"/>
+    </root>
+    
+</log4j:configuration>

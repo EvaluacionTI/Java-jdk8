@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>Evaluación JSP</display-name>
+    <!-- 1.0 Evaluación de formularios por medio de servlet
+    -->
+    <!-- 1.1 Iniciar un servlet -->
+    <servlet>
+        <servlet-name>FormularioServlet</servlet-name>
+        <servlet-class>aemsa.sqlserver.vista.CV01v01IniciarMostrarEnServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewServlet1</servlet-name>
+        <servlet-class>aemsa.sqlserver.vista.servlet.NewServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FormularioServlet</servlet-name>
+        <url-pattern>/ServletIniciarMostrar</url-pattern>
+    </servlet-mapping>
+    <!-- 1.2 Registro de citas -->
+    <servlet>
+        <servlet-name>RegistroCitasServlet</servlet-name>
+        <servlet-class>aemsa.sqlserver.vista.CV02v01RegistroCitas</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistroCitasServlet</servlet-name>
+        <url-pattern>/CV02v01RegistroCitas</url-pattern>
+    </servlet-mapping>
+    <!-- 1.3 Crear una session -->
+    <servlet>
+        <servlet-name>CrearSesion</servlet-name>
+        <servlet-class>aemsa.sqlserver.vista.CV03v01CrearSesionProducto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CrearSesion</servlet-name>
+        <url-pattern>/ServletSesionProducto</url-pattern>
+    </servlet-mapping>
+    <!-- **************************************************
+        2.0 Evaluación servlet con SQL Server    
+    **************************************************  -->
+    <!-- 2.0.1 Mantenimiento de Moneda -->
+    <!-- 2.0.2 Consulta de Moneda -->
+    <servlet>
+        <servlet-name>CV02v04ListaMoneda</servlet-name>
+        <servlet-class>aemsa.sqlserver.vista.servlet.CV02v01ListaMoneda</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CV02v04ListaMoneda</servlet-name>
+        <url-pattern>/ListaMonedaServlet</url-pattern>
+    </servlet-mapping>
+    <!-- 2.1 Listar la institución Financiera -->
+    <servlet>
+        <servlet-name>CV02v03ListaTipoInstitucionFinanciera</servlet-name>
+        <servlet-class>aemsa.sqlserver.vista.CV02v03ListaTipoInstitucionFinanciera</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CV02v03ListaTipoInstitucionFinanciera</servlet-name>
+        <url-pattern>/ListaTipoInstitucionFinanciera</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewServlet1</servlet-name>
+        <url-pattern>/NewServlet1</url-pattern>
+    </servlet-mapping>
+</web-app>

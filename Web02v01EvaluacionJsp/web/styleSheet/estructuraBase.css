@@ -1,0 +1,80 @@
+/* 
+    Document   : EstructuraBase
+    Created on : 16-may-2013, 8:41:57
+    Author     : background21
+    Description:
+        Purpose of the stylesheet follows.
+
+
+root { 
+    display: block;
+}
+
+Colores:
+
+Blanco      =   #FFFFFF
+Negro       =   #333333
+Verde       =   #669933
+Rojo         =   #FC0303
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    color: #333;
+    /* background-image: url(../imagenes/cursos.png);*/
+    background-color: #333333;
+    background-repeat: repeat-x;
+}
+
+h1,h2,h3,h4,h5,h6{
+    
+}
+
+/* ~~ este contenedor de anchura fija rodea a las demás divs ~~ */
+.container {
+        width: 900px;
+        height: auto;
+        background-color: #FC0303;
+        margin: 0 auto; /* el valor automático de los lados, unido a la anchura, centra el diseño */
+        /* width: 50%;
+            background-color: #666;
+        */
+
+        
+}
+
+/* ~~ no se asigna una anchura al encabezado. Se extenderá por toda la anchura del diseño. Contiene un marcador de posición de imagen que debe sustituirse por su propio logotipo vinculado ~~ */
+.header {
+        background-color: #FFFFFF;
+}
+
+
+.bodyinternal {
+        padding: 10px 0;
+        width: 900px;
+        float: left;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 14px;
+        background-color: #FC0303;
+}
+
+/* ~~ El pie de página ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #669933;
+	position: relative;/* esto da a IE6 hasLayout para borrar correctamente */
+	clear: both; /* esta propiedad de borrado fuerza a .container a conocer dónde terminan las columnas y a contenerlas */
+}
+
+ul#nav {
+	font-family: 'Lobster13Regular', cursive;
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+	font-size: 22px;
+	letter-spacing: 1px;
+}

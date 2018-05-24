@@ -1,0 +1,68 @@
+/* 
+*/
+
+#idTitulo{
+    background-color: #FF8800; /*Naranja */
+    text-align: center;
+}
+
+#idTabla {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    background-color: #F1F1C1;
+    width: 100%;
+}
+#idTabla tr:nth-child(even) {
+        background-color: #EEE;
+}
+            
+#idTabla tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
+#idTabla th {
+    background-color: #F1F1C1;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    padding: 8px;
+    color: blue;
+}
+
+
+#idTablaMantenimiento{
+    background: #DEEFDC; /* Verde bajo*/
+    width: auto;
+    border: 1px solid #FF6666 ;
+    border-collapse: separate;
+   
+}
+
+
+
+
+
+
+
+
+
+.idTablaComex{
+    background: #DEEFDC; /* Verde bajo*/
+    width: auto;
+    border: 1px solid #000 ;
+    border-collapse: separate;
+    
+}
+
+.idTablaComex th, .idTablaComex td{
+    border: 1px solid #000;
+}
+
+#TituloTablaMantenimiento{
+    background-color: #FEEFCB; /*Naranja */
+    height: 20px;
+    color: blue;
+}
+
+#RegistroMantenimientoTabla{
+    background: #FEEFCB;;
+}

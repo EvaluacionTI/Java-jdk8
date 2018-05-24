@@ -1,0 +1,56 @@
+10
+
+dir
+0
+https://invertec/svn/desa_java/AMPER/trunk/src/aemsa/cap09/clase
+https://invertec/svn/desa_java
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+f4aa3f3a-b5fd-a840-a9f8-b7c4579c2bc8
+
+entidad
+dir
+
+
+
+add
+
+interfase
+dir
+
+
+
+add
+
+logica
+dir
+
+
+
+add
+
+vista
+dir
+
+
+
+add
+
