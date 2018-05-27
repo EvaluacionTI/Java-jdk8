@@ -12,7 +12,7 @@ import pe.aemsa.cap29.swing.controls07.combobox.entidad.CEAnimal;
  *
  * @author ALDV
  */
-public class CDDatosParaCombo {
+public class CDDataDemo {
     private ArrayList<CEAnimal> oListaAnimal;
     private CEAnimal oCEAnimal;
     
@@ -21,11 +21,11 @@ public class CDDatosParaCombo {
         oListaAnimal = new ArrayList<>();
 
         oCEAnimal = new CEAnimal();
-	oCEAnimal.setIdAnimal(1);
-	oCEAnimal.setCodigoAnimal("300");
-	oCEAnimal.setNumeroArete("A300");
-	oCEAnimal.setNombreAlias("Pasquel");
-	oListaAnimal.add(oCEAnimal);
+        oCEAnimal.setIdAnimal(1);
+        oCEAnimal.setCodigoAnimal("300");
+        oCEAnimal.setNumeroArete("A300");
+        oCEAnimal.setNombreAlias("Pasquel");
+        oListaAnimal.add(oCEAnimal);
         
         oCEAnimal = new CEAnimal();
         oCEAnimal.setIdAnimal(2);

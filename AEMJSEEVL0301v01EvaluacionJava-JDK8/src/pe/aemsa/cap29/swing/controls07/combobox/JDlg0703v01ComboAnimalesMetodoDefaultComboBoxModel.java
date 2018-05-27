@@ -53,7 +53,7 @@ public class JDlg0703v01ComboAnimalesMetodoDefaultComboBoxModel extends javax.sw
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        JCbxMetodoDefaultComboBoxModel = new javax.swing.JComboBox<>();
+        JCbxMetodoDefaultComboBoxModel = new javax.swing.JComboBox();
         JLblMedotoCombo = new javax.swing.JLabel();
         JLblPosicionCombo = new javax.swing.JLabel();
         JLblDatoObjeto = new javax.swing.JLabel();
@@ -176,7 +176,7 @@ public class JDlg0703v01ComboAnimalesMetodoDefaultComboBoxModel extends javax.sw
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> JCbxMetodoDefaultComboBoxModel;
+    private javax.swing.JComboBox JCbxMetodoDefaultComboBoxModel;
     private javax.swing.JLabel JLblDatoObjeto;
     private javax.swing.JLabel JLblMedotoCombo;
     private javax.swing.JLabel JLblPosicionCombo;

@@ -9,14 +9,14 @@ import java.util.ArrayList;
 import javax.swing.JComboBox;
 import pe.aemsa.cap29.swing.controls07.combobox.entidad.CEAnimal;
 import pe.aemsa.cap29.swing.controls07.combobox.impl.CM0701v01ArrayListComboBoxModel;
-import pe.aemsa.cap29.swing.controls07.combobox.modelo.CDDatosParaCombo;
+import pe.aemsa.cap29.swing.controls07.combobox.modelo.CDDataDemo;
 
 /**
  *
- * @author user
+ * @author ALDV
  */
 public class JDlg0702v01ComboAnimalesMetodoComboBoxModel extends javax.swing.JDialog {
-    private CDDatosParaCombo oCDDatoCombo;
+    private CDDataDemo oCDDatoCombo;
     private ArrayList<CEAnimal> oListaAnimal;
     private CEAnimal oCEAnimal;
     /**
@@ -115,17 +115,17 @@ public class JDlg0702v01ComboAnimalesMetodoComboBoxModel extends javax.swing.JDi
     }
 
     private void traerAnimal(){
-        oCDDatoCombo = new CDDatosParaCombo();
+        oCDDatoCombo = new CDDataDemo();
         ArrayList<CEAnimal> oResultadoListaAnimales = oCDDatoCombo.dataVacas();
         if (oResultadoListaAnimales != null){
             llenarModeloCombo(jCbxModeloAnimal, oResultadoListaAnimales);
-            int iTamano = oResultadoListaAnimales.size();
-
-            for (int i=0; i < iTamano; i++){
-                oCEAnimal = new CEAnimal();                
-                oCEAnimal = (CEAnimal) oResultadoListaAnimales.get(i);
-                oListaAnimal.add(oCEAnimal);
-            }
+//            int iTamano = oResultadoListaAnimales.size();
+//
+//            for (int i=0; i < iTamano; i++){
+//                oCEAnimal = new CEAnimal();                
+//                oCEAnimal = (CEAnimal) oResultadoListaAnimales.get(i);
+//                oListaAnimal.add(oCEAnimal);
+//            }
         }
     }
 

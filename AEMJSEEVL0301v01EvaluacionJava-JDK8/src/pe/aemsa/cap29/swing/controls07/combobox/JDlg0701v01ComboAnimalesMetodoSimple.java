@@ -5,12 +5,18 @@
  */
 package pe.aemsa.cap29.swing.controls07.combobox;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import pe.aemsa.cap29.swing.controls07.combobox.entidad.CEAnimal;
+import pe.aemsa.cap29.swing.controls07.combobox.modelo.CDDataDemo;
+
 /**
  *
  * @author ALDV
  */
 public class JDlg0701v01ComboAnimalesMetodoSimple extends javax.swing.JDialog {
-   
+        private ArrayList<CEAnimal> moLista;
+        private CEAnimal moCEAnimal;
     /**
      * Creates new form JDlg0701v01ComboAnimales
      */
@@ -18,14 +24,17 @@ public class JDlg0701v01ComboAnimalesMetodoSimple extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        // 1. Combo String de Animales
+        // 1. Combo Declarado en las propiedades setModel
+        
+        // 2. Combo String de Animales
         jCbxListaAnimales.addItem("..... [Seleccione] .....");
         jCbxListaAnimales.addItem("Pasquel");
         jCbxListaAnimales.addItem("Raquel");
         jCbxListaAnimales.addItem("Marco");
         
-
-
+        // 3. Combo cargado de una lista
+        // Al declarar el JComboBox se debe dejar en blanco la propiedad Type Parameters
+        cargaComboAnimal();
     }
 
     /**
@@ -41,16 +50,22 @@ public class JDlg0701v01ComboAnimalesMetodoSimple extends javax.swing.JDialog {
         jLblComboAnimales = new javax.swing.JLabel();
         JLblComboModelo = new javax.swing.JLabel();
         jCbxModeloAnimal = new javax.swing.JComboBox<>();
+        JCbxComboListaAnimal = new javax.swing.JComboBox();
+        JLblComboAnimalLista = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jCbxListaAnimales.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLblComboAnimales.setText("2. Carga elemento");
+        jLblComboAnimales.setText("2. Carga combo en propiedad addItem de JComboBox");
 
-        JLblComboModelo.setText("1. Metodo Simple en propiedad");
+        JLblComboModelo.setText("1. Carga combo asignando en propiedad model en diseno ");
 
         jCbxModeloAnimal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Vacas", "Toros", "Bueyes" }));
+
+        JCbxComboListaAnimal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        JLblComboAnimalLista.setText("3. Carga combo utilizando un ArrayList");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -60,12 +75,15 @@ public class JDlg0701v01ComboAnimalesMetodoSimple extends javax.swing.JDialog {
                 .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JLblComboModelo)
-                    .addComponent(jLblComboAnimales))
+                    .addComponent(jLblComboAnimales)
+                    .addComponent(JLblComboAnimalLista))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jCbxModeloAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCbxListaAnimales, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(JCbxComboListaAnimal, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jCbxListaAnimales, javax.swing.GroupLayout.Alignment.LEADING, 0, 143, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,11 +92,15 @@ public class JDlg0701v01ComboAnimalesMetodoSimple extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JLblComboModelo)
                     .addComponent(jCbxModeloAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLblComboAnimales)
                     .addComponent(jCbxListaAnimales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(72, 72, 72))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JCbxComboListaAnimal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JLblComboAnimalLista))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         pack();
@@ -127,7 +149,26 @@ public class JDlg0701v01ComboAnimalesMetodoSimple extends javax.swing.JDialog {
         });
     }
 
+    private void cargaComboAnimal(){
+        moLista = new ArrayList<>();
+        moCEAnimal = new CEAnimal();
+        CDDataDemo oData = new CDDataDemo();
+        
+        JCbxComboListaAnimal.removeAllItems();
+        moLista = oData.dataVacas();
+        if (moLista != null){
+             for (int i=0; i<moLista.size(); i++){
+                 moCEAnimal = moLista.get(i);
+                 JCbxComboListaAnimal.addItem(moCEAnimal);
+             }
+        }else{
+            JOptionPane.showMessageDialog(this, "Lista Vacia");
+        }
+        
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox JCbxComboListaAnimal;
+    private javax.swing.JLabel JLblComboAnimalLista;
     private javax.swing.JLabel JLblComboModelo;
     private javax.swing.JComboBox<String> jCbxListaAnimales;
     private javax.swing.JComboBox<String> jCbxModeloAnimal;

@@ -28,13 +28,17 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="JLblComboModelo" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="jLblComboAnimales" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLblComboAnimalLista" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jCbxModeloAnimal" min="-2" pref="246" max="-2" attributes="0"/>
-                  <Component id="jCbxListaAnimales" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="JCbxComboListaAnimal" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jCbxListaAnimales" alignment="0" pref="143" max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="99" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -46,12 +50,17 @@
                   <Component id="JLblComboModelo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jCbxModeloAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="37" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLblComboAnimales" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jCbxListaAnimales" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="JCbxComboListaAnimal" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLblComboAnimalLista" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="51" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -74,12 +83,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLblComboAnimales">
       <Properties>
-        <Property name="text" type="java.lang.String" value="2. Carga elemento"/>
+        <Property name="text" type="java.lang.String" value="2. Carga combo en propiedad addItem de JComboBox"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="JLblComboModelo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="1. Metodo Simple en propiedad"/>
+        <Property name="text" type="java.lang.String" value="1. Carga combo asignando en propiedad model en diseno "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="jCbxModeloAnimal">
@@ -95,6 +104,26 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="JCbxComboListaAnimal">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="4">
+            <StringItem index="0" value="Item 1"/>
+            <StringItem index="1" value="Item 2"/>
+            <StringItem index="2" value="Item 3"/>
+            <StringItem index="3" value="Item 4"/>
+          </StringArray>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="JLblComboAnimalLista">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="3. Carga combo utilizando un ArrayList"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

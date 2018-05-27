@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import pe.aemsa.cap29.swing.controls07.combobox.entidad.CEAnimal;
-import pe.aemsa.cap29.swing.controls07.combobox.modelo.CDDatosParaCombo;
+import pe.aemsa.cap29.swing.controls07.combobox.modelo.CDDataDemo;
 
 /**
  *
@@ -38,8 +38,8 @@ public class CV0702v01ComboAnimalesMetodoaddItem {
     }
 
     private static void traerAnimal(){
-        CDDatosParaCombo oCDDatoCombo;
-        oCDDatoCombo = new CDDatosParaCombo();
+        CDDataDemo oCDDatoCombo;
+        oCDDatoCombo = new CDDataDemo();
         
         ArrayList<CEAnimal> oResultadoListaAnimales = oCDDatoCombo.dataVacas();
         if (oResultadoListaAnimales != null){

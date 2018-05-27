@@ -38,4 +38,8 @@ public class CEAnimal {
     public void setNombreAlias(String nombreAlias) {
             this.nombreAlias = nombreAlias;
     }
+    
+    public String toString(){
+        return nombreAlias;
+    }
 }
