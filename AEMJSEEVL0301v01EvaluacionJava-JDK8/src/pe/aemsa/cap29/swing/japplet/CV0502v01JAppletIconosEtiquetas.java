@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.aemsa.cap29.swing;
+package pe.aemsa.cap29.swing.japplet;
 
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
@@ -55,7 +55,8 @@ public class CV0502v01JAppletIconosEtiquetas extends javax.swing.JApplet {
             ex.printStackTrace();
         }
         
-        ImageIcon oIIcocono = new ImageIcon("F:\\01NetBeans8.2\\AEMJSEEVL0301v01EvaluacionJava-JDK8\\src\\pe\\aemsa\\cap29\\swing\\AberdeenAngusMacho.jpg");
+        String sRuta = "F:\\01NetBeans8.2\\03Desarrollo\\AEMJSEEVL0301v01EvaluacionJava-JDK8\\src\\resources\\imagen\\cap29\\swing\\japplet\\AberdeenAngusMacho.jpg";
+        ImageIcon oIIcocono = new ImageIcon(sRuta);
         JLabel oJLblBandera = new JLabel("Toro", oIIcocono, JLabel.CENTER);
         oJLblBandera.setText("Agregando Imagen");
         getContentPane().add(oJLblBandera, BorderLayout.CENTER);

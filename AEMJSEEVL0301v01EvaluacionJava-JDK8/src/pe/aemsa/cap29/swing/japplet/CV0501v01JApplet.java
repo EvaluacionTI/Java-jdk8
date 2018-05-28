@@ -1,4 +1,4 @@
-package pe.aemsa.cap29.swing;
+package pe.aemsa.cap29.swing.japplet;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
@@ -18,7 +18,7 @@ public class CV0501v01JApplet extends JApplet {
     private JLabel etiqueta;
     private JButton boton;
     // Otras referencias
-    private static String mensaje = "Hola mundo!!!";
+    private static String mensaje = "Evaluacion de Java Swing - JApplet!!!";
 
     @Override
     public void init() {
