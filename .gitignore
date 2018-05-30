@@ -1,4 +1,23 @@
+
+# NetBeans
+#==============================================================================
+*.xml
+*.mf
+*.policy
+*.properties
+nbproject/
+nbproject/private/
+lib/
+build/
+.svn/
+#==============================================================================
+
+
+
 /Web02v01EvaluacionJsp/build/
 /Web02v01EvaluacionJsp/dist/
 /AEMJWBEVL0401v01EvaluacionJSTL/nbproject/private/
 /AEMJSEEVL0301v01EvaluacionJava-JDK8/build/
+/JavaApplication1/nbproject/private/
+
+

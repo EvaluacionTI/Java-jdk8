@@ -21,8 +21,8 @@ public class JDlg0101v01ControlLabel extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         
-        jLblMensaje = new JLabel("Iniciando el proceso .....", JLabel.CENTER);
-        JOptionPane.showMessageDialog(this, jLblMensaje);
+        jLblTituloArquitectura = new JLabel("Iniciando el proceso .....", JLabel.CENTER);
+        JOptionPane.showMessageDialog(this, jLblTituloArquitectura);
     }
 
     /**
@@ -34,13 +34,18 @@ public class JDlg0101v01ControlLabel extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLblMensaje = new javax.swing.JLabel();
+        jLblTituloArquitectura = new javax.swing.JLabel();
         jLblArquitecturASO = new javax.swing.JLabel();
         jLblArquitecturaHOST = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLblMensaje.setText("Arquitectura");
+        jLblTituloArquitectura.setText("Arquitectura");
+        jLblTituloArquitectura.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jLblTituloArquitecturaMouseDragged(evt);
+            }
+        });
 
         jLblArquitecturASO.setText("Coordenada X");
 
@@ -55,14 +60,14 @@ public class JDlg0101v01ControlLabel extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLblArquitecturaHOST)
                     .addComponent(jLblArquitecturASO)
-                    .addComponent(jLblMensaje))
+                    .addComponent(jLblTituloArquitectura))
                 .addContainerGap(371, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLblMensaje)
+                .addComponent(jLblTituloArquitectura)
                 .addGap(18, 18, 18)
                 .addComponent(jLblArquitecturASO)
                 .addGap(18, 18, 18)
@@ -72,6 +77,10 @@ public class JDlg0101v01ControlLabel extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLblTituloArquitecturaMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLblTituloArquitecturaMouseDragged
+        
+    }//GEN-LAST:event_jLblTituloArquitecturaMouseDragged
 
     /**
      * @param args the command line arguments
@@ -118,6 +127,6 @@ public class JDlg0101v01ControlLabel extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLblArquitecturASO;
     private javax.swing.JLabel jLblArquitecturaHOST;
-    private javax.swing.JLabel jLblMensaje;
+    private javax.swing.JLabel jLblTituloArquitectura;
     // End of variables declaration//GEN-END:variables
 }

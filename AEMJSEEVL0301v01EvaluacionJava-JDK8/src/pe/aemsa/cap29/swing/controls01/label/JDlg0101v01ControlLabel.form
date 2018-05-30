@@ -28,7 +28,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLblArquitecturaHOST" min="-2" max="-2" attributes="0"/>
                   <Component id="jLblArquitecturASO" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLblMensaje" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLblTituloArquitectura" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="371" max="32767" attributes="0"/>
           </Group>
@@ -38,7 +38,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="jLblMensaje" min="-2" max="-2" attributes="0"/>
+              <Component id="jLblTituloArquitectura" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jLblArquitecturASO" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -49,10 +49,13 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="jLblMensaje">
+    <Component class="javax.swing.JLabel" name="jLblTituloArquitectura">
       <Properties>
         <Property name="text" type="java.lang.String" value="Arquitectura"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseDragged" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="jLblTituloArquitecturaMouseDragged"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLblArquitecturASO">
       <Properties>
