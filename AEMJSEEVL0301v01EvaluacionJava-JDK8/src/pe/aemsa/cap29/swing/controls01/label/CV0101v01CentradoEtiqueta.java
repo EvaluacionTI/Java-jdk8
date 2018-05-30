@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author user
+ * @author ALDV
  */
 public class CV0101v01CentradoEtiqueta {
 
@@ -23,7 +23,7 @@ public class CV0101v01CentradoEtiqueta {
     public static void main(String[] args) {
         JFrame f = new JFrame("Label Demo");
         f.setLayout(new FlowLayout());
-        f.setSize(200, 360);
+        f.setSize(400, 360);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JLabel label= new JLabel("asdf");

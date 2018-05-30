@@ -7,10 +7,10 @@ package pe.aemsa.prueba.logica;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class CL0101v01EvaluarNumerosTest {
     
@@ -42,7 +42,7 @@ public class CL0101v01EvaluarNumerosTest {
         CL0101v01EvaluarNumeros instance = new CL0101v01EvaluarNumeros();
         int iResultadoEsperado = 0;
         int iResultado = instance.numeroMayorTresNumeros(piNumero1, piNumero2, piNumero3);
-        assertEquals(iResultadoEsperado, iResultado);
+        assertEquals(iResultadoEsperado, iResultado,0);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
