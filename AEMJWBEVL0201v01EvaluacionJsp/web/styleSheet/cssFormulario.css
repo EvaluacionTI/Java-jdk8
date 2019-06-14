@@ -1,0 +1,26 @@
+/* 
+    Document   : css03v01TablaMantenimiento
+    Created on : 25-abr-2013, 9:00:09
+    Author     : ALDV
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body{
+    background-color: #FFFFFF; /* #D8DA3D = verde claro, #FFFFFF = blanco */
+    margin: 0;
+    padding: 0;
+    color: #000000; /* Color de Letra Negro */
+    font-family: Verdana, Arial, Helvetica, sans-serif, Vrinda;
+    font-size: 100%;
+    line-height: 1.4;
+    background-image: none;
+    background-repeat: repeat-x;
+}
+
+#idTitulo{
+    background-color: #FF8800; /*Naranja */
+    color: #04408C;
+    text-align: center;
+}
+

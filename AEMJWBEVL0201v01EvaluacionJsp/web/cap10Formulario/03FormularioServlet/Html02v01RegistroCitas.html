@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>.....[ Evaluación JSP ].....</title>
+  </head>
+
+  <body>
+    <h3 align="center">Concertar una cita</h3>
+    <form action=http://localhost:8080/EvaluacionJsp/CV02v01RegistroCitas  method=POST>
+      <BR>Alumno:<BR><input type=text name=mTxtAlumno size=60>
+      <BR>Con el profesor:<BR><input type=text name=mTxtProfesor size=60>
+      <BR>Día:
+      <table width="90%" border="0">
+         <select name=mCboDia>
+           <option>lunes
+           <option>martes
+           <option>miércoles
+           <option>jueves
+           <option>viernes
+         </select>
+      </table>
+      <BR>Hora:&nbsp;&nbsp;&nbsp;
+      10<input type=radio name=mRbHora value=10 checked>
+      &nbsp;&nbsp;&nbsp;12<input type=radio name=mRbhora value=12>
+      &nbsp;&nbsp;&nbsp;16<input type=radio name=mRbhora value=16>
+      &nbsp;&nbsp;&nbsp;18<input type=radio name=mRbhora value=18>
+      <BR><BR><input type=submit value="Enviar datos" name="mBtnEnviar">
+      &nbsp;&nbsp;<input type=reset name="mBtnSalir">
+    </form>
+  </body>
+</html>

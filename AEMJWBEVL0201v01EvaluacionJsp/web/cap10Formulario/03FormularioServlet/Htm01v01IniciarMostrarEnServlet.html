@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<HTML>
+    <HEAD>
+        <title>.....[ Evaluación JSP ].....</title>
+    </HEAD>
+    <BODY>
+        <H1>Acceso a Win Leasing</H1>
+        <!-- Descripción
+        Servidor de aplicación:Puerto:Nombde Aplicación:Servlet
+        Servidor : http://localhost
+        Puerto : 8080
+        Aplicación : EvaluacionJsp/cap10Formulario/03FormularioServlet
+        Servlet : CV01v01IniciarMostrarEnServlet
+
+        1. Configurar el servlet en el archivo web.xml
+        
+        2. En el FORM para action asignar el nombre del servlet descripto en el parrafo inicial
+            Servidor de aplicación:Puerto:Nombde Aplicación:Servlet
+            Servidor            : http://localhost
+            Puerto              : 8080
+            Aplicación          : EvaluacionJsp
+            Nombre del Servlet  : ServletIniciarMostrar
+        
+        3. Con esta dirección se inicia la página HTML en la URL
+        http://localhost:8080/EvaluacionJsp/cap10Formulario/03FormularioServlet/Htm01v01IniciarMostrarEnServlet.html
+        
+        4. Cuando invoca al servlet se visualizará en la URL
+        http://localhost:8080/EvaluacionJsp/ServletIniciarMostrar
+        -->
+
+        <form action="http://localhost:8080/EvaluacionJsp/ServletIniciarMostrar"
+              method="POST">
+
+            <p>Usuario: <input type="text" name="mTxtLogin" size="20"/></p>
+            <p>Clave: <input type="password" name="mPwdClave" size="20"/></p>
+
+            <p><input type="SUBMIT" value="Acceso" name="mBtnAcceso"/>
+            <input type="SUBMIT" value="Salir" name="mBtnSalir"/></P>
+
+        </form>
+    </BODY>
+</HTML>
