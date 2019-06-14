@@ -3,7 +3,7 @@ package aemsa.cap09.clase.vista;
 // Lista circular doblemente enlazada
 
 import pe.aemsa.cap09.clase.CO18v01ListaDoblementeEnlazada;
-import aemsa.cap09.clase.entidad.CE18v01ListaDoblementeEnlazada;
+import pe.aemsa.evalua.java.cap08.clases.entity.CE18v01ListaDoblementeEnlazada;
 
 //
 public class CV1801v01ListaDoblementeEnlazada {

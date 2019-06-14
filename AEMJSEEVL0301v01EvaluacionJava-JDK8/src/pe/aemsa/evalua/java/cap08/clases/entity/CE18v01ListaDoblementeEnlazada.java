@@ -1,4 +1,4 @@
-package aemsa.cap09.clase.entidad;
+package pe.aemsa.evalua.java.cap08.clases.entity;
 
 public class CE18v01ListaDoblementeEnlazada {
     // Atributos
