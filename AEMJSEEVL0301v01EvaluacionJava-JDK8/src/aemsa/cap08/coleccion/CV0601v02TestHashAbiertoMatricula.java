@@ -2,7 +2,7 @@ package aemsa.cap08.coleccion;
 
 import aemsa.cap08.coleccion.entidad.CEAlumno;
 import aemsa.cap08.coleccion.logica.CLHashAbierto;
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 import java.io.IOException;
 import java.io.PrintStream;
 

@@ -1,7 +1,7 @@
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO17v01DatosPalabras;
-import aemsa.cap09.clase.CO17v03ArbolBinarioDeBusqueda;
+import pe.aemsa.cap09.clase.CO17v01DatosPalabras;
+import pe.aemsa.cap09.clase.CO17v03ArbolBinarioDeBusqueda;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;

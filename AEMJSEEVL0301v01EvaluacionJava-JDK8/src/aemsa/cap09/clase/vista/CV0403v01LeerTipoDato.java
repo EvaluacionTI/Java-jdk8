@@ -5,7 +5,7 @@
 
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 import java.io.IOException;
 
 

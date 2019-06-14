@@ -4,7 +4,7 @@
  */
 package aemsa.cap05.arreglo;
 
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 
 /**
  *

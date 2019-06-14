@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 //////////////////////////////////////////////////////////////////
 // Pila: lista en la que todas las inserciones y supresiones se

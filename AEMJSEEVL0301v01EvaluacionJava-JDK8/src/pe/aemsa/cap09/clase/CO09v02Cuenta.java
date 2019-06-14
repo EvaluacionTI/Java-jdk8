@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 //////////////////////////////////////////////////////////////////
 // Clase CO09v02Cuenta: clase abstracta que agrupa los datos comunes a

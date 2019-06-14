@@ -4,8 +4,8 @@ package aemsa.cap09.clase.vista;
 
 //////////////////////////////////////////////////////////////////
 
-import aemsa.cap09.clase.CO1901v01Hanoi;
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO1901v01Hanoi;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 import java.io.IOException;
 
 // Torres de Hanoi

@@ -5,7 +5,7 @@
 
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO04v01Grados;
+import pe.aemsa.cap09.clase.CO04v01Grados;
 
 public class CV03v01ConversionGrados {
     // Definición de constantes

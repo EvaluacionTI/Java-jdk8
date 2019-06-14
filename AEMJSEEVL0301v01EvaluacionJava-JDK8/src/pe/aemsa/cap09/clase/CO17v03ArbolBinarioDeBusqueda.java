@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 /////////////////////////////////////////////////////////////////
 // Clase derivada de la clase abstracta CArbolBinB. Redefine los
 // m�todos: comparar, procesar y visitarInorden.

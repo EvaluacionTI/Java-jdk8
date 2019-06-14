@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 //////////////////////////////////////////////////////////////////
 // Clase CO07v01TerminoPolinomio: expresi�n de la forma a.x^n.y^m

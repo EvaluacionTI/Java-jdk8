@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 //////////////////////////////////////////////////////////////////
 // Clase CO09v01Banco: clase que mantiene una matriz de referencias a

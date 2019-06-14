@@ -2,12 +2,12 @@ package aemsa.cap09.clase.vista;
 
 /////////////////////////////////////////////////////////////////
 
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
-import aemsa.cap09.clase.CO09v01Banco;
-import aemsa.cap09.clase.CO09v02Cuenta;
-import aemsa.cap09.clase.CO09v03CuentaAhorro;
-import aemsa.cap09.clase.CO09v04CuentaCorriente;
-import aemsa.cap09.clase.CO09v05CuentaCorrienteConIn;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO09v01Banco;
+import pe.aemsa.cap09.clase.CO09v02Cuenta;
+import pe.aemsa.cap09.clase.CO09v03CuentaAhorro;
+import pe.aemsa.cap09.clase.CO09v04CuentaCorriente;
+import pe.aemsa.cap09.clase.CO09v05CuentaCorrienteConIn;
 import java.io.IOException;
 import java.io.PrintStream;
 

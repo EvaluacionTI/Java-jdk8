@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 public class CO17v01DatosPalabras {
     // Atributos

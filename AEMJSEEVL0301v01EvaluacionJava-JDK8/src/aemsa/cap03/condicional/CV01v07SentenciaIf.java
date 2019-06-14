@@ -1,7 +1,7 @@
 package aemsa.cap03.condicional;
 
 import java.io.IOException;
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 
 public class CV01v07SentenciaIf {
 

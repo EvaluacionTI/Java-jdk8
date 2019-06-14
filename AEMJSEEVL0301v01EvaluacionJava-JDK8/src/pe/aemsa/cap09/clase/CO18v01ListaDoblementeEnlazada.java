@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 /////////////////////////////////////////////////////////////////
 // La clase lista circular doblemente enlazada permite manipular
 // los elementos que componen una lista de este tipo.

@@ -2,7 +2,7 @@ package aemsa.cap09.clase.vista;
 
 /////////////////////////////////////////////////////////////////
 
-import aemsa.cap09.clase.CO09v03CuentaAhorro;
+import pe.aemsa.cap09.clase.CO09v03CuentaAhorro;
 
 // Aplicaci�n para trabajar con CCuenta...
 //

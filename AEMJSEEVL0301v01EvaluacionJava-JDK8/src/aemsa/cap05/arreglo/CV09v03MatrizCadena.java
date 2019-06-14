@@ -1,7 +1,7 @@
 
 package aemsa.cap05.arreglo;
 
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;

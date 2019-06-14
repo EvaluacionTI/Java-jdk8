@@ -1,6 +1,6 @@
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO1901v01DeclararVariable;
+import pe.aemsa.cap09.clase.CO1901v01DeclararVariable;
 
 
 public class CV0202v03DeclararVariable {

@@ -5,7 +5,7 @@
 
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO09v04CuentaCorriente;
+import pe.aemsa.cap09.clase.CO09v04CuentaCorriente;
 
 public class CV0801v01CuentaBancaria {
 

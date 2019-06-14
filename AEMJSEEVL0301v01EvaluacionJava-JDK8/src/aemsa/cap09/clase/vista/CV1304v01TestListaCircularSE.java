@@ -1,8 +1,8 @@
 package aemsa.cap09.clase.vista;
 
 //////////////////////////////////////////////////////////////////
-import aemsa.cap09.clase.CO14v01DatosListaCircularSE;
-import aemsa.cap09.clase.CO14v02ListaCircularSE;
+import pe.aemsa.cap09.clase.CO14v01DatosListaCircularSE;
+import pe.aemsa.cap09.clase.CO14v02ListaCircularSE;
 import javax.swing.JOptionPane;
 
 // Crear una lista lineal circular simplemente enlazada

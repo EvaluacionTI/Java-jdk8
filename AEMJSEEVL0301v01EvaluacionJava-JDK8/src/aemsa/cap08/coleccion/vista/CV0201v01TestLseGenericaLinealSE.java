@@ -3,7 +3,7 @@ package aemsa.cap08.coleccion.vista;
 // Crear una lista lineal simplemente enlazada
 
 import aemsa.cap08.coleccion.logica.CLListaLinealSE;
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 import java.io.IOException;
 //
 public class CV0201v01TestLseGenericaLinealSE {

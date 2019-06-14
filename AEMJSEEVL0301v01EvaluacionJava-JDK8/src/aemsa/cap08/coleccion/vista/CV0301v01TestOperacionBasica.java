@@ -1,7 +1,7 @@
 package aemsa.cap08.coleccion.vista;
 
 import aemsa.cap08.coleccion.entidad.CEElementoLSE;
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 import java.io.IOException;
 //////////////////////////////////////////////////////////////////
 // Operaciones b�sicas en una lista lineal simplemente enlazada

@@ -1,6 +1,6 @@
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO08v01ClaseLectura;
+import pe.aemsa.cap09.clase.CO08v01ClaseLectura;
 
 class CV1508v03CalcularSueldo {
 

@@ -1,6 +1,6 @@
 package aemsa.cap07.excepcion;
 
-import aemsa.cap09.clase.CO09v04CuentaCorriente;
+import pe.aemsa.cap09.clase.CO09v04CuentaCorriente;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 

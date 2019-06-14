@@ -1,6 +1,6 @@
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO03v02Persona;
+import pe.aemsa.cap09.clase.CO03v02Persona;
 
 public class CV0202v01LlamarClaseExternaPersona
 {

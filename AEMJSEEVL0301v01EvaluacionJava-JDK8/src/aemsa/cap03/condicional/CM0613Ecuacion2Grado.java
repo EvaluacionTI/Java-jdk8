@@ -1,6 +1,6 @@
 package aemsa.cap03.condicional;
 
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
 
 import java.io.IOException;
 

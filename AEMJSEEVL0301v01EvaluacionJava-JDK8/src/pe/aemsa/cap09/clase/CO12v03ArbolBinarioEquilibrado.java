@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 import aemsa.cap12.flujos.entidad.CO04v01FlujoTipoDato;
 import javax.swing.JOptionPane;

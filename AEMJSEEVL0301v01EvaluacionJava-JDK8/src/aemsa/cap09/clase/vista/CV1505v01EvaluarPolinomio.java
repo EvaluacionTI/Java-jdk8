@@ -3,9 +3,9 @@
 //
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
-import aemsa.cap09.clase.CO07v01TerminoPolinomio;
-import aemsa.cap09.clase.CO07v02CalcularPolinomio;
+import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap09.clase.CO07v01TerminoPolinomio;
+import pe.aemsa.cap09.clase.CO07v02CalcularPolinomio;
 import java.io.IOException;
 
 public class CV1505v01EvaluarPolinomio {

@@ -5,7 +5,7 @@
 
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO0102v01DefineClaseInterna;
+import pe.aemsa.cap09.clase.CO0102v01DefineClaseInterna;
 
 public class CV0201v04LlamarClaseExterna {
 

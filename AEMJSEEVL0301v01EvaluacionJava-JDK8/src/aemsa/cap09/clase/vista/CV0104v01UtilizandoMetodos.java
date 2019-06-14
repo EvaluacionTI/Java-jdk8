@@ -1,6 +1,6 @@
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO0101v01VisualizarMensaje;
+import pe.aemsa.cap09.clase.CO0101v01VisualizarMensaje;
 
 public class CV0104v01UtilizandoMetodos {
 

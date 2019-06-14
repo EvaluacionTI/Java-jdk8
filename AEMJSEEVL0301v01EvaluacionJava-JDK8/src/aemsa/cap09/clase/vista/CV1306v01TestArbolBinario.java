@@ -2,8 +2,8 @@ package aemsa.cap09.clase.vista;
 //////////////////////////////////////////////////////////////////
 // Crear un �rbol binario de b�squeda
 
-import aemsa.cap09.clase.CO11v01DatosArbol;
-import aemsa.cap09.clase.CO11v03ArbolBinarioDeBusqueda;
+import pe.aemsa.cap09.clase.CO11v01DatosArbol;
+import pe.aemsa.cap09.clase.CO11v03ArbolBinarioDeBusqueda;
 import javax.swing.JOptionPane;
 
 //

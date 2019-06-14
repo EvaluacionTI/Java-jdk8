@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 //////////////////////////////////////////////////////////////////
 // Clase CO07v02CalcularPolinomio. Un objeto CO07v02CalcularPolinomio consta de uno o m�s

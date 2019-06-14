@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 public class CO01v01VisualizarImpuesto {
     // Variables que son miembros de la clase

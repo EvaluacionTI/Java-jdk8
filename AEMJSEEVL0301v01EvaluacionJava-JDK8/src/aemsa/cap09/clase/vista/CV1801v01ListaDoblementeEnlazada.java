@@ -2,7 +2,7 @@ package aemsa.cap09.clase.vista;
 //////////////////////////////////////////////////////////////////
 // Lista circular doblemente enlazada
 
-import aemsa.cap09.clase.CO18v01ListaDoblementeEnlazada;
+import pe.aemsa.cap09.clase.CO18v01ListaDoblementeEnlazada;
 import aemsa.cap09.clase.entidad.CE18v01ListaDoblementeEnlazada;
 
 //

@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 
 /**
  * CONCEPTO CLASE: Es la creaci�n de una clase con sus miembros (atributos) y

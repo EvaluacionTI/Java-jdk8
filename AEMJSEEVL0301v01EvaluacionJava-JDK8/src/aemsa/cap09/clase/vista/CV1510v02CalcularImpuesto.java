@@ -1,7 +1,7 @@
 package aemsa.cap09.clase.vista;
 
-import aemsa.cap09.clase.CO01v01VisualizarImpuesto;
-import aemsa.cap09.clase.CO05v01CalcularFormula;
+import pe.aemsa.cap09.clase.CO01v01VisualizarImpuesto;
+import pe.aemsa.cap09.clase.CO05v01CalcularFormula;
 
 public class CV1510v02CalcularImpuesto {
 

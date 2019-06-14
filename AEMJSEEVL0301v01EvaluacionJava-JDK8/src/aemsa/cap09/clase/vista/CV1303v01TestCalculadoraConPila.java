@@ -2,7 +2,7 @@ package aemsa.cap09.clase.vista;
 
 //////////////////////////////////////////////////////////////////
 
-import aemsa.cap09.clase.CO16v03PilaCalculadoraConPila;
+import pe.aemsa.cap09.clase.CO16v03PilaCalculadoraConPila;
 import javax.swing.JOptionPane;
 
 // Calculadora utilizando una pila. Esta aplicaci�n, adem�s de las

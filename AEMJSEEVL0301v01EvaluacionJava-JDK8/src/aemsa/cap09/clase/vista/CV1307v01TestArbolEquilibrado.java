@@ -1,8 +1,8 @@
 package aemsa.cap09.clase.vista;
 
 //////////////////////////////////////////////////////////////////
-import aemsa.cap09.clase.CO12v01DatosArbolEquilibrado;
-import aemsa.cap09.clase.CO12v03ArbolBinarioEquilibrado;
+import pe.aemsa.cap09.clase.CO12v01DatosArbolEquilibrado;
+import pe.aemsa.cap09.clase.CO12v03ArbolBinarioEquilibrado;
 import javax.swing.JOptionPane;
 
 // Crear un �rbol binario perfectamente equilibrado de n nodos

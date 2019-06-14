@@ -1,4 +1,4 @@
-package aemsa.cap09.clase;
+package pe.aemsa.cap09.clase;
 /////////////////////////////////////////////////////////////////
 // Clase abstracta: �rbol binario de b�squeda. Para utilizar los
 // m�todos proporcionados por esta clase, tendremos que crear

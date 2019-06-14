@@ -1,8 +1,8 @@
 package aemsa.cap09.clase.vista;
 
 //////////////////////////////////////////////////////////////////
-import aemsa.cap09.clase.CO15v01DatosListaLinealSE;
-import aemsa.cap09.clase.CO15v02ListaLinealSE;
+import pe.aemsa.cap09.clase.CO15v01DatosListaLinealSE;
+import pe.aemsa.cap09.clase.CO15v02ListaLinealSE;
 import javax.swing.JOptionPane;
 
 // Crear una lista lineal simplemente enlazada
