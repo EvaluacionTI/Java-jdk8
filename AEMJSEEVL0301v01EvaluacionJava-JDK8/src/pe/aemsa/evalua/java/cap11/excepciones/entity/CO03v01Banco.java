@@ -1,6 +1,6 @@
 package pe.aemsa.evalua.java.cap11.excepciones.entity;
 
-import pe.aemsa.cap09.clase.CO09v02Cuenta;
+import pe.aemsa.evalua.java.cap08.clases.view.CO09v02Cuenta;
 
 //////////////////////////////////////////////////////////////////
 // Clase CO03v01Banco: clase que mantiene una matriz de referencias a

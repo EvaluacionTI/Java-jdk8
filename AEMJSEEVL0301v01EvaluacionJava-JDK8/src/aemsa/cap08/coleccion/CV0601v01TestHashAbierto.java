@@ -2,7 +2,7 @@ package aemsa.cap08.coleccion;
 
 //////////////////////////////////////////////////////////////////
 
-import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
 import java.io.IOException;
 
 // Calcular los centros num�ricos entre 1 y n.

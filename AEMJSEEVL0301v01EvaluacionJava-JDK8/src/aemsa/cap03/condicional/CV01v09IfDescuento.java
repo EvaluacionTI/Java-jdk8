@@ -1,6 +1,6 @@
 package aemsa.cap03.condicional;
 
-import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
 import java.io.IOException;
 
 public class CV01v09IfDescuento

@@ -6,7 +6,7 @@ import aemsa.cap08.coleccion.entidad.CE04v02Datos;
 import aemsa.cap08.coleccion.logica.CLCola;
 import aemsa.cap08.coleccion.logica.CLListaCircularSE;
 import aemsa.cap08.coleccion.logica.CLPila;
-import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
 
 import java.io.IOException;
 

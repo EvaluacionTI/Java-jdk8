@@ -1,7 +1,7 @@
 
 package aemsa.cap05.arreglo;
 
-import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
 
 public class CV02v03NotaMediaMatrizUnidimensional {
 

@@ -4,7 +4,7 @@ package aemsa.cap05.arreglo;
 // Aplicaci�n para trabajar con matrices de objetos
 //
 import aemsa.mysql.dba.entidad.CEPersona;
-import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

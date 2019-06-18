@@ -2,7 +2,7 @@ package aemsa.cap08.coleccion;
 
 import aemsa.cap08.coleccion.logica.CLListaTelefonos;
 import aemsa.cap08.coleccion.entidad.CEPersona;
-import pe.aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
 
 import java.io.File;
 import java.io.FileWriter;
