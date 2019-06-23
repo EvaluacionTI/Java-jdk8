@@ -1,6 +1,6 @@
 package aemsa.cap15.hilos.modelo;
 
-import aemsa.cap15.hilos.CV1301v01PhilAnimator;
+import pe.aemsa.evalua.java.cap17.hilos.CV1301v01PhilAnimator;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
