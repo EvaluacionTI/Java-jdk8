@@ -2,7 +2,7 @@ package pe.etg.bbva.evalua.java8.view.quiz2;
 
 class CM0201SampleDemo implements Runnable{
     private Thread t;
-    private String threadName;
+    private final String threadName;
     
     CM0201SampleDemo(String threadName){
         this.threadName = threadName;
@@ -33,5 +33,4 @@ public class CV0201EvaluarThread {
         B.start();
         A.start();
     }
-    
 }

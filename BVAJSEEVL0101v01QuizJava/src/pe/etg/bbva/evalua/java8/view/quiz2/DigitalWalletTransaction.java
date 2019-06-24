@@ -8,21 +8,31 @@ public class DigitalWalletTransaction {
     
     
     public void addMoney(DigitalWallet digitalWallet, int amount) throws TransactionException{
+        if (digitalWallet.getUserAccessToken().isEmpty()){
+            throw new TransactionException("Usuario no autorizado", USER_NOT_AUTHORIZED);
+        }
         
+        if (amount <=0){
+            throw new TransactionException("Cantidad debe ser mayor a cero", INVALID_AMOUNT);
+        }
+        
+        if (digitalWallet.getWalletBalance()<amount){
+            throw new TransactionException("Saldo insuficiente", INSUFFICIENT_BALANCE);
+        }        
     }
     
     public void payMoney(DigitalWallet digital, int amount) throws TransactionException{
         
         if (digital.getUserAccessToken().isEmpty()){
-            throw new TransactionException(USER_NOT_AUTHORIZED, "Usuario no autorizado");
+            throw new TransactionException("Usuario no autorizado", USER_NOT_AUTHORIZED);
         }
         
         if (amount <=0){
-            throw new TransactionException(INVALID_AMOUNT, "Cantidad debe ser mayor a cero");
+            throw new TransactionException("Cantidad debe ser mayor a cero", INVALID_AMOUNT);
         }
         
         if (digital.getWalletBalance()<amount){
-            throw new TransactionException(INSUFFICIENT_BALANCE, "Saldo insuficiente");
+            throw new TransactionException("Saldo insuficiente", INSUFFICIENT_BALANCE);
         }
     }
 }

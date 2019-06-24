@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.etg.bbva.evalua.java8.view.quiz1;
 
 import java.io.BufferedReader;
@@ -17,44 +12,40 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 import java.util.stream.IntStream;
 
-/**
- *
- * @author Administrador
- */
 public class CV0401v01Anagrama {
 
- public static List<String> funWithAnagrams(List<String> s) {
-    List<String> aAnagrama = null;
-    String[] aAux1 = null;
-    String[] aAux2 = null;
-    
+    public static List<String> funWithAnagrams(List<String> s) {
+        List<String> aAnagrama = null;
+        String[] aAux1 = null;
+        String[] aAux2 = null;
+
         Iterator oIt = s.iterator();
-        int i=0;
-        while (oIt.hasNext()){
+        int i = 0;
+        while (oIt.hasNext()) {
             aAux1[i] = s.get(0);
             aAux2[i] = s.get(0);
         }
-        
-        char[] cadena1 = null; 
+
+        char[] cadena1 = null;
         char[] cadena2 = null;
-     
-        for (i=0;i<aAux1.length;i++){
+
+        for (i = 0; i < aAux1.length; i++) {
             cadena1 = aAux1[i].toCharArray();
-            for (int j=0;j<aAux2.length;j++){
+            for (int j = 0; j < aAux2.length; j++) {
                 cadena2 = aAux2[i].toCharArray();
-                Arrays.sort(cadena1); 
+                Arrays.sort(cadena1);
                 Arrays.sort(cadena2);
-                String sCadena1 = new String(cadena1); 
+                String sCadena1 = new String(cadena1);
                 String sCadena2 = new String(cadena2);
-                if (sCadena1.equals(sCadena2)){
+                if (sCadena1.equals(sCadena2)) {
                     aAnagrama.add(sCadena2);
                 };
             }
         }
-        
-    return aAnagrama;
+
+        return aAnagrama;
     }
- 
+
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -68,18 +59,18 @@ public class CV0401v01Anagrama {
                 throw new RuntimeException(ex);
             }
         })
-            .collect(toList());
+                .collect(toList());
 
 //        List<String> result = Result.funWithAnagrams(s);
-List<String> result = null;
+        List<String> result = null;
         bufferedWriter.write(
-            result.stream()
-                .collect(joining("\n"))
-            + "\n"
+                result.stream()
+                        .collect(joining("\n"))
+                + "\n"
         );
 
         bufferedReader.close();
         bufferedWriter.close();
     }
-    
+
 }

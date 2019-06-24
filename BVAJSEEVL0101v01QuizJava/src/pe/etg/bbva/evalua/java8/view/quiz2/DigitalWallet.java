@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.etg.bbva.evalua.java8.view.quiz2;
 
 public class DigitalWallet {
@@ -12,6 +7,7 @@ public class DigitalWallet {
     private int walletBalance;
     
     DigitalWallet(String walletId, String userName){}
+    
     DigitalWallet(String walletId, String userName, String userAccessToken){}
             
     public String getWalletId() {
@@ -45,7 +41,4 @@ public class DigitalWallet {
     public void setWalletBalance(int walletBalance) {
         this.walletBalance = walletBalance;
     }
-
- 
-
 }
