@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.aemsa.cap29.swing.controls02.jbutton;
+package pe.aemsa.evalua.swing.view.jbutton;
 
 import java.awt.Container;
 /**
@@ -11,7 +11,7 @@ import java.awt.Container;
  * @author ALDV
  */
 public class jDlg0101v01MostrarBotonesHorario extends javax.swing.JDialog {
-    private CV0101v01BotonesHorario oCVBotonHorario;
+    private CV0101v01EstructuraBotones oCVBotonHorario;
     /**
      * Creates new form jDlg0101v01MostrarBotonesHorario
      * @param parent
@@ -48,7 +48,7 @@ public class jDlg0101v01MostrarBotonesHorario extends javax.swing.JDialog {
         iEjeYFinal = iEjeY + iEjeYIncremento;
         
         for (int i=1;i<9;i++){
-            oCVBotonHorario = new CV0101v01BotonesHorario(asHoraAlquiler[i][1]);
+            oCVBotonHorario = new CV0101v01EstructuraBotones(asHoraAlquiler[i][1]);
             oCVBotonHorario.setBounds(10, iEjeYFinal, 150, 60);
             iEjeYFinal += iEjeYIncremento;
 
@@ -61,7 +61,7 @@ public class jDlg0101v01MostrarBotonesHorario extends javax.swing.JDialog {
         iEjeYFinal = iEjeY + iEjeYIncremento;
         
         for (int i=1;i<9;i++){
-            oCVBotonHorario = new CV0101v01BotonesHorario(asHoraAlquiler[i][2]);
+            oCVBotonHorario = new CV0101v01EstructuraBotones(asHoraAlquiler[i][2]);
             oCVBotonHorario.setBounds(160, iEjeYFinal, 150, 60);
             iEjeYFinal += iEjeYIncremento;
 

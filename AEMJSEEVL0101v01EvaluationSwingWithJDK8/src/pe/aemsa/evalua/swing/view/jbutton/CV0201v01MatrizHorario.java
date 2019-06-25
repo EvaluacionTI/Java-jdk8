@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.aemsa.cap29.swing.controls02.jbutton;
+package pe.aemsa.evalua.swing.view.jbutton;
 
 /**
  *
