@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.aemsa.cap01.introduccion;
+package pe.etg.bbva.evalua.java8.view.quiz2;
 
 /**
  *
