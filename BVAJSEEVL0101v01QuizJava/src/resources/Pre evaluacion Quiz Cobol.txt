@@ -1,0 +1,88 @@
+# INTERNALIZACIÓN
+
+## 1. Se tienen los archivos siguientes:
+
+	Archivo 1 MAESSEGU, cuya longitud es de 750 caracteres, contiene el maestro de
+	contratos de seguros.
+	Archivo 2 MOVISEGU, cuya longitud es variable de 750 hasta 1024 caracteres, que
+	contiene los diferentes movimientos que ha realizado un contrato de seguros.
+	Los archivos se encuentran ordenados ascendentemente por el campo clave que en
+	ambos se encuentran en las primeras 20 posiciones.
+		
+	Pregunta: Basado en este contexto defina la sección para la lectura de ambos archivos
+	(FILE-CONTROL y FILE-SECTION).
+
+## 2. Se tienen los archivos siguientes:
+
+	Archivo 1 MAESSEGU, cuya longitud es de 750 caracteres, contiene el maestro de
+	contratos de seguros.
+	Archivo 2 MOVISEGU, cuya longitud es variable de 750 hasta 1024 caracteres, que
+	contiene los diferentes movimientos que ha realizado un contrato de seguros.
+	Los archivos se encuentran ordenados ascendentemente por el campo clave que en
+	ambos se encuentran en las primeras 20 posiciones.
+		
+	Pregunta: Basado en este contexto defina un archivo de salida que deberá tener
+	longitud fija de 30 posiciones con la estructura siguiente:
+		
+	I. Contrato PIC X(20)
+	II. Ocurrencias PIC 9(10)
+
+## 3. Se tienen los archivos siguientes:
+
+	Archivo 1 MAESSEGU, cuya longitud es de 750 caracteres, contiene el maestro de
+	contratos de seguros.
+	Archivo 2 MOVISEGU, cuya longitud es variable de 750 hasta 1024 caracteres, que
+	contiene los diferentes movimientos que ha realizado un contrato de seguros.
+	Los archivos se encuentran ordenados ascendentemente por el campo clave que en
+	ambos se encuentran en las primeras 20 posiciones.
+	
+	Pregunta: Basado en este contexto defina. Los párrafos para la lectura de los 
+	archivos. Luego desarrolle un párrafo que realice el cruce de ambos archivos 
+	de modo que se escriba en la salida el número de contrato (campo clave) y la 
+	cantidad de movimientos que presenta cada uno de ellos.
+
+## 4. Se tienen los archivos siguientes:
+
+	Archivo 1 MAESSEGU, cuya longitud es de 750 caracteres, contiene el maestro de
+	contratos de seguros.
+	Archivo 2 MOVISEGU, cuya longitud es variable de 750 hasta 1024 caracteres, que
+	contiene los diferentes movimientos que ha realizado un contrato de seguros.
+	Los archivos se encuentran ordenados ascendentemente por el campo clave que en
+	ambos se encuentran en las primeras 20 posiciones.
+
+	Pregunta: Basado en este contexto defina. Si el contrato tiene más de 12 movimientos
+	debe actualizar en la tabla maestra de seguros (ICDTCAP) la columna ANIVERSARIO con
+	el valor de esta incrementada en 1, para acceder a la tabla se deberá utilizar el
+	campo clave CONTRATO.
+
+## 5. Se tiene una transacción en línea en la que se permite consultar los recibos generados
+	   y la situación de los mismos ingresando el número de contrato de seguros. La información
+	   de los contratos se encuentran en una tabla DB2 cuyo nombre es ICDTCAM. Basado en esta 
+	   premisa defina lo siguiente:
+	   
+   Preguntas:
+
+   a. Un cursor que lista los movimientos sin bloquear la tabla. Considere que los campos son:
+   Fecha de Generación(FECGEN), Fecha de Cobro(FECCOB), Oficina de Cobro(OFICOB), Importe del
+   Recibo(IMPREC). La clave de acceso a la tabla es el número de contrato.
+   b. El párrafo para la apertura del cursor
+   c. El párrafo para el recorrido del cursor
+   d. El párrafo para el cierre del cursor.
+
+## 6. Se tiene un archivo VSAM indexado cuyos campos son los siguientes:
+
+	cuenta			x(20)
+	codigo-fondo	9(4)
+	codigo-oficina	9(4)
+	tipo-cta		x(2)
+	codigo-cliente	x(10)
+	saldo			9(8)v9(2)
+
+	Pregunta: La clave principal del archivo es el campo CUENTA. Qué se tendría que 
+			hacer para poder acceder a este mismo archivo usando el campo CODIGO-CLIENTE?
+
+## 7. Elabore un algoritmo de búsqueda dicotómica. Indique cuál es la premisa a considerar 
+	   para emplear un algoritmo de este tipo.
+
+
+

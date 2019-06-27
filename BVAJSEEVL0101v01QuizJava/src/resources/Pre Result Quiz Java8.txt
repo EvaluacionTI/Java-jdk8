@@ -1,0 +1,208 @@
+# INTERNALIZACIÓN
+
+#1. Cuales de los siguientes algoritmos de clasificación tiene la mejor complejidad de tiempo de 
+	ejecución asintótica.
+	
+	Bubble sort
+	Heap sort
+	Selection sort
+	Insertion sort
+
+	Análisis
+	:::
+		Bubble sort.- La Ordenación de burbuja (Bubble Sort en inglés) es un sencillo algoritmo de 
+			ordenamiento. Funciona revisando cada elemento de la lista que va a ser ordenada con el
+			siguiente, intercambiándolos de posición si están en el orden equivocado. 
+			Es necesario revisar varias veces toda la lista hasta que no se necesiten más 
+			intercambios, lo cual significa que la lista está ordenada. 
+			Este algoritmo obtiene su nombre de la forma con la que suben por la lista los 
+			elementos durante los intercambios, como si fueran pequeñas "burbujas". También es 
+			conocido como el método del intercambio directo. Dado que solo usa comparaciones para 
+			operar elementos, se lo considera un algoritmo de comparación, siendo uno de los más 
+			sencillos de implementar.
+		
+			La complejidad de la clasificación de burbujas es O (nlog n), lo que la convierte en una 
+			opción menos frecuente para organizar en orden ordenado cuando la cantidad de números es 
+			alta.
+			
+		Heap sort.- Es un algoritmo de ordenamiento no recursivo.
+			Este algoritmo consiste en almacenar todos los elementos del vector a ordenar en un 
+			montículo (heap), y luego extraer el nodo que queda como nodo raíz del montículo (cima) 
+			en sucesivas iteraciones obteniendo el conjunto ordenado. Basa su funcionamiento en una 
+			propiedad de los montículos, por la cual, la cima contiene siempre el menor elemento (o
+			el mayor, según se haya definido el montículo) de todos los almacenados en él. El 
+			algoritmo, después de cada extracción, recoloca en el nodo raíz o cima, la última hoja 
+			por la derecha del último nivel. Lo cual destruye la propiedad heap del árbol. Pero, a 
+			continuación realiza un proceso de "descenso" del número insertado de forma que se elige
+			a cada movimiento el mayor de sus dos hijos, con el que se intercambia. Este 
+			intercambio, realizado sucesivamente "hunde" el nodo en el árbol restaurando la 
+			propiedad montículo del árbol y dejando paso a la siguiente extracción del nodo raíz.
+		
+			Tenga en cuenta que, en datos reales, Quicksort suele ser más eficaz que Heap Sort. El 
+			lado positivo es que Heap Sort siempre tiene una complejidad de tiempo O (n log n) en el
+			peor de los casos. A pesar de que la complejidad del tiempo es O (n log n) , en la 
+			mayoría de los casos, no es el mejor algoritmo para datos del mundo real.
+		
+		Selection Sort.- El ordenamiento por selección (Selection Sort en inglés) es un algoritmo 
+			de ordenamiento que requiere O {(n^{2})} operaciones para ordenar una lista de n 
+			elementos.
+		
+			Su funcionamiento es el siguiente:
+
+				1. Buscar el mínimo elemento de la lista
+				2. Intercambiarlo con el primero
+				3. Buscar el siguiente mínimo en el resto de la lista
+				4. Intercambiarlo con el segundo
+				5. Y en general:
+				
+				Buscar el mínimo elemento entre una posición i y el final de la lista
+				Intercambiar el mínimo con el elemento de la posición i
+						
+			Este algoritmo mejora ligeramente el algoritmo de la burbuja. En el caso de tener que 
+			ordenar un vector de enteros, esta mejora no es muy sustancial, pero cuando hay que 
+			ordenar un vector de estructuras más complejas.
+			Este algoritmo realiza muchas menos operaciones intercambiar() que el de la burbuja, 
+			por lo que lo mejora en algo. 
+		
+			Otra desventaja de este algoritmo respecto a otros como el de burbuja o de inserción
+			directa es que no mejora su rendimiento cuando los datos ya están ordenados o 
+			parcialmente ordenados
+		
+		Insertion sort .- El ordenamiento por inserción (insertion sort en inglés) es una manera 
+			muy natural de ordenar para un ser humano, y puede usarse fácilmente para ordenar un
+			mazo de cartas numeradas en forma arbitraria. Requiere O(n²) operaciones para ordenar
+			una lista de n elementos.
+		
+			Este algoritmo no es adecuado para grandes conjuntos de datos, ya que su complejidad 
+			promedio y en el peor de los casos es de Ο (n 2 ), donde n es el número de elementos.
+			Este algoritmo es útil para ordenar una pequeña cantidad de elementos
+			Se vuelve ineficiente cuando se ordenan secuencias de entrada que tienen más de 100
+			elementos. 
+
+## 3.- Multiple Choise
+
+	Cuál de las siguientes afirmaciones es cierta sobre la sobrecarga y la anulación
+	
+	Elige las opciones correctas
+	
+	       El tipo de retorno del método de anulación puede ser diferente del método anulado 
+		   siempre que el nuevo tipo de retorno sea asignable al tipo de retorno del metodo que se
+		   reemplaza.
+	[RPTA] Los métodos privados y finales no pueden ser sobrecargados.
+		   La anulación ocurre en tiempo de compilación.
+	[RPTA] La sobrecarga ocurre en tiempo de compilación.
+
+	Diferencias entre overload and override
+
+	Overload es la sobrecarga de metodos, es que en una misma clase puedas tener dos metodos que se
+		llamen de la misma forma pero que se diferiencen a traves de la cantidad de parametros.
+	
+	Override es sobrescritura de metodos es utilizado cuando hereados los metodos de una clase y un 
+		metodo lo redefines en la clase hija esto tiene mas importancia cuando lo combinas con el 
+		polimorfismo.
+			 
+		La sobreescritura sucede cuando tu heredas una clase o cuando implementas una interfaz
+		En el caso de herencia, es obligatorio sobreescribir los métodos de una superclase si estos
+		son abstractos, si no son abstractos, es opcional sobreescribirlos; pero generalmente así 
+		sucede para dar un comportamiento polimórfico.
+
+		En el caso de una clase que implemente una interfaz, es obligatorio sobreescribir los 
+		métodos de la interfaz, siempre y cuando estos no sean default, ya que por defecto, los 
+		métodos  de una interfaz son públicos y abstractos.
+
+	Por otro lado tenemos los métodos "Sobreescritos", estos, son métodos pertenecientes a la clase
+	"padre" de una Herencia, los cuales son declarados en la clase "hija" para modificar algún tipo
+	de comportamiento más específico.
+	
+	Estos métodos han de tener:
+
+        La misma lista de argumentos
+        El mismo tipo de devolución
+        El nivel de visibilidad del método debe ser igual o menos restrictivo al que sobrescribe. 
+            Los modificadores de acceso de menor a mayor visibilidad son:
+                Private
+                Default
+                Protected
+                Public
+        No se pueden declarar nuevas "Excepciones" (Ya veremos este tema) en el método sobrescrito, 
+		aunque si se pueden declarar nuevas "Excepciones" que sean subclases de las Excepciones que
+		lance el método sobrescrito.
+        Métodos declarados como "final" o "private" NO pueden ser "sobreescritos"
+
+	Método de sobrecarga:
+		El método de sobrecarga se utiliza para aumentar la legibilidad del programa. 
+		La sobrecarga de métodos se realiza dentro de la clase. 
+		En caso de sobrecarga del método, el parámetro debe ser diferente. 
+		La sobrecarga de métodos es el ejemplo del polimorfismo de tiempo de compilación. 
+		En java, la sobrecarga de métodos no se puede realizar cambiando solo el tipo de retorno del
+		método. El tipo de retorno puede ser igual o diferente en la sobrecarga de métodos. Pero 
+		debes tener que cambiar el parámetro. 
+
+	Método Anulando:
+		La anulación del método se utiliza para proporcionar la implementación específica del 
+		método que ya está provisto por su superclase.
+		La anulación del método se produce en dos clases que tienen una relación IS-A (herencia).
+		En caso de anulación del método, el parámetro debe ser el mismo.
+		La anulación del método es el ejemplo del polimorfismo de tiempo de ejecución. 
+		El tipo de devolución debe ser igual o covariante en la invalidación del método.
+
+	https://riptutorial.com/es/java/example/25779/explicando-que-es-el-metodo-de-sobrecarga-y-anulacion-
+	http://picarcodigo.blogspot.com/2012/10/sobreescritura-y-sobrecarga-de-metodos.html
+
+	
+## 4.- Java8: Collections
+	Cuál de las siguientes afirmaciones son ciertas acerca de ArrayList y Vector en Java?
+
+	Elige una de las opciones
+		   El vector puede ser redimensionado mientras que ArrayList no puede ser
+	[RPTA] Vector está sincronizado mientras que ArrayList no está
+	       Los ArrayList pueden crecer pero no pueden reducir su tamano, mientras que Vector 
+		   puede aumentar y disminuir
+	       Los vectores permiten valores duplicados mientras que ArrayList no lo hace
+
+	El vector está sincronizado (synchronized), por tanto, su contenido está protegido de otros
+	hilos, es decir, es thread-safe. ArrayList no está sincronizado y por tanto no son thread-safe,
+	pero podemos sincronizar una ArrayList por Collections.synchronizedList (aList)
+	Las colecciones sincronizadas son una pérdida de tiempo y peligrosas
+	Hay que tener en cuenta esto porque los vectores tienen un coste en tiempo de ejecución que no 
+	tienen los ArrayList. Si no necesitas thead-safe, usa ArrayList.
+	
+	Tamaño de los datos:
+	Ambas estructuras necesitan un Array para almacenar los datos internamente. Cuando se insertan 
+	datos, tanto unos como otros tienen que crecer para que no haya un desbordamiento. He aquí la
+	diferencia:
+	Los vectores crecen duplicando su espacio
+	Los ArrayList crecen añadiendo el 50% de su espacio anterior.
+
+	Por defecto ArrayList<E> y Vector<E> utilizan arrays con capacidad para 10 elementos. Cuando el
+	número de elementos sobrepasa la capacidad disponibleVector<E> dobla el tamaño del array 
+	interno, mientras que ArrayList<E> utiliza la fórmula (capacidad * 3) / 2 + 1.
+
+## 5.- Abstract Classes
+
+	Cuál de las siguientes afirmaciones es cierta acerca de las clases abstractas
+	
+	Elige las opciones correctas
+	
+	       Las clases abstractas pueden usarse como cualquier otra clase
+	[RPTA] Las clases abstractas deben ser declaradas con la palabra clave abstract
+	[RPTA] Las clases abstractas no pueden ser instanciadas
+	[RPTA] Una clase que contenga al menos un método abstracto será una clase abstracta	
+	
+	? Que es una clase abstract y método abstract ?
+	En Java se dice que son clases abstractas aquellas clases base (superclases) de las que no se
+	permite la creación de objetos. Para ello, se utiliza la palabra clave abstract.
+
+	Para que una clase sea abstracta la condición es que al menos uno de sus métodos sea abstracto
+	(se le agrega la palabra reservada abstract y no se especifica el cuerpo del método)
+
+	Una clase abstracta no se puede instanciar pero si se puede heredar y las clases hijas serán
+	las encargadas de agregar la funcionalidad a los métodos abstractos. Si no lo hacen así, 
+	las clases hijas deben ser también abstractas
+	
+	Métodos abstractos : 
+		En una clase abstracta es posible definir métodos abstractos, los cuales se caracterizan
+		por el hecho de que no pueden ser implementados en la clase base. De ellos, solo se escribe
+		su signatura en la superclase, y su funcionalidad –polimórfica– tiene que indicarse en las 
+		clases derivadas (subclases)
+	

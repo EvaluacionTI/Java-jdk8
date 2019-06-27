@@ -1,0 +1,53 @@
+# INTERNALIZACIÓN
+
+## I. SQL
+
+### 10. Consider the three SQL statements:
+
+	SELECT CONVERT(datetime, 'NOV 23 2005');
+	SELECT CONVERT(datetime, (TRIM(' NOV 23 2005')));
+	SELECT CONVERT(datetime, (LTRIM(' NOV 23 2005')));
+	
+	Which of these statements gives the same output?
+	
+	Pick one of the choices:
+	
+	Only statement1 and statement2
+	Only statement1 and statement3
+	Only statement2 and statement3
+	All the three statement give the same output
+
+### 11. Students and Examination
+	A college maintains the data of its students and appeared examinatios in two tables: STUDENT
+	and EXAMINATION. A student could appear in a subject examination more than once. Write a 
+	query to print the student ID, the subject name, and the total number ot times the student
+	appeared in this subject examination. The order of output does not matter. The result should
+	be in the following format: STUDENT.ID EXAMINATION.SUBJECT NUMBER_OF_TIMES.
+	
+	Un colegio mantiene los datos de sus estudiantes y aparecieron los exámenes en dos tablas: 
+	estudiante y examen. Un estudiante podría aparecer en un exámen de matería  más de una vez. 
+	Escriba una consulta para imprimir la identificación del estudiante, el nombre de la materia
+	y el numero total de veces que el estudiante apareció en este exámen de la materia.
+	El orden de salida no importa. El resultado debe estar en el siguiente formato.
+	student.id, examination.subject number_of_times
+
+## 12. Multiple Choice
+
+	Table EMPLOYES has 5 rows. Consider the following sequence of SQL statements:
+	
+	SQL> CREATE TABLE myTable SELECT AS (SELECT * FROM EMPLOYES)
+	SQL> INSERT INTO myTable SELECT * FROM myTable
+	SQL> INSERT INTO myTable SELECT * FROM myTable
+	SQL> INSERT INTO myTable SELECT * FROM myTable
+	SQL> INSERT INTO myTable SELECT * FROM myTable
+	
+	if all of the statements above have executed and the following statement is run, what will be 
+	printed?
+	
+	SELECT COUNT(*) FROM myTable
+	
+	Pick one of the options
+	80
+	25
+	20
+	5

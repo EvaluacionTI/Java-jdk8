@@ -1,4 +1,4 @@
-package pe.etg.bbva.evalua.java8.view.quiz1;
+package pe.etg.bbva.evalua.java8.view.quiz;
 
 import java.util.Scanner;
 

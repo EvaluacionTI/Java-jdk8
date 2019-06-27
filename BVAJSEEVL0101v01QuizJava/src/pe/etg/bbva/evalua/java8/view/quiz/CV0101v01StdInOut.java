@@ -4,7 +4,7 @@
 * indica cuántas líneas más hay en la entrada. Cada una de las N líneas subsiguientes contiene 2 enteros). 
 * Debe imprimir la suma de cada par en una línea separada de STDOUT..
  */
-package pe.etg.bbva.evalua.java8.view.quiz1;
+package pe.etg.bbva.evalua.java8.view.quiz;
 
 import java.util.Scanner;
 

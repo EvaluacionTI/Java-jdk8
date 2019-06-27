@@ -1,0 +1,267 @@
+﻿# INTERNALIZACIÓN
+
+## 1. Cuales de los siguientes algoritmos de clasificación tiene la mejor complejidad de tiempo de ejecución asintótica
+	Bubble sort
+	Heap sort
+	Selection sort
+	Insertion sort
+
+## 2. Implementar una clase interface y su implementación para efectuar una suma, resta, multiplicacion y divisón de enteros
+
+## 3. Multiple Choice
+	Which of the following is true about overloading and overriding?
+	
+	Pick of correct choices
+
+		Return type of overriding method can be different from that of overridden method as long
+		as the new type is assignable to the return type of the method being overridden.
+		Private and final method cannot be overloaded
+		Overriding happens at compile time
+		Overloading happens at compile time
+
+## 4. Java8: Collections
+	Which of the below statements are true about ArrayList and Vector in Java?
+	
+	Pick one of the choices
+	
+	Vector can be resized while ArrayList cannot be
+	Vector is synchronized while ArrayList is not
+	ArrayList can grow but cannot shrink in size, while Vector can both grow and shrink
+	Vectors allow duplicate values while ArrayList doesnot
+	
+## 5. Abstract Classes
+	Which of the following is true about abstract class?
+	
+	Pick the correct choices
+	
+	abstract classes can be used as just any other class
+	abstract classes need to be declared with 'abstract' keyword
+	abstract classes cannot be instantiated
+	a class containing at least one abstract method will be an abstract class
+
+
+## 6. Crear una excepción personalizada para mostrar la validación de password actual y el nuevo password.
+   Así mismo que la longitud mínima debe ser de 5 caracteres.
+
+	
+## 8. Retos futuros
+	? Qué arquitecturas/tecnologías/lenguajes de programación te gustarían aprender próximanete?
+	?Por qué?
+
+## 9. Maximun Substring
+
+	For this challenge, a substring is defined as any contiguous group of one or more characters 
+	of a string. For example, the unique substring of 'baca' are ['b', 'ba', 'bac', 'baca', 'a',
+	'ac', 'aca', 'c', 'ca']. The list in alphabetical order is ['a', 'ac', 'aca', 'b', 'ba', 
+	'bac', 'baca', 'c', 'ca']. In this case, the maximun substring, alphabetically, is 'ca'. 
+	Given a string, determine its maximun substring.
+	
+	Function Description
+	
+	Complete the function maxSubstring in the editor below. The function must return the maximun
+	substring in s.
+	
+	maxSubstring has the following parameter(s):
+	s: a string
+	
+	Constraints
+	1 <= |s| <= 100
+	all characters ofs E ascii(a-z).
+
+	class Result{
+		public static String maxSubstring(String s){
+		
+		}
+	}
+	
+	public class Solution(){
+		public static void main(String[] args) throws IOExeption{
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+			
+			String s = bufferedReader.readLine();
+			String result = Result.maxSubstring(s);
+			
+			bufferedWriter.write(result);
+			bufferedWriter.newLine();
+			
+			bufferedReader.close();
+			bufferedWriter.close();
+		}
+	}
+	
+	
+
+## 13. Java: Threads
+
+	What is the output of the following Java snippet
+
+	class CM0201SampleDemo implements Runnable{
+		private Thread t;
+		private String threadName;
+		
+		CM0201SampleDemo(String threadName){
+			this.threadName = threadName;
+		}
+	
+		@Override
+		public void run() {
+			while(true)
+				System.out.println(threadName);
+		}
+		
+		public void start(){
+			if (t==null){
+				t = new Thread(this, threadName);
+				t.start();
+			}
+		}
+	}
+	
+	public class CV0201EvaluarThread {
+	
+		public static void main(String[] args) {
+			CM0201SampleDemo A = new CM0201SampleDemo("A");
+			CM0201SampleDemo B = new CM0201SampleDemo("B");
+			
+			B.start();
+			A.start();
+		}
+	}
+	
+	Pick one of the choices
+	
+	ABABABAB...(pattern repeats)
+	BABABABA...(pattern repeats)
+	AABAABAA...(pattern repeats)
+	A pattern cannot be predicted and can vary each time the program is run
+
+
+# 15. Furtinure Factory
+
+	Consider the UML class diagram below:
+	
+							|-------------------------|
+							| Interface               |
+							| FurtinureOrderInterface |
+							|-------------------------|
+										^
+										|
+		|-------------|         |------------------|
+		| Enumeration | <-----	| FurtinureOrder   |
+		| Furtinure   |			|------------------|
+		|-------------|
+
+		a) Furtinure
+			CHAIR
+			TABLE
+			COUCH
+			-----
+			Furtinure(label: String, cost:float)
+			label(): String
+			cost(): float
+			
+			FurtinureOrderInterface
+			addToOrder(type: Furtinure, count: int)
+			getOrderedFurniture(): HashMap
+			getTypeCount(type: Furtinure): int
+			getTypeCost(type: Furtinure): float
+			getTotalOrderCost(): float
+			getTotalOrderQuantity(): int
+			
+			FurtinureOrder
+			order: HashMap<Furtinure, integer>[1]
+			addToOrder(type: Furtinure, count: int)
+			getOrderedFurniture(): HashMap<Furtinure, Integer>
+			getTypeCount(type: Furtinure): int
+			getTypeCost(type: Furtinure): float
+			getTotalOrderCost(): float
+			getTotalOrderQuantity(): int
+
+	Given a Java project containig the following:
+	
+	The implementation and documentation for Furtinure.java and 
+	FurtinureOrderInterface.java
+	An incomplete implementation of FurtinureOrder.java
+	A file named SampleUnitTest.java containing a complete set of JUnit tests.
+	
+	Complete the implementation of FurtinureOrder.java so that the project passes all the unit
+
+# 16. Angry Animals
+	Pi's father, Danny, runs the Hackerville Zoo. He is moving to Rookieville and wants to take all
+	of the zoo animals with him via ship. He is confused about how to arrange then because a few of
+	the species cannot be kept together in the same cabin.
+	
+	There are n animals palced in a straight line. Each animal is identified by a unique number
+	from 1 to n in order. There are m pairs (a[i], b[i]) which imply that animals a[i] and b[i] are
+	enemies and should not be kept in the same cabin. Pi is good at solving problems and he came up
+	with following challenge: count the number of different groups that do not contain any pair
+	such that they are enemies. A group is defined as an interval (x,y) such that all animals in 
+	the range from x to y form a group. Determine the number of groups that can be formed according
+	to the Pi's challenge.
+	
+	For example, given n=3 animals and m=3 pairs of enemies, a=[1,2,3] and b=[3,3,1], animal 1 is
+	the enemy of animal 3, and animal 3 is the enemy of animal 1 and 2. Because 3 is an enemy of
+	both 1 and 2, it must be in its own cabin. Animals 1 and 2 can be roomed together or 
+	separately. There are four possible groupings meeting the constraints: (1,2), (1), (2), (3).
+	Note that the intervals are along the original line of animals numbered consecutively from 1 
+	to n, i.e. [1,2,3] in this case. They cannot be reordered.
+	
+	Function Description
+	
+	Complete the function angryAnimals in the editor below. The function must return the number of
+	groups that can be formed according to Pi's challenge.
+	
+	angryAnimals has the following parameters:
+	n: an integer that denotes the number of unique animals
+	a[a[0],...a[m-1]]: an array of integers
+	b[b[0],...a[m-1]]: an array of integers
+	
+	Constraints
+	1<=n<=10^5
+	1<=m<=10^6
+	1<=a[i], b[i]<=n
+
+	import java.io.*;
+	import java.math.*;
+	import java.security.*;
+	import java.text.*;
+	import java.util.*;
+	import java.util.concurrent.*;
+	import java.util.function.*;
+	import java.util.regex.*;
+	import java.util.stream.*;
+	import static java.util.stream.Collectors.joining;
+	import static java.util.stream.Collectors.toList;
+	class Result{
+	
+			public static long angryAnimals(int n, List<Integer> a, List<Integer> b){
+			
+			}
+	
+	}
+
+	public class Solution{
+	
+	}
+
+
+## 13. Consider the following three class
+	
+	class A{}
+	class B extends A{} 
+	class C extends B{}
+	
+	Consider an object of class B is instantiated, i.e.
+	
+	B b = new B();
+	
+	Which of the followind boolean expresiones evaluates to true
+	Pick the correct choices
+	[RPTA] (b instancedof B)	
+		   (b instancedof B) && (!(b instancedof A))
+	[RPTA] (b instancedof B) && (!(b instancedof C))
+			None of the above
+
+
+

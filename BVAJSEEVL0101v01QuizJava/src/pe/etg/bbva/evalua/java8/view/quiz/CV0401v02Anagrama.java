@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.etg.bbva.evalua.java8.view.quiz1;
+package pe.etg.bbva.evalua.java8.view.quiz;
 
 import java.util.Arrays;
 
