@@ -357,12 +357,98 @@
 		}
 	}
 	
-	
-	
-	
-	
-	
+	public class CV0701v01DigitalWalletTransaction {
+
+		public static void main(String[] args) {
+			CU0702v01DigitalWalletTransaction oValidar = new CU0702v01DigitalWalletTransaction();
+			CE0701v01DigitalWallet oDigitalToken = new CE0701v01DigitalWallet();
+			CE0701v01DigitalWallet oDigital = new CE0701v01DigitalWallet();
+			oDigitalToken.setUserAccessToken("15172027");
+			
+			oDigital.setUserAccessToken("");
+			oDigital.setWalletBalance(300);
+			
+			try{
+				oValidar.addMoney(oDigitalToken, 100);
+				oValidar.addMoney(oDigitalToken, -1000);
+				
+				oValidar.payMoney(oDigital, 0);
+				oValidar.payMoney(oDigital, 100);
+				
+			}catch(CU0701v01TransactionException ex){
+			System.out.println("Transacción evaluada : " + ex.getErrorCode() + ex.getErrorMensaje());
+			}
+		}
+	}
 	:::
+
+## 13. Java: Threads
+
+	What is the output of the following Java snippet
+
+	class CM0201SampleDemo implements Runnable{
+		private Thread t;
+		private String threadName;
+		
+		CM0201SampleDemo(String threadName){
+			this.threadName = threadName;
+		}
+	
+		@Override
+		public void run() {
+			while(true)
+				System.out.println(threadName);
+		}
+		
+		public void start(){
+			if (t==null){
+				t = new Thread(this, threadName);
+				t.start();
+			}
+		}
+	}
+	
+	public class CV0201EvaluarThread {
+	
+		public static void main(String[] args) {
+			CM0201SampleDemo A = new CM0201SampleDemo("A");
+			CM0201SampleDemo B = new CM0201SampleDemo("B");
+			
+			B.start();
+			A.start();
+		}
+	}
+	
+	Pick one of the choices
+	
+			ABABABAB...(pattern repeats)
+			BABABABA...(pattern repeats)
+			AABAABAA...(pattern repeats)
+	[RPTA]  A pattern cannot be predicted and can vary each time the program is run
+
+
+## 14. Consider the following three class
+	
+	class A{}
+	class B extends A{} 
+	class C extends B{}
+	
+	Consider an object of class B is instantiated, i.e.
+	
+	B b = new B();
+	
+	Which of the followind boolean expresiones evaluates to true
+	Pick the correct choices
+	
+	[RPTA] (b instancedof B)	
+		   (b instancedof B) && (!(b instancedof A))
+			(b instancedof B) && (!(b instancedof C))
+			None of the above
+	
+	
+	
+	
+	
 		
 		
 		

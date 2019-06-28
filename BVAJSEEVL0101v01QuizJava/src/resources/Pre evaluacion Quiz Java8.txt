@@ -153,9 +153,9 @@
 	
 	Which of the followind boolean expresiones evaluates to true
 	Pick the correct choices
-	[RPTA] (b instancedof B)	
-		   (b instancedof B) && (!(b instancedof A))
-	[RPTA] (b instancedof B) && (!(b instancedof C))
+			(b instancedof B)	
+		    (b instancedof B) && (!(b instancedof A))
+			(b instancedof B) && (!(b instancedof C))
 			None of the above
 
 

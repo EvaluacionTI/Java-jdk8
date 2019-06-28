@@ -1,4 +1,4 @@
-package pe.etg.bbva.evalua.java8.view.quiz2;
+package pe.etg.bbva.evalua.java8.view.quiz;
 
 class CM0201SampleDemo implements Runnable{
     private Thread t;
@@ -22,14 +22,15 @@ class CM0201SampleDemo implements Runnable{
     }
 }
 
-public class CV0201EvaluarThread {
+public class CV1301v01EvaluarThread {
 
     public static void main(String[] args) {
         CM0201SampleDemo A = new CM0201SampleDemo("A");
         CM0201SampleDemo B = new CM0201SampleDemo("B");
         
-        System.out.println(A);
-        System.out.println(B);
+        System.out.println(A.toString());
+        System.out.println(B.toString());
+        
         B.start();
         A.start();
     }
