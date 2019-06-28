@@ -1,9 +1,9 @@
-package pe.etg.bbva.evalua.java8.view.quiz2;
+package pe.etg.bbva.evalua.java8.view.quiz;
 
-import pe.etg.bbva.evalua.java8.utility.quiz2.CU0901v01CustomException;
-import pe.etg.bbva.evalua.java8.utility.quiz2.CU0901v01ValidarExcepcion;
+import pe.etg.bbva.evalua.java8.utility.quiz.CU0601v01PasswordExcepcion;
+import pe.etg.bbva.evalua.java8.utility.quiz.CU0602v01ValidarPassword;
 
-public class CV0901v01ExcepcionPersonalizadoWithUserPassword {
+public class CV0601v01ConsultaVerificarPasswordWithExcepcion {
 
     public static void main(String[] args) {
         String sUsuario, sPassword, sRePassword;
@@ -12,12 +12,12 @@ public class CV0901v01ExcepcionPersonalizadoWithUserPassword {
         sPassword = "22082014";
         sRePassword = "220814";
         
-        CU0901v01ValidarExcepcion  oCUExcepcion = new CU0901v01ValidarExcepcion();
+        CU0602v01ValidarPassword  oCUValidar= new CU0602v01ValidarPassword();
         
         try{
             System.out.println("Usuario : " + sUsuario);
-            oCUExcepcion.validarPassword(sPassword, sRePassword);
-        }catch(CU0901v01CustomException ex){
+            oCUValidar.validarPassword(sPassword, sRePassword);
+        }catch(CU0601v01PasswordExcepcion ex){
             //ex.printStackTrace();
             System.out.println("No se puede registrar un usuario debido a : " + ex.getMessage());
         }finally{

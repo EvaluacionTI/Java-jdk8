@@ -79,6 +79,43 @@
 			Se vuelve ineficiente cuando se ordenan secuencias de entrada que tienen más de 100
 			elementos. 
 
+	Rpta: Selection Sort, Bubble Sort, Insertion Sort, Heap Sort
+
+## 2. Implementar una clase interface y su implementación para efectuar una suma, resta, multiplicacion y divisón de enteros
+	:::
+	public interface CL0201v01OperacionBasicaSumRestMulDiv {
+		int suma(int piNumero1, int piNumero2);
+		int resta(int piNumero1, int piNumero2);
+		int multiplicacion(int piMultiplicando, int piMultiplicador);
+		int division(int piDividendo, int piDivisor);
+	}
+	
+	public class CM0201v01OperacionBasica implements CL0201v01OperacionBasicaSumRestMulDiv{
+
+		@Override
+		public int suma(int piNumero1, int piNumero2) {
+			return piNumero1 + piNumero2;
+		}
+	
+		@Override
+		public int resta(int piNumero1, int piNumero2) {
+			return (piNumero1 - piNumero2);
+		}
+	
+		@Override
+		public int multiplicacion(int piMultiplicando, int piMultiplicador) {
+			return (piMultiplicando * piMultiplicador);
+		}
+	
+		@Override
+		public int division(int piDividendo, int piDivisor) {
+			return (piDividendo / piDivisor);
+		}
+	}
+	
+	
+	:::
+
 ## 3.- Multiple Choise
 
 	Cuál de las siguientes afirmaciones es cierta sobre la sobrecarga y la anulación
@@ -97,7 +134,7 @@
 	Overload es la sobrecarga de metodos, es que en una misma clase puedas tener dos metodos que se
 		llamen de la misma forma pero que se diferiencen a traves de la cantidad de parametros.
 	
-	Override es sobrescritura de metodos es utilizado cuando hereados los metodos de una clase y un 
+	Override es sobrescritura de metodos es utilizado cuando heredados los metodos de una clase y un 
 		metodo lo redefines en la clase hija esto tiene mas importancia cuando lo combinas con el 
 		polimorfismo.
 			 
@@ -146,10 +183,6 @@
 		La anulación del método es el ejemplo del polimorfismo de tiempo de ejecución. 
 		El tipo de devolución debe ser igual o covariante en la invalidación del método.
 
-	https://riptutorial.com/es/java/example/25779/explicando-que-es-el-metodo-de-sobrecarga-y-anulacion-
-	http://picarcodigo.blogspot.com/2012/10/sobreescritura-y-sobrecarga-de-metodos.html
-
-	
 ## 4.- Java8: Collections
 	Cuál de las siguientes afirmaciones son ciertas acerca de ArrayList y Vector en Java?
 
@@ -205,4 +238,146 @@
 		por el hecho de que no pueden ser implementados en la clase base. De ellos, solo se escribe
 		su signatura en la superclase, y su funcionalidad –polimórfica– tiene que indicarse en las 
 		clases derivadas (subclases)
+
+	Una clase "interface" es  una clase abstracta pura en la que todos sus métodos son abstractos
+	y por tanto no se pueden implementar en la clase Interface
 	
+## 6. Crear una excepción personalizada para mostrar la validación de password actual y el nuevo password.
+   Así mismo que la longitud mínima debe ser de 5 caracteres.
+   
+   :::
+	public class CU0601v01PasswordExcepcion extends Exception{
+		// 1 generar una variable para reconocer en el runtime el id de esta clase
+		private static final long SERIAL_VERSION_UID = 700L;
+	
+		// 2 Con este metodo lo que se hace es que se llama a esta clase excepcion con el mensaje enviado
+		public CU0601v01PasswordExcepcion(String psMensaje){
+			super(psMensaje);
+		}
+	}
+	
+	public class CU0602v01ValidarPassword {
+		private static final String EX_PASS_NO_IGUAL = "Los campos de password no son iguales";
+		private static final String EX_PASS_LONGITUD = "El password no cumple la longitud mínima";
+		
+		public CU0602v01ValidarPassword(){}
+		
+		public boolean validarPassword(String psPassword, String psRePassword) throws CU0601v01PasswordExcepcion{
+			if (!psPassword.equals(psRePassword)){
+				throw new CU0601v01PasswordExcepcion(EX_PASS_NO_IGUAL);
+			}
+	
+			if (psPassword.length()<5){
+				throw new CU0601v01PasswordExcepcion(EX_PASS_LONGITUD);
+			}
+			return true;
+		}
+	}	
+	
+	public class CV0601v01ConsultaVerificarPasswordWithExcepcion {
+
+		public static void main(String[] args) {
+			String sUsuario, sPassword, sRePassword;
+			
+			sUsuario = "Illari";
+			sPassword = "22082014";
+			sRePassword = "220814";
+			
+			CU0602v01ValidarPassword  oCUValidar= new CU0602v01ValidarPassword();
+			
+			try{
+				System.out.println("Usuario : " + sUsuario);
+				oCUValidar.validarPassword(sPassword, sRePassword);
+			}catch(CU0601v01PasswordExcepcion ex){
+				//ex.printStackTrace();
+				System.out.println("No se puede registrar un usuario debido a : " + ex.getMessage());
+			}finally{
+				System.out.println("Terminado satisfactoriamente");
+			}
+		}
+	}
+   :::
+   
+## 7. Crear una excepción personalizada para mostrar la validación 
+		USER_NOT_AUTHORIZED = "Usuario no autorizado";
+		INVALID_AMOUNT = "Cantidad debe ser mayor a cero";
+		INSUFFICIENT_BALANCE = "Saldo insuficiente";   
+
+	:::
+	public class CU0701v01TransactionException extends Exception {
+		private final String errorMensaje;
+		private final String errorCode;
+		
+		CU0701v01TransactionException(String psErrorMensaje, String psErrorCode) {
+			this.errorMensaje = psErrorMensaje;
+			this.errorCode = psErrorCode;
+		}
+		
+		public String getErrorCode() {
+			return errorCode;
+		}
+		
+		public String getErrorMensaje() {
+			return errorMensaje;
+		}
+	}	
+
+	public class CU0702v01DigitalWalletTransaction {
+		private static final String USER_NOT_AUTHORIZED = "Usuario no autorizado";
+		private static final String INVALID_AMOUNT = "Cantidad debe ser mayor a cero";
+		private static final String INSUFFICIENT_BALANCE = "Saldo insuficiente";
+    
+		public void addMoney(CE0701v01DigitalWallet digitalWallet, int amount) throws CU0701v01TransactionException{
+			if (digitalWallet.getUserAccessToken()==null){
+				throw new CU0701v01TransactionException("Usuario no autorizado", USER_NOT_AUTHORIZED);
+			}
+			
+			if (amount <=0){
+				throw new CU0701v01TransactionException("Cantidad debe ser mayor a cero", INVALID_AMOUNT);
+			}
+			
+			if (digitalWallet.getWalletBalance()<amount){
+				throw new CU0701v01TransactionException("Saldo insuficiente", INSUFFICIENT_BALANCE);
+			}        
+		}
+    
+		public void payMoney(CE0701v01DigitalWallet digital, int amount) throws CU0701v01TransactionException{
+			
+			if (digital.getUserAccessToken()==null){
+				throw new CU0701v01TransactionException("Usuario no autorizado", USER_NOT_AUTHORIZED);
+			}
+			
+			if (amount <=0){
+				throw new CU0701v01TransactionException("Cantidad debe ser mayor a cero", INVALID_AMOUNT);
+			}
+			
+			if (digital.getWalletBalance()<amount){
+				throw new CU0701v01TransactionException("Saldo insuficiente", INSUFFICIENT_BALANCE);
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	:::
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

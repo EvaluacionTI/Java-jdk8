@@ -39,9 +39,13 @@
 	abstract classes cannot be instantiated
 	a class containing at least one abstract method will be an abstract class
 
-
 ## 6. Crear una excepción personalizada para mostrar la validación de password actual y el nuevo password.
    Así mismo que la longitud mínima debe ser de 5 caracteres.
+
+## 7. Crear una excepción personalizada para mostrar la validación 
+		USER_NOT_AUTHORIZED = "Usuario no autorizado";
+		INVALID_AMOUNT = "Cantidad debe ser mayor a cero";
+		INSUFFICIENT_BALANCE = "Saldo insuficiente";
 
 	
 ## 8. Retos futuros
@@ -135,6 +139,24 @@
 	BABABABA...(pattern repeats)
 	AABAABAA...(pattern repeats)
 	A pattern cannot be predicted and can vary each time the program is run
+
+
+## 14. Consider the following three class
+	
+	class A{}
+	class B extends A{} 
+	class C extends B{}
+	
+	Consider an object of class B is instantiated, i.e.
+	
+	B b = new B();
+	
+	Which of the followind boolean expresiones evaluates to true
+	Pick the correct choices
+	[RPTA] (b instancedof B)	
+		   (b instancedof B) && (!(b instancedof A))
+	[RPTA] (b instancedof B) && (!(b instancedof C))
+			None of the above
 
 
 # 15. Furtinure Factory
@@ -245,23 +267,6 @@
 	
 	}
 
-
-## 13. Consider the following three class
-	
-	class A{}
-	class B extends A{} 
-	class C extends B{}
-	
-	Consider an object of class B is instantiated, i.e.
-	
-	B b = new B();
-	
-	Which of the followind boolean expresiones evaluates to true
-	Pick the correct choices
-	[RPTA] (b instancedof B)	
-		   (b instancedof B) && (!(b instancedof A))
-	[RPTA] (b instancedof B) && (!(b instancedof C))
-			None of the above
 
 
 

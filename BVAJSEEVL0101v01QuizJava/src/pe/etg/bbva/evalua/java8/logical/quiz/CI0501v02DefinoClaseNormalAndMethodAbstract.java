@@ -1,6 +1,6 @@
-package pe.etg.bbva.evalua.java8.logical.quiz2;
+package pe.etg.bbva.evalua.java8.logical.quiz;
 
-public abstract class CL0301DefinoClaseAnsMetodoAbstract {
+public abstract class CI0501v02DefinoClaseNormalAndMethodAbstract {
     public String mostrarMensaje(){
         return "BBVA Host / APX";
     }

@@ -1,15 +1,17 @@
-package pe.etg.bbva.evalua.java8.view.quiz2;
+package pe.etg.bbva.evalua.java8.entity.quiz;
 
-public class DigitalWallet {
+public class CE0701v01DigitalWallet {
     private String walletId;
     private String userName;
     private String userAccessToken;
     private int walletBalance;
     
-    DigitalWallet(String walletId, String userName){}
+/*    CE0701v01DigitalWallet(){};
     
-    DigitalWallet(String walletId, String userName, String userAccessToken){}
-            
+    CE0701v01DigitalWallet(String walletId, String userName){}
+    
+    CE0701v01DigitalWallet(String walletId, String userName, String userAccessToken){}*/
+
     public String getWalletId() {
         return walletId;
     }

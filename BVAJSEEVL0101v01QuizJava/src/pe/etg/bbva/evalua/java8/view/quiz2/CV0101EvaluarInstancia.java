@@ -1,6 +1,6 @@
 package pe.etg.bbva.evalua.java8.view.quiz2;
 
-import pe.etg.bbva.evalua.java8.logical.quiz2.CL0102ClaseB;
+import pe.etg.bbva.evalua.java8.logical.quiz.CL0102ClaseB;
 
 public class CV0101EvaluarInstancia {
 
