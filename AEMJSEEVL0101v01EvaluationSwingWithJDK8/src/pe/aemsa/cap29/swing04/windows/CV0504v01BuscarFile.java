@@ -27,7 +27,7 @@ public class CV0504v01BuscarFile {
                   }
                   file.deleteOnExit();
               } catch (IOException ex) {
-                  Exceptions.printStackTrace(ex);
+                  ex.printStackTrace();
               }
           } else {
               //this will probably work in your IDE, but not from a JAR
