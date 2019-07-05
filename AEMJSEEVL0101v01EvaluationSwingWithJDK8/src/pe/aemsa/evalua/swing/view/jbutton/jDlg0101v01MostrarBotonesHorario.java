@@ -1,22 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pe.aemsa.evalua.swing.view.jbutton;
 
 import java.awt.Container;
-/**
- *
- * @author ALDV
- */
+
 public class jDlg0101v01MostrarBotonesHorario extends javax.swing.JDialog {
-    private CV0101v01EstructuraBotones oCVBotonHorario;
-    /**
-     * Creates new form jDlg0101v01MostrarBotonesHorario
-     * @param parent
-     * @param modal
-     */
+
     public jDlg0101v01MostrarBotonesHorario(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -44,29 +31,6 @@ public class jDlg0101v01MostrarBotonesHorario extends javax.swing.JDialog {
         asHoraAlquiler[7][2] = "19 - 20 pm";
         asHoraAlquiler[8][2] = "21 - 22 pm";
         
-        int iEjeYFinal = 0, iEjeY = 10, iEjeYIncremento = 60;
-        iEjeYFinal = iEjeY + iEjeYIncremento;
-        
-        for (int i=1;i<9;i++){
-            oCVBotonHorario = new CV0101v01EstructuraBotones(asHoraAlquiler[i][1]);
-            oCVBotonHorario.setBounds(10, iEjeYFinal, 150, 60);
-            iEjeYFinal += iEjeYIncremento;
-
-            container.add(oCVBotonHorario);
-        }
-
-        iEjeYFinal = 0;
-        iEjeY = 10; 
-        iEjeYIncremento = 60;
-        iEjeYFinal = iEjeY + iEjeYIncremento;
-        
-        for (int i=1;i<9;i++){
-            oCVBotonHorario = new CV0101v01EstructuraBotones(asHoraAlquiler[i][2]);
-            oCVBotonHorario.setBounds(160, iEjeYFinal, 150, 60);
-            iEjeYFinal += iEjeYIncremento;
-
-            container.add(oCVBotonHorario);
-        }        
     }
 
     /**
