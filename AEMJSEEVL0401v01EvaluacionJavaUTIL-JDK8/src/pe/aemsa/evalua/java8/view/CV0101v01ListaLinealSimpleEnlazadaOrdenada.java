@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 import pe.aemsa.evalua.java8.entity.CE0101v01NotaAlumno;
 import pe.aemsa.evalua.java8.logical.impl.CL0101v01ListaLinealSimplEnlazadaOrdenada;
 
-public class CV0101v01TestListaLinealSEOrdenada {
+public class CV0101v01ListaLinealSimpleEnlazadaOrdenada {
 
     public static void mostrarLista(CL0101v01ListaLinealSimplEnlazadaOrdenada lse) {
         // Mostrar todos los elementos de la lista

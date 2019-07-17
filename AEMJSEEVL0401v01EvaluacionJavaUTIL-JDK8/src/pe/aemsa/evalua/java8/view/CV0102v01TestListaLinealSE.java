@@ -1,8 +1,7 @@
 package pe.aemsa.evalua.java8.view;
 
-import aemsa.cap08.coleccion.logica.CLListaLinealSE;
-import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
 import java.io.IOException;
+import pe.aemsa.evalua.java8.logical.CLListaLinealSE;
 //////////////////////////////////////////////////////////////////
 // Crear una lista lineal simplemente enlazada
 //
