@@ -1,4 +1,4 @@
-package aemsa.cap01.introduccion;
+package pe.aemsa.evalua.java8.cap01.introduccion.view;
 
 /**
  * La ejecuci�n del programa comienza con el m�todo main().

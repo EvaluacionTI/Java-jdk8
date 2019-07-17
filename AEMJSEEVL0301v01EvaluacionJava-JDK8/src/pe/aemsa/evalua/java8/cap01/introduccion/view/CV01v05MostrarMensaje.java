@@ -1,5 +1,5 @@
 
-package aemsa.cap01.introduccion;
+package pe.aemsa.evalua.java8.cap01.introduccion.view;
 
 public class CV01v05MostrarMensaje {
 

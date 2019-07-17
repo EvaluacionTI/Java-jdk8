@@ -4,7 +4,7 @@ package pe.aemsa.evalua.java8.logical;
 // Clase abstracta CLListaLinealSEO: 
 //   Lista lineal simplemente enlazada ordenada ascendentemente.
 //
-public abstract class CLListaLinealSEO {
+public abstract class CI0101v01ListaLinealSimplEnlazadaOrdenada {
     // p: referencia al primer elemento de la lista.
 
     private CElemento p = null;            // elemento de cabecera
@@ -29,7 +29,7 @@ public abstract class CLListaLinealSEO {
         }
     }
 
-    public CLListaLinealSEO() {
+    public CI0101v01ListaLinealSimplEnlazadaOrdenada() {
     } // constructor
 
     // El m�todo siguiente debe ser redefinido en una subclase para
@@ -155,4 +155,3 @@ public abstract class CLListaLinealSEO {
         }
     }
 }
-//////////////////////////////////////////////////////////////////

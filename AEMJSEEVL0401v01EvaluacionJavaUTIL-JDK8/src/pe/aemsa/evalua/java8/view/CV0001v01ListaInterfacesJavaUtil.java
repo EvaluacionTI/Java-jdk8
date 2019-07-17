@@ -1,6 +1,6 @@
 package pe.aemsa.evalua.java8.view;
 
-public class CV0001v01EstructuraJavaUtil {
+public class CV0001v01ListaInterfacesJavaUtil {
 
     public static void main(String[] args) {
         System.out.println("1. Collection<E>	The root interface in the collection hierarchy.");
