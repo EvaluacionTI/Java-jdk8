@@ -6,7 +6,6 @@ Author             :   ALDV
 Descripción     :   Crear una lista lineal simplemente enlazada
                             LSE = Lista Lineal Simple Enlazada
  */
-
 import javax.swing.JOptionPane;
 import pe.aemsa.evalua.java8.entity.CE0101v01NotaAlumno;
 import pe.aemsa.evalua.java8.logical.impl.CL0101v01ListaLinealSimplEnlazadaOrdenada;
@@ -32,7 +31,7 @@ public class CV0101v01TestListaLinealSEOrdenada {
         CE0101v01NotaAlumno obj;
 
         String nombre = "INICIO";
-        String lsNota = null;
+        String lsNota;
         double nota;
         int i = 0;
         System.out.println("Introducir datos. Finalizar con Ctrl+Z.");
