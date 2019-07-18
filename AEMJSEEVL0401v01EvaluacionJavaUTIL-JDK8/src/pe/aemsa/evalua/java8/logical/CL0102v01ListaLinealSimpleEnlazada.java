@@ -1,11 +1,14 @@
 package pe.aemsa.evalua.java8.logical;
 
 //////////////////////////////////////////////////////////////////
+
+import java.util.logging.Logger;
+
 // Lista lineal simplemente enlazada
 //
-public class CLListaLinealSE {
+public class CL0102v01ListaLinealSimpleEnlazada {
     // p: referencia al primer elemento de la lista
-
+private static final Logger MOLOG = Logger.getLogger("CL0102v01ListaLinealSimpleEnlazada");
     private CElemento p = null;
 
     // Elemento de una lista lineal simplemente enlazada
@@ -20,7 +23,7 @@ public class CLListaLinealSE {
         } // constructor
     }
 
-    public CLListaLinealSE() {
+    public CL0102v01ListaLinealSimpleEnlazada() {
     } // constructor
 
     // A�adir un elemento al principio de la lista
@@ -29,6 +32,10 @@ public class CLListaLinealSE {
         q.dato = n;      // asignaci�n de valores
         q.siguiente = p; // reasignaci�n de referencias
         p = q;
+        MOLOG.info("anadirAlPrincipio - n " + n);
+        MOLOG.info("anadirAlPrincipio - q.dato " + q.dato);
+        MOLOG.info("anadirAlPrincipio - q.siguiente " + q.siguiente);
+        MOLOG.info("anadirAlPrincipio - p " + p);
     }
 
     public void mostrarTodos() {
@@ -36,7 +43,9 @@ public class CLListaLinealSE {
         CElemento q = p; // referencia al primer elemento
         while (q != null) {
             System.out.print(q.dato + " ");
+            MOLOG.info("Dato : " + q.dato);
             q = q.siguiente;
+            MOLOG.info("Siguiente Dato : " + q.siguiente);
         }
     }
 

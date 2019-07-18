@@ -1,8 +1,12 @@
 package pe.aemsa.evalua.java8.entity;
 
-public class CE0101v01NotaAlumno {
-    // Atributos
+import java.util.logging.Logger;
 
+
+public class CE0101v01NotaAlumno {
+
+    private static final Logger MOLOG = Logger.getLogger("CE0101v01NotaAlumno");
+    
     private String nombre;
     private double nota;
 
@@ -14,6 +18,7 @@ public class CE0101v01NotaAlumno {
     {
         nombre = nom;
         nota = n;
+        MOLOG.info("CE0101v01NotaAlumno" + nombre + " | " + nota);
     }
 
     public void asignarNombre(String nom) {

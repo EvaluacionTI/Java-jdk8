@@ -33,7 +33,7 @@ public class CV0101v01ListaLinealSimpleEnlazadaOrdenada {
         String nombre = "INICIO";
         String lsNota;
         double nota;
-        int i = 0;
+
         System.out.println("Introducir datos. Finalizar con Ctrl+Z.");
         System.out.print("nombre: ");
 

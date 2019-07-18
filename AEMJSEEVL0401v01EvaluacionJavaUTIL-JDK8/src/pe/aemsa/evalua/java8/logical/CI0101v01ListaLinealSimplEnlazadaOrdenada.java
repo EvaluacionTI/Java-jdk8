@@ -1,11 +1,15 @@
 package pe.aemsa.evalua.java8.logical;
 
 //////////////////////////////////////////////////////////////////
+import java.util.logging.Logger;
+
 // Clase abstracta CLListaLinealSEO: 
 //   Lista lineal simplemente enlazada ordenada ascendentemente.
 //
 public abstract class CI0101v01ListaLinealSimplEnlazadaOrdenada {
-    // p: referencia al primer elemento de la lista.
+
+    private static final Logger MOLOG = Logger.getLogger("CI0101v01ListaLinealSimplEnlazadaOrdenada");
+// p: referencia al primer elemento de la lista.
 
     private CElemento p = null;            // elemento de cabecera
     private CElemento elemAnterior = null; // elemento anterior
@@ -26,13 +30,15 @@ public abstract class CI0101v01ListaLinealSimplEnlazadaOrdenada {
         {
             datos = d;
             siguiente = s;
+            MOLOG.info("Object : " + d.toString());
+            MOLOG.info("CElemento :  " + s.toString());
         }
     }
 
     public CI0101v01ListaLinealSimplEnlazadaOrdenada() {
     } // constructor
 
-    // El m�todo siguiente debe ser redefinido en una subclase para
+    // El m�todo siguiente debe ser redefinido en una subclase para 
     // que permita comparar dos elementos de la lista por el atributo
     // que necesitemos en cada momento.
     public abstract int comparar(Object obj1, Object obj2);
@@ -58,9 +64,13 @@ public abstract class CI0101v01ListaLinealSimplEnlazadaOrdenada {
         elemAnterior = p;
         elemActual = p;
         // Posicionarse en el elemento buscado.
+        MOLOG.info("CElemento to p : " + p.toString());
         while (elemActual != null && (r = comparar(obj, elemActual.datos)) > 0) {
             elemAnterior = elemActual;
             elemActual = elemActual.siguiente;
+            
+            MOLOG.info("elemAnterior : " + elemAnterior.datos.toString());
+            MOLOG.info("elemActual    : " + elemActual.siguiente.toString());
         }
         return r == 0 ? 1 : 0; // devuelve: 0 no encontrado y 1 encontrado
     }
@@ -84,16 +94,22 @@ public abstract class CI0101v01ListaLinealSimplEnlazadaOrdenada {
         // Dos casos:
         // 1) Insertar al principio de la lista
         // 2) Insertar despu�s del anterior (incluye insertar al final)
+        MOLOG.info("elemAnterior : " + elemAnterior.datos.toString());
+            MOLOG.info("elemActual    : " + elemActual.siguiente.toString());
         if (elemAnterior == elemActual) // insertar al principio
         {
             q.siguiente = p;
             p = q; // cabecera
             elemAnterior = elemActual = p; // actualizar referencias
+            MOLOG.info("elemAnterior : " + elemAnterior.datos.toString());
+            MOLOG.info("elemActual    : " + elemActual.siguiente.toString());
         } else // insertar despu�s del anterior
         {
             q.siguiente = elemActual;
             elemAnterior.siguiente = q;
             elemActual = q; // actualizar referencia
+            MOLOG.info("elemAnterior : " + elemAnterior.datos.toString());
+            MOLOG.info("elemActual    : " + elemActual.siguiente.toString());
         }
     }
 
