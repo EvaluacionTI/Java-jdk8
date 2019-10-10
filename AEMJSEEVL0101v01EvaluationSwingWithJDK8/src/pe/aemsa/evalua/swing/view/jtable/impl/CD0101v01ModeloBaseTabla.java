@@ -1,5 +1,5 @@
 
-package pe.aemsa.cap29.swing.controls21.jtable.modelo;
+package pe.aemsa.evalua.swing.view.jtable.impl;
 
 import javax.swing.JButton;
 import javax.swing.JTable;

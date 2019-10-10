@@ -1,19 +1,19 @@
-package pe.aemsa.cap29.swing.controls21.jtable.vista;
+package pe.aemsa.evalua.swing.view.jtable;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class CV0201v01JDialogMantenimientoAlumno extends javax.swing.JDialog {
+public class CV0102v01JDialogMantenimientoAlumno extends javax.swing.JDialog {
 
     DefaultTableModel oModelo = new DefaultTableModel();
 
-    public CV0201v01JDialogMantenimientoAlumno(java.awt.Frame parent, boolean modal) {
+    public CV0102v01JDialogMantenimientoAlumno(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
+
         // Centrar la ventana
         this.setLocationRelativeTo(null);
-        
+
         // Adicionar columnas
         oModelo.addColumn("Código");
         oModelo.addColumn("DNI");
@@ -178,33 +178,33 @@ public class CV0201v01JDialogMantenimientoAlumno extends javax.swing.JDialog {
         jTextFieldNumeroDNI.setText("");
         jTextFieldApellidos.setText("");
         jTextFieldNombres.setText("");
-        
+
         jTextFieldCodigoAlumno.requestFocus();
     }//GEN-LAST:event_jButtonNuevoActionPerformed
 
     private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
         String oDato[] = new String[4];
-        
+
         oDato[0] = jTextFieldCodigoAlumno.getText();
         oDato[1] = jTextFieldNumeroDNI.getText();
         oDato[2] = jTextFieldApellidos.getText();
         oDato[3] = jTextFieldNombres.getText();
-        
+
         oModelo.addRow(oDato);
     }//GEN-LAST:event_jButtonAgregarActionPerformed
 
     private void jButtonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonModificarActionPerformed
-        
+
         int iRowSelect = jTableAlumno.getSelectedRow();
-        
-        if (iRowSelect >= 0 ){
+
+        if (iRowSelect >= 0) {
             jTextFieldCodigoAlumno.setText(jTableAlumno.getValueAt(iRowSelect, 0).toString());
             jTextFieldNumeroDNI.setText(jTableAlumno.getValueAt(iRowSelect, 1).toString());
             jTextFieldApellidos.setText(jTableAlumno.getValueAt(iRowSelect, 2).toString());
             jTextFieldNombres.setText(jTableAlumno.getValueAt(iRowSelect, 3).toString());
-            
+
             oModelo.removeRow(iRowSelect);
-        }else{
+        } else {
             JOptionPane.showMessageDialog(this, "Fila no seleccionada");
         }
     }//GEN-LAST:event_jButtonModificarActionPerformed
@@ -226,20 +226,21 @@ public class CV0201v01JDialogMantenimientoAlumno extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CV0201v01JDialogMantenimientoAlumno dialog = new CV0201v01JDialogMantenimientoAlumno(new javax.swing.JFrame(), true);
+                CV0102v01JDialogMantenimientoAlumno dialog = new CV0102v01JDialogMantenimientoAlumno(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

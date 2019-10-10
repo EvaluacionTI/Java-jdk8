@@ -1,14 +1,14 @@
 
-package pe.aemsa.cap29.swing.controls21.jtable.vista;
+package pe.aemsa.evalua.swing.view.jtable;
 
+import pe.aemsa.evalua.swing.view.jtable.impl.CD0101v01ModeloBaseTabla;
 import javax.swing.JButton;
-import pe.aemsa.cap29.swing.controls21.jtable.modelo.CD0101v01ModeloBaseTabla;
 
-public class CV0102v01JFrameModificarTablaConBotones extends javax.swing.JFrame {
+public class CV0201v01JFrameModificarTablaConBotones extends javax.swing.JFrame {
 
     CD0101v01ModeloBaseTabla oTabla = new CD0101v01ModeloBaseTabla();
 
-    public CV0102v01JFrameModificarTablaConBotones() {
+    public CV0201v01JFrameModificarTablaConBotones() {
         initComponents();
         
          this.setLocationRelativeTo(this);
@@ -100,20 +100,21 @@ public class CV0102v01JFrameModificarTablaConBotones extends javax.swing.JFrame 
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CV0102v01JFrameModificarTablaConBotones().setVisible(true);
+                new CV0201v01JFrameModificarTablaConBotones().setVisible(true);
             }
         });
     }

@@ -1,19 +1,17 @@
+package pe.aemsa.evalua.swing.view.jtable;
 
-package pe.aemsa.cap29.swing.controls21.jtable.vista;
-
+import pe.aemsa.evalua.swing.view.jtable.impl.CD0101v01ModeloBaseTabla;
 import javax.swing.JButton;
-import pe.aemsa.cap29.swing.controls21.jtable.modelo.CD0101v01ModeloBaseTabla;
 
 public class CV0101v01JDialogModificarTablaConBotones extends javax.swing.JDialog {
 
     CD0101v01ModeloBaseTabla oTabla = new CD0101v01ModeloBaseTabla();
-    
 
     public CV0101v01JDialogModificarTablaConBotones(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        
-         this.setLocationRelativeTo(null);
+
+        this.setLocationRelativeTo(null);
         oTabla.mostrarTabla(jTableMantenimiento);
     }
 
@@ -69,29 +67,29 @@ public class CV0101v01JDialogModificarTablaConBotones extends javax.swing.JDialo
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTableMantenimientoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMantenimientoMouseClicked
-        
-int column = jTableMantenimiento.getColumnModel().getColumnIndexAtX(evt.getX());
-        int row = evt.getY()/jTableMantenimiento.getRowHeight();
-        
-        if (row < jTableMantenimiento.getRowCount() && row > 0 && column < jTableMantenimiento.getColumnCount() && column >= 0){
+
+        int column = jTableMantenimiento.getColumnModel().getColumnIndexAtX(evt.getX());
+        int row = evt.getY() / jTableMantenimiento.getRowHeight();
+
+        if (row < jTableMantenimiento.getRowCount() && row > 0 && column < jTableMantenimiento.getColumnCount() && column >= 0) {
             Object value = jTableMantenimiento.getValueAt(row, column);
-            
-            if (value instanceof JButton){
+
+            if (value instanceof JButton) {
                 ((JButton) value).doClick();
                 JButton oBoton = (JButton) value;
-                
+
                 System.out.println("Objeto value " + value);
                 System.out.println("Click en el boton " + oBoton);
-                
-                if (oBoton.getName().equals("m")){
+
+                if (oBoton.getName().equals("m")) {
                     System.out.println("Click en Modificar " + oBoton);
                 }
-                if (oBoton.getName().equals("e")){
+                if (oBoton.getName().equals("e")) {
                     System.out.println("Click en Eliminar " + oBoton);
                 }
             }
         }
-        
+
     }//GEN-LAST:event_jTableMantenimientoMouseClicked
 
     /**
