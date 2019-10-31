@@ -1,0 +1,61 @@
+# Instalación de Java Linux Ubuntu 18.04
+
+##1. Objetive
+	Instalar Java en Linux Ubuntu 18.04
+
+##2. Procedimiento
+
+### Version de ubuntu
+
+p028036@PythonGoSwift:~$lsb_release -a
+
+### Actualizar componentes
+
+p028036@PythonGoSwift:~$sudo apt-get update
+
+p028036@PythonGoSwift:~$sudo apt-get upgrade
+
+### Autoremover componentes
+
+p028036@PythonGoSwift:~$sudo apt autoremove
+
+### Reiniciar el sistema linux
+
+p028036@PythonGoSwift:~$reboot
+
+### Ingresar la clave de acceso
+
+Usuario : p028036
+Clave 	: BbvQ1908
+
+##3. Utilitarios adicionales
+
+### Git and curl
+
+
+p028036@PythonGoSwift:~$sudo apt install git
+
+p028036@PythonGoSwift:~$sudo apt install git
+
+
+##4. Instalación version 11
+
+### Instalando java jdk y el entorno de ejecución
+
+p028036@PythonGoSwift:~$sudo apt-get install defalult-jdk
+
+p028036@PythonGoSwift:~$sudo apt-get install defalult-jre
+
+### Versión de Java
+
+p028036@PythonGoSwift:~$java --version
+
+### Versiones que tenemos instalado
+
+p028036@PythonGoSwift:~$sudo update-alternatives --config java
+
+
+##5. Instalación version 8
+
+p028036@PythonGoSwift:~$sudo apt install openjdk-8-jdk
+
