@@ -2,7 +2,7 @@ package aemsa.cap12.flujos;
 
 
 import aemsa.cap09.clase.CO06v01LeerTipoDato;
-import aemsa.cap12.flujos.entidad.CO03v01Persona;
+import pe.aemsa.cap12.flujos.entidad.CO03v01Persona;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;

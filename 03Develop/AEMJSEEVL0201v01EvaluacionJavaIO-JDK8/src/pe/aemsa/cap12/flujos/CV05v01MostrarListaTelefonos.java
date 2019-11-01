@@ -1,6 +1,6 @@
 package aemsa.cap12.flujos;
 
-import aemsa.cap12.flujos.entidad.CO03v01Persona;
+import pe.aemsa.cap12.flujos.entidad.CO03v01Persona;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;

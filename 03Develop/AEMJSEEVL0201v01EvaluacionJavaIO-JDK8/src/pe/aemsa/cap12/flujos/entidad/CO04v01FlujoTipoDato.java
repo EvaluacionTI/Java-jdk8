@@ -1,4 +1,4 @@
-package aemsa.cap12.flujos.entidad;
+package pe.aemsa.cap12.flujos.entidad;
 
 import java.io.IOException;
 import java.io.InputStreamReader;

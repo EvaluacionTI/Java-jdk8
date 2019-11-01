@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aemsa.cap12.flujos.vista.propiedad;
+package pe.aemsa.cap12.flujos.vista.propiedad;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

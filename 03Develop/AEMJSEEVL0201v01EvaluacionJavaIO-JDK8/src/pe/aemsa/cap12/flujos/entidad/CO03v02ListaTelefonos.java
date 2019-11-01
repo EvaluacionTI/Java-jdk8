@@ -1,4 +1,4 @@
-package aemsa.cap12.flujos.entidad;
+package pe.aemsa.cap12.flujos.entidad;
 
 /////////////////////////////////////////////////////////////////
 

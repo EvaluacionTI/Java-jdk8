@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aemsa.cap12.flujos.entidad.vista;
+package pe.aemsa.cap12.flujos.vista;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import aemsa.cap12.flujos.entidad.CECruceCuenta;
+import pe.aemsa.cap12.flujos.entidad.CECruceCuenta;
 /**
  *
  * @author ALEDIA

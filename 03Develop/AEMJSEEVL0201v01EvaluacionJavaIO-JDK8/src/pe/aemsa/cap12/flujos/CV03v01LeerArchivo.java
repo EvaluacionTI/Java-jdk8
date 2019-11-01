@@ -1,7 +1,7 @@
 package aemsa.cap12.flujos;
 
-import aemsa.cap12.flujos.entidad.CO03v01Persona;
-import aemsa.cap12.flujos.entidad.CO03v02ListaTelefonos;
+import pe.aemsa.cap12.flujos.entidad.CO03v01Persona;
+import pe.aemsa.cap12.flujos.entidad.CO03v02ListaTelefonos;
 import aemsa.cap09.clase.CO06v01LeerTipoDato;
 import java.io.BufferedReader;
 import java.io.File;

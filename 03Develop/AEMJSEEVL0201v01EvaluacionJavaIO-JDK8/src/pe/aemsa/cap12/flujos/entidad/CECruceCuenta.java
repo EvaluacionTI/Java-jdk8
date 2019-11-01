@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aemsa.cap12.flujos.entidad;
+package pe.aemsa.cap12.flujos.entidad;
 
 /**
  *
