@@ -7,10 +7,6 @@ import sun.misc.IOUtils;
 import sun.nio.cs.StandardCharsets;
 
 
-/**
- *
- * @author user
- */
 public class CV0101v01ValidarRecursoTest {
     
     //@DisplayName("Test loading XML")
