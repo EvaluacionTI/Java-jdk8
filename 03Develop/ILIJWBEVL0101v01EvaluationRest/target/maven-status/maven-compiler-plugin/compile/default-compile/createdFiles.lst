@@ -1,0 +1,5 @@
+pe\inverfin\evalua\rest\controller\CC0101v01RestBaseApplication.class
+pe\inverfin\evalua\rest\controller\CC0102v01CallRest.class
+pe\inverfin\evalua\rest\controller\CC0102v01FirstService.class
+pe\inverfin\evalua\rest\controller\CC0103v01UserService.class
+pe\inverfin\evalua\rest\entity\CE0101v01User.class
