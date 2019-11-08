@@ -1,4 +1,4 @@
-package pe.inverfin.evalua.rest.controller;
+package pe.inverfin.evalua.service;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -9,11 +9,11 @@ import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Path("/message")
+@Path("/messageRest")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class CC0102v01FirstService {
-    private static final Logger MOLOG = LoggerFactory.getLogger(CC0102v01FirstService.class);
+public class CS0101v01FirstService {
+    private static final Logger MOLOG = LoggerFactory.getLogger(CS0101v01FirstService.class);
     
     @GET
     public Response showMessage(){

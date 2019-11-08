@@ -1,4 +1,4 @@
-package pe.inverfin.evalua.rest.controller;
+package pe.inverfin.evalua.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,12 +15,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-import pe.inverfin.evalua.rest.entity.CE0101v01User;
+import pe.inverfin.evalua.entity.CE0101v01User;
 
 @Path("/users")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class CC0103v01UserService {
+public class CS0102v01UserService {
 
     //User database pre-initialization
     private static final List<CE0101v01User> oListUser = new ArrayList<>();

@@ -1,4 +1,4 @@
-package pe.inverfin.evalua.rest.controller;
+package pe.inverfin.evalua.controller;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
