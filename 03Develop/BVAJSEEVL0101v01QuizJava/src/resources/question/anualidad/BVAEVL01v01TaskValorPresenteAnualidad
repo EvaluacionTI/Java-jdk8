@@ -1,0 +1,18 @@
+#1. Problema
+    Miguel ha comprado un viaje a crédito. La agencia de viajes le compra 100 u.m. en tres pagos semestrales. Pero él quiere pagarlo al contado.
+    ¿Cuál sería su valor al contado si el asesor está de acuerdo en que el pago al contado se realice a una tasa de interes nominal fija de 180 días del 12% anual?
+
+#2. Representación gráfica
+		
+		              100 u.m.        100 u.m.         100 u.m.
+		              180días         360días          540días
+		|---------------|---------------|---------------|
+		        6%             6%              6%
+		
+		
+	a) Pagos uniformes iguales (iguales a 100 u.m.)
+	b) Pagos periódicos (pagos semestrales)
+	c) Plazo conocido (un año y medio)
+
+	Observe que este conjunto de pagos cumple con las características de una anualidad:
+
