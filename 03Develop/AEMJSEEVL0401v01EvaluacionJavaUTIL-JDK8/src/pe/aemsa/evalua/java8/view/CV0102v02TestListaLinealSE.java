@@ -2,8 +2,8 @@ package pe.aemsa.evalua.java8.view;
 
 //////////////////////////////////////////////////////////////////
 
-import aemsa.cap08.coleccion.logica.CLListaLinealSE;
-import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java8.logical.CL0102v01ListaLinealSimpleEnlazada;
+import pe.aemsa.evalua.java8.logical.impl.CL0102v01LeerTipoDato;
 import java.io.IOException;
 
 // Crear una lista lineal simplemente enlazada
@@ -13,14 +13,14 @@ public class CV0102v02TestListaLinealSE
   public static void main(String[] args) throws IOException
   {
     // Crear una lista lineal vac�a
-    CLListaLinealSE lse = new CLListaLinealSE();
+    CL0102v01ListaLinealSimpleEnlazada lse = new CL0102v01ListaLinealSimpleEnlazada();
     
     // Leer datos reales y a�adirlos a la lista
     double n;
     boolean eof = true;
     System.out.println("Introducir datos. Finalizar con Ctrl+Z.");
     System.out.print("dato: ");
-    while (Double.isNaN(n = CO06v01LeerTipoDato.datoDouble()) != eof)
+    while (Double.isNaN(n = CL0102v01LeerTipoDato.datoDouble()) != eof)
     {
       lse.anadirAlPrincipio(n);
       System.out.print("dato: ");

@@ -3,7 +3,7 @@ package pe.aemsa.evalua.java8.view;
 import java.util.ArrayList;
 
 import java.util.List;
-import pe.aemsa.cap09.clase.entity.CE0101v01Persona;
+import pe.aemsa.evalua.java8.entity.CE0101v01Persona;
 
 public class CV0102v01ValidarColleccion {
 

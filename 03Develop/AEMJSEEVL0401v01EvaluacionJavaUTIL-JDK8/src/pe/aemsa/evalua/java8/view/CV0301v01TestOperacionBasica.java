@@ -1,7 +1,7 @@
 package pe.aemsa.evalua.java8.view;
 
-import aemsa.cap08.coleccion.entidad.CEElementoLSE;
-import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java8.entity.CEElementoLSE;
+import pe.aemsa.evalua.java8.logical.impl.CL0102v01LeerTipoDato;
 import java.io.IOException;
 //////////////////////////////////////////////////////////////////
 // Operaciones b�sicas en una lista lineal simplemente enlazada
@@ -16,7 +16,7 @@ public class CV0301v01TestOperacionBasica {
         // Buscar en una lista un elemento con un valor x
         q = p;             // q referencia el primer elemento de la lista
         System.out.print("dato a buscar: ");
-        x = CO06v01LeerTipoDato.datoInt();
+        x = CL0102v01LeerTipoDato.datoInt();
         while (q != null && q.dato != x) {
             q = q.siguiente; // q referencia al siguiente elemento
         }
@@ -32,7 +32,7 @@ public class CV0301v01TestOperacionBasica {
         p = null; // lista vac�a
         System.out.print("dato: ");
         System.out.print("Integer MIN_VALUE");
-        while ((n = CO06v01LeerTipoDato.datoInt()) != eof) {
+        while ((n = CL0102v01LeerTipoDato.datoInt()) != eof) {
             q = new CEElementoLSE();
             q.dato = n;
             q.siguiente = p;

@@ -1,8 +1,8 @@
 package pe.aemsa.evalua.java8.view;
 
-import aemsa.cap08.coleccion.logica.CLListaTelefonos;
-import aemsa.cap08.coleccion.entidad.CEPersona;
-import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java8.logical.impl.CL03v02ListaTelefonos;
+import pe.aemsa.evalua.java8.entity.CEPersona;
+import pe.aemsa.evalua.java8.logical.impl.CL0102v01LeerTipoDato;
 
 import java.io.File;
 import java.io.FileWriter;

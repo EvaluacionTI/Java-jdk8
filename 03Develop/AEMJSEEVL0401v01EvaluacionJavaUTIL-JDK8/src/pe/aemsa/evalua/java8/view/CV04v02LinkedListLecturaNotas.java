@@ -1,7 +1,7 @@
 package pe.aemsa.evalua.java8.view;
 
 //////////////////////////////////////////////////////////////////
-import aemsa.cap08.coleccion.entidad.CE04v02Datos;
+import pe.aemsa.evalua.java8.entity.CE04v02Datos;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 

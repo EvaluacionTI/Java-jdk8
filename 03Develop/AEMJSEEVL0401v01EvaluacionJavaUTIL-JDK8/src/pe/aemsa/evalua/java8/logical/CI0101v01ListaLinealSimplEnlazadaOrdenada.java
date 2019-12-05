@@ -68,7 +68,7 @@ public abstract class CI0101v01ListaLinealSimplEnlazadaOrdenada {
         while (elemActual != null && (r = comparar(obj, elemActual.datos)) > 0) {
             elemAnterior = elemActual;
             elemActual = elemActual.siguiente;
-            
+
             MOLOG.info("elemAnterior : " + elemAnterior.datos.toString());
             MOLOG.info("elemActual    : " + elemActual.siguiente.toString());
         }
@@ -95,7 +95,7 @@ public abstract class CI0101v01ListaLinealSimplEnlazadaOrdenada {
         // 1) Insertar al principio de la lista
         // 2) Insertar despu�s del anterior (incluye insertar al final)
         MOLOG.info("elemAnterior : " + elemAnterior.datos.toString());
-            MOLOG.info("elemActual    : " + elemActual.siguiente.toString());
+        MOLOG.info("elemActual    : " + elemActual.siguiente.toString());
         if (elemAnterior == elemActual) // insertar al principio
         {
             q.siguiente = p;

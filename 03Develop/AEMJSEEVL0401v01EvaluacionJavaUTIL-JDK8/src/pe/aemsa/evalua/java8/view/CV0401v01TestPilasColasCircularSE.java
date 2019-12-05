@@ -2,11 +2,11 @@ package pe.aemsa.evalua.java8.view;
 
 //////////////////////////////////////////////////////////////////
 
-import aemsa.cap08.coleccion.entidad.CE04v02Datos;
-import aemsa.cap08.coleccion.logica.CLCola;
-import aemsa.cap08.coleccion.logica.CLListaCircularSE;
-import aemsa.cap08.coleccion.logica.CLPila;
-import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java8.entity.CE04v02Datos;
+import pe.aemsa.evalua.java8.logical.CLCola;
+import pe.aemsa.evalua.java8.logical.CLListaCircularSE;
+import pe.aemsa.evalua.java8.logical.CLPila;
+import pe.aemsa.evalua.java8.logical.impl.CL0102v01LeerTipoDato;
 
 import java.io.IOException;
 
@@ -49,10 +49,10 @@ public class CV0401v01TestPilasColasCircularSE
     int i = 0;
     System.out.println("Introducir datos. Finalizar con Ctrl+Z.");
     System.out.print("nombre: ");
-    while ((nombre = CO06v01LeerTipoDato.dato()) != null)
+    while ((nombre = CL0102v01LeerTipoDato.dato()) != null)
     {
       System.out.print("nota:   ");
-      nota = CO06v01LeerTipoDato.datoDouble();
+      nota = CL0102v01LeerTipoDato.datoDouble();
       pila.meterEnPila(new CE04v02Datos(nombre, nota));
       cola.meterEnCola(new CE04v02Datos(nombre, nota));
       System.out.print("nombre: ");

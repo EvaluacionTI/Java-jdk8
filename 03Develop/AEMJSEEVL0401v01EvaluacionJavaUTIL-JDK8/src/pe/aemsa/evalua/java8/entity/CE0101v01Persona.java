@@ -5,7 +5,7 @@ package pe.aemsa.evalua.java8.entity;
 /////////////////////////////////////////////////////////////////
 // Definici�n de la clase CEPersona
 //
-public class CEPersona
+public class CE0101v01Persona
 {
   // Atributos
   private String nombre;
@@ -13,8 +13,8 @@ public class CEPersona
   private long telefono;
   
   // M�todos
-  public CEPersona() {}
-  public CEPersona(String nom, String dir, long tel)
+  public CE0101v01Persona() {}
+  public CE0101v01Persona(String nom, String dir, long tel)
   {
     nombre = nom;
     direccion = dir;

@@ -1,9 +1,7 @@
 package pe.aemsa.evalua.java8.logical;
 
-import aemsa.cap08.coleccion.entidad.CEDatoNumerico;
+import pe.aemsa.evalua.java8.entity.CEDatoNumerico;
 
-
-/////////////////////////////////////////////////////////////////
 // Recursividad
 //
 public class CLRecursion
@@ -62,4 +60,3 @@ public class CLRecursion
     }
   }
 }
-/////////////////////////////////////////////////////////////////

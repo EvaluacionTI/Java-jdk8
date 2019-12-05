@@ -2,7 +2,7 @@ package pe.aemsa.evalua.java8.view;
 
 //////////////////////////////////////////////////////////////////
 
-import pe.aemsa.evalua.java.cap08.clases.view.CO06v01LeerTipoDato;
+import pe.aemsa.evalua.java8.logical.impl.CL0102v01LeerTipoDato;
 import java.io.IOException;
 
 // Calcular los centros num�ricos entre 1 y n.
@@ -55,7 +55,7 @@ public class CV0601v01TestHashAbierto
     long lim_sup_grupo2; // l�mite superior del grupo 2
   
     System.out.print("Centros num�ricos entre 1 y ");
-    n = CO06v01LeerTipoDato.datoLong();
+    n = CL0102v01LeerTipoDato.datoLong();
     System.out.println();
     for (cn = 3; cn < n; cn++)
     {

@@ -1,14 +1,13 @@
 package pe.aemsa.evalua.java8.logical;
 
-//////////////////////////////////////////////////////////////////
-
 import java.util.logging.Logger;
 
 // Lista lineal simplemente enlazada
 //
 public class CL0102v01ListaLinealSimpleEnlazada {
     // p: referencia al primer elemento de la lista
-private static final Logger MOLOG = Logger.getLogger("CL0102v01ListaLinealSimpleEnlazada");
+
+    private static final Logger MOLOG = Logger.getLogger("CL0102v01ListaLinealSimpleEnlazada");
     private CElemento p = null;
 
     // Elemento de una lista lineal simplemente enlazada

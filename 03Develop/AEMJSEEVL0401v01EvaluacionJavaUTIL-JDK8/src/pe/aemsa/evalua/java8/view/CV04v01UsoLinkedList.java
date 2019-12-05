@@ -1,7 +1,7 @@
 
 package pe.aemsa.evalua.java8.view;
 
-import aemsa.cap08.coleccion.entidad.CEPrestamo;
+import pe.aemsa.evalua.java8.entity.CEPrestamo;
 import java.util.LinkedList;
 import java.util.List;
 

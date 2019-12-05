@@ -1,9 +1,8 @@
 package pe.aemsa.evalua.java8.logical;
 
-/////////////////////////////////////////////////////////////////
 // Definici�n de la clase CListaTfnos.
 //
-import aemsa.cap08.coleccion.entidad.CEPersona;
+import pe.aemsa.evalua.java8.entity.CEPersona;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
