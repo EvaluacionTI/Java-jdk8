@@ -1,8 +1,8 @@
 package pe.aemsa.cap12.java8.flujos.vista;
 
-import pe.aemsa.cap12.flujos.entidad.CO03v01Persona;
-import pe.aemsa.cap12.flujos.entidad.CO03v02ListaTelefonos;
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
+import pe.aemsa.cap12.java8.flujos.entidad.CE03v01Persona;
+import pe.aemsa.cap12.java8.flujos.entidad.CE0302v01ListaTelefonos;
+import pe.aemsa.cap12.java8.flujos.logical.CO04v01FlujoTipoDato;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,7 +33,7 @@ public class CV03v01LeerArchivo
     System.out.print("   Opci�n: ");
     int op;
     do
-      op = CO06v01LeerTipoDato.datoInt();
+      op = CO04v01FlujoTipoDato.datoInt();
     while (op < 1 || op > 5);
     return op;
   }
@@ -46,7 +46,7 @@ public class CV03v01LeerArchivo
     // Definir una referencia al flujo est�ndar de salida: flujoS
     PrintStream flujoS = System.out;
 
-    CO03v02ListaTelefonos listatfnos;
+    CE0302v01ListaTelefonos listatfnos;
     int opcion = 0, pos = -1;
     String cadenabuscar = null;
     String nombre, direccion;
@@ -61,14 +61,14 @@ public class CV03v01LeerArchivo
       File fichero = new File("listatfnos.dat");
       if (!fichero.exists())
       {
-        listatfnos = new CO03v02ListaTelefonos();
+        listatfnos = new CE0302v01ListaTelefonos();
         flujoS.println("Se ha creado una lista de tel�fonos nueva");
       }
       else
       {
         ObjectInputStream ois = new ObjectInputStream(
                                 new FileInputStream("listatfnos.dat"));
-        listatfnos = (CO03v02ListaTelefonos)ois.readObject();
+        listatfnos = (CE0302v01ListaTelefonos)ois.readObject();
         ois.close();
         flujoS.println("Se carg� la lista de tel�fonos con �xito");
       }
@@ -111,12 +111,12 @@ public class CV03v01LeerArchivo
          case 3: // a�adir
             flujoS.print("nombre:    "); nombre = flujoE.readLine();
             flujoS.print("direcci�n: "); direccion = flujoE.readLine();
-            flujoS.print("tel�fono:  "); telefono = CO06v01LeerTipoDato.datoLong();
-            listatfnos.anadir(new CO03v01Persona(nombre, direccion, telefono));
+            flujoS.print("tel�fono:  "); telefono = CO04v01FlujoTipoDato.datoLong();
+            listatfnos.anadir(new CE03v01Persona(nombre, direccion, telefono));
             listaModificada = true;
             break;
           case 4: // eliminar
-            flujoS.print("tel�fono: "); telefono = CO06v01LeerTipoDato.datoLong();
+            flujoS.print("tel�fono: "); telefono = CO04v01FlujoTipoDato.datoLong();
             eliminado = listatfnos.eliminar(telefono);
             if (eliminado)
             {

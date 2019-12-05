@@ -1,8 +1,7 @@
 package pe.aemsa.cap12.java8.flujos.vista;
 
-
-import aemsa.cap09.clase.CO06v01LeerTipoDato;
-import pe.aemsa.cap12.flujos.entidad.CO03v01Persona;
+import pe.aemsa.cap12.java8.flujos.logical.CO04v01FlujoTipoDato;
+import pe.aemsa.cap12.java8.flujos.entidad.CE03v01Persona;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -28,17 +27,17 @@ public class CV04v01LecturaArchivo {
             // en el fichero
             do {
                 flujoS.print("nombre:    ");
-                nombre = CO06v01LeerTipoDato.dato();
+                nombre = CO04v01FlujoTipoDato.dato();
                 flujoS.print("direcci�n: ");
-                direccion = CO06v01LeerTipoDato.dato();
+                direccion = CO04v01FlujoTipoDato.dato();
                 flujoS.print("tel�fono:  ");
-                telefono = CO06v01LeerTipoDato.datoLong();
+                telefono = CO04v01FlujoTipoDato.datoLong();
 
                 // Crear un objeto CO03v01Persona y almacenarlo en el fichero
-                oos.writeObject(new CO03v01Persona(nombre, direccion, telefono));
+                oos.writeObject(new CE03v01Persona(nombre, direccion, telefono));
 
                 flujoS.print("�desea escribir otro registro? (s/n) ");
-                resp = CO06v01LeerTipoDato.caracter();
+                resp = CO04v01FlujoTipoDato.caracter();
                 //Leer.limpiar();
             } while (resp == 's');
         } finally {
@@ -57,15 +56,15 @@ public class CV04v01LecturaArchivo {
         try {
             // Crear un objeto File que identifique al fichero
             flujoS.print("Nombre del fichero: ");
-            nombreFichero = CO06v01LeerTipoDato.dato();
+            nombreFichero = CO04v01FlujoTipoDato.dato();
             fichero = new File(nombreFichero);
 
             // Verificar si el fichero existe
             char resp = 's';
             if (fichero.exists()) {
                 flujoS.print("El fichero existe �desea sobreescribirlo? (s/n) ");
-                resp = CO06v01LeerTipoDato.caracter();
-                CO06v01LeerTipoDato.caracter();
+                resp = CO04v01FlujoTipoDato.caracter();
+                CO04v01FlujoTipoDato.caracter();
             }
             if (resp == 's') {
                 crearFichero(fichero);

@@ -1,6 +1,6 @@
 package pe.aemsa.cap12.java8.flujos.vista;
 
-import pe.aemsa.cap12.flujos.entidad.CO03v01Persona;
+import pe.aemsa.cap12.java8.flujos.entidad.CE03v01Persona;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
@@ -26,14 +26,14 @@ public class CV05v01MostrarListaTelefonos {
                 ois = new ObjectInputStream(new FileInputStream(fichero));
 
                 // Declarar los datos a leer desde el fichero
-                CO03v01Persona persona;
+                CE03v01Persona persona;
                 String nombre, direccion;
                 long telefono;
                 do {
                     // Leer un objeto CPersona desde el fichero. Cuando se
                     // alcance el final del fichero Java lanzar� una
                     // excepci�n del tipo EOFException.
-                    persona = (CO03v01Persona) ois.readObject();
+                    persona = (CE03v01Persona) ois.readObject();
 
                     nombre = persona.obtenerNombre();
                     direccion = persona.obtenerDireccion();
