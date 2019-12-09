@@ -1,6 +1,6 @@
 package pe.aemsa.evalua.java.cap17.hilos;
 
-import aemsa.cap12.flujos.entidad.CO04v01FlujoTipoDato;
+import pe.aemsa.cap12.flujos.entidad.CO04v01FlujoTipoDato;
 
 public class CV13v01LeerFlujoTipoDato {
 
