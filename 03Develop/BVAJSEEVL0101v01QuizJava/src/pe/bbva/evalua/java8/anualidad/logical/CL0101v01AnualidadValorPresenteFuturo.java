@@ -4,9 +4,9 @@ import com.sun.istack.internal.logging.Logger;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class CL0101v01AnualidadValorPresente {
+public class CL0101v01AnualidadValorPresenteFuturo {
 
-    private final Logger MOLOG = Logger.getLogger(CL0101v01AnualidadValorPresente.class);
+    private final Logger MOLOG = Logger.getLogger(CL0101v01AnualidadValorPresenteFuturo.class);
 
     private static final int BASE_CALCULO = 360;
     private static final int BASE_UNO = 1;
@@ -67,20 +67,53 @@ public class CL0101v01AnualidadValorPresente {
     public double valuePresent(double pdValorFuturo, double pdTasaAnual, int piPlazoTotalDias, int piFrecuenciaDias) {
 
         int iNumero_periodo = (piPlazoTotalDias / piFrecuenciaDias);
-        double dFactor_base_calculo = pdTasaAnual * (piFrecuenciaDias / BASE_CALCULO);
+        double dFactor_base_calculo = (pdTasaAnual * piFrecuenciaDias) / BASE_CALCULO;
 
-        double dFactor_base = Math.pow(dFactor_base_calculo, iNumero_periodo);
+        double dFactor_base = 1 / Math.pow((1+dFactor_base_calculo), iNumero_periodo);
 
-        double dFactor_tasa = (dFactor_base + 1) / dFactor_base;
-        double dFactor = (1 - dFactor_tasa) / dFactor_base_calculo;
+        double dFactor_tasa = (1 - dFactor_base) / dFactor_base_calculo;
 
-        double dResult = pdValorFuturo * dFactor;
+        double dResult = pdValorFuturo * dFactor_tasa;
 
         MOLOG.info("[EVL] dFactor_base_calculo : " + dFactor_base_calculo);
         MOLOG.info("[EVL] dFactor_base : " + dFactor_base);
-        MOLOG.info("[EVL] dFactor_tasa : " + dFactor_tasa);
         MOLOG.info("[EVL] iNumero_periodo : " + iNumero_periodo);
-        MOLOG.info("[EVL] dFactor : " + dFactor);
+        MOLOG.info("[EVL] dFactor_tasa : " + dFactor_tasa);
+        MOLOG.info("[EVL] dResult : " + dResult);
+
+        return dResult;
+    }
+    
+    public double valueFuture(double pdValor, double pdTasAnual, int piPlazoTotalDias, int piFrecuenciaDias){
+        int iNumero_periodo = (piPlazoTotalDias / piFrecuenciaDias);
+        double dFactor_base_calculo = (pdTasAnual * piFrecuenciaDias) / BASE_CALCULO;
+
+        double dFactor_base = Math.pow((1+dFactor_base_calculo), iNumero_periodo);
+
+        double dFactor_tasa = (dFactor_base - 1) / dFactor_base_calculo;
+
+        double dResult = pdValor * dFactor_tasa;
+
+        MOLOG.info("[EVL] dFactor_base_calculo : " + dFactor_base_calculo);
+        MOLOG.info("[EVL] dFactor_base : " + dFactor_base);
+        MOLOG.info("[EVL] iNumero_periodo : " + iNumero_periodo);
+        MOLOG.info("[EVL] dFactor_tasa : " + dFactor_tasa);
+        MOLOG.info("[EVL] dResult : " + dResult);
+
+        return dResult;
+    }
+    
+    public double valuePayAnualidad(double pdValor, double pdTasAnual, int piPlazoTotalDias, int piFrecuenciaDias){
+        int iNumero_periodo = (piPlazoTotalDias / piFrecuenciaDias);
+        double dFactor_base_calculo = (pdTasAnual * piFrecuenciaDias) / BASE_CALCULO;
+
+        double dFactor_base = Math.pow((1+dFactor_base_calculo), iNumero_periodo);
+        
+        double dResult = (pdValor * dFactor_base_calculo ) / (dFactor_base - 1);
+
+        MOLOG.info("[EVL] dFactor_base_calculo : " + dFactor_base_calculo);
+        MOLOG.info("[EVL] dFactor_base : " + dFactor_base);
+        MOLOG.info("[EVL] iNumero_periodo : " + iNumero_periodo);
         MOLOG.info("[EVL] dResult : " + dResult);
 
         return dResult;
