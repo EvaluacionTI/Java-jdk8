@@ -41,18 +41,45 @@ public class CDCanalEmbebido implements CICanal{
     }
 
     @Override
-    public ArrayList<CECanal> queryChanelsByPaginationWithArrayList(Long pageSize, Long paginationKey) {
+    public boolean saveChannel(CECanal poCanal) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public List<CECanal> queryChanelsByPaginationWithList(Long pageSize, Long paginationKey) {
+    public boolean updateChannel(CECanal poCanal) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean deleteChannel(CECanal poCanal) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<CECanal> listAllChannel() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public CECanal getChannelByCode(String psCodigo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<CECanal> getChannelByPaginationWithArrayList(Long pageSize, Long paginationKey) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<CECanal> getChannelByPaginationWithList(Long pageSize, Long paginationKey) {
         List<CECanal> oListData = new ArrayList<>();
         
         moCDCxnSQL = new CDConexionPostgres();
         moCxnSQL = moCDCxnSQL.getConexion();
         try {
-            moPsSQL = moCxnSQL.prepareStatement(CEConstDataBase.SQL_SELECT_ALL_CANAL);
+            moPsSQL = moCxnSQL.prepareStatement(CEConstDataBase.SQL_SELECT_CANAL_PAGINATION);
+            moPsSQL.setLong(1, pageSize);
+            moPsSQL.setLong(2, paginationKey);
             moRsSQL = moPsSQL.executeQuery();
             if (moRsSQL != null) {
                 while (moRsSQL.next()){
