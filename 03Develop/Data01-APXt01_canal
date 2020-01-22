@@ -1,0 +1,80 @@
+CANAL____DESCRIPCION_CANAL_____CNL_ASTA__CNL/SUBCNL_AST__INDICE__DISPONI
+AD    ADUANAS - SUNAD              AD      ASTA/0000         0        S 
+AL    AGENTES FULLCARGA ALIGNET    AL      RNET/0000         0        S 
+AM    AGENTES MULTIFACIL HERMES    AM      RNET/0000         0        S 
+AP    AFILIACION PACKS             AP      ASTA/0000         0        S 
+AT    TC FAST ACTIVA TARJETAS      AT      ASTA/0000         0        S 
+AX    SAEX                         AX      JNET/0000         0        S 
+BI    BNET UX PERSONAS             BI      BNET/0000         0        S 
+BL    BANCA MOVIL USSD CLARO       BL      MNET/0000         0        S 
+BM    BANCA MOVIL - GLOMO          BM      GNET/0000         0        S 
+BO    BANCA MOVIL                  BO      MNET/0000         0        S 
+BP    BPM SOLUTION                 BP      ASTA/0000         0        S 
+CC    IVR CONTACT CENTER           CC      ASTA/0000         0        S 
+CS    CONTRATACION DE SEGURO       CS      ASTA/0000         0        S 
+CT    IVR CONTACT CENTER PRIVAD    CT      CNET/0000         0        S 
+EC    SEMAAS BACKEND               EC      ASTA/0000         0        S 
+EL    CONTRATACION ELECTRONICA     EL      ASTA/0000         0        S 
+E1    ENVIOS DE DINERO             E1      EDIN/EDIN         0        S
+E2    ENVIOS DE DINERO             E2      EDI2/EDIN         0        S
+FV    FUVEX                        FV      ASTA/0000         0        S
+F1    FILE UNICO                   F1      ASTA/0000         0        S
+GC    GESTION DE CARTERAS          GC      ASTA/0000         0        S
+GE    GRUPOS ECONOMICOS            GE      ASTA/0000         0        S
+GL    BANCA MOVIL-GLOMO PUBLICO    GL      GNET/0001         0        S
+HC    HAREC-ATENCION DE RECLAMO    HC      ASTA/0000         0        S
+IC    SEGUROS                      IC      ASTA/0000         0        S
+ID    INTRADAY                     ID      ASTA/0000         0        S
+IM    BASTANTEO PODERES IMAGENE    IM      ASTA/0000         0        S
+IN    PFLIGTH                      IN      ASTA/0000         0        S
+LS    ADM. DE BIENES DE LEASING    LS      ASTA/0000         0        S
+L1    CARTERA                      L1      ASTA/0000         0        S
+ME    NETC - BCA MOVIL EMPRESAS    26      0026/ASTA         2        S
+MG    BANCA MOVIL PERSONAS         MG      BNET/0002         0        S
+MK    MP CRYPTOSEC RKL             MK      ASTA/0000         0        S 
+MN    MONITOR PLUS                 CC      ASTA/0000         0        S 
+MO    MONITOR ACF                  MO      ASTA/0000         0        S 
+MP    MEDIOS DE PAGO               MP      MPAG/0000         0        S 
+MR    MOTOR DE EVALUACION          MR      ASTA/0000         0        S 
+MW    WALLET PRIVADO               MW      BNET/0001         0        S 
+NI    NEGOCIO INMOBILIARIO         NI      ASTA/0000         0        S 
+OH    HERMES CORPORTAMENTAL        OH      ASTA/0000         0        S 
+PC    PLATAFORMA COMERCIAL         PC      ASTA/0000         0        S 
+PD    PRINCIPALES DECISORES        PD      ASTA/0000         0        S 
+PF    PROYECTO FINANCIERO          PF      ASTA/0000         0        S 
+PG    BASTANTEO                    PG      BAST/0000         0        S 
+PH    PRUEBAS HOST/APX             PH      ASTA/0000         0        S 
+PR    GESTION PROPUESTA RIESGOS    PR      ASTA/0000         0        S 
+PS    PLANEACION ESTRATEGICA       PS      ASTA/0000         0        S 
+PT    PROYECTO PAGALTOKE           PT      RNET/0000         0        S 
+PW    PROYECTO PLAN FX WEB         PW      ASTA/0000         0        S 
+PX    PROYECTO PLAN FX             PX      ASTA/0000         0        S 
+P1    PRUEBA CNL                   P1      P1  /0000         0        S 
+P2    PIC                          P2      ASTA/0000         0        S 
+QS    IDM - SEG. Y CONFIDENCIAL    QS      ASTA/0000         0        S 
+RC    RECAUDOS                     RC      ASTA/0000         0        S 
+SC    BPM FRONTAL                  SC      ASTA/0000         0        S 
+SF    PROYECTO SMS FRAUD           SF      ASTA/0000         0        S 
+SG    SEGMENTADOR BMATIC           SG      SNET/0000         0        S 
+SL    MIS CLIENTES                 SL      SL  /0000         0          
+SO    SEGMENTACION ONLINE          SO      ASTA/0000         0        S 
+SR    PROYECTO SCORATING           SR      ASTA/0000         0        S 
+SU    SUNAT                        SU      SUNT/0000         0        S 
+SW    SWITCH HIPERCENTER           SW      RNET/0000         0        S 
+TI    TINONLINE                    TI      ASTA/0000         0        S 
+TM    ATMPU                        TM      ASTA/0000         0        S 
+TR    SIMULADOR WEB PREST. TREA    TR      ASTA/0000         0        S 
+UI    PISCO - VALIJA DIGITAL       UI      ASTA/0000         0        S 
+VL    PROYECTO CONTINENTAL SAB     VL      ASTA/0000         0        S 
+WP    WEBPYMES                     WP      ASTA/0000         0        S 
+XA    BACKEND APX                  XA      ASTA/0000         0        S 
+XG    RISK ANALYST                 XG      ASTA/0000         0        S 
+XP    SPECTRUM                     XP      ASTA/0000         0        S 
+ZP    ZONA PUBLICA                 ZP      ASTA/0000         0        S 
+21    SWIFT                        21      MCUG/ASTA         0          
+26    PIBEE                        26      0026/ASTA         0        S 
+40    NETCASH                      40      NETC/0000         0        S 
+50    MACUG                        50      MCUG/0000         0        S 
+70    EXTRANET                     70      SAE /0000         0        S 
+80    EXTRANET                     80      SAE /0000         0        S 
+
