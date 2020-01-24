@@ -24,6 +24,12 @@ public class CDCanalEmbebido implements CICanal{
     private PreparedStatement moPsSQL = null;
     private final CallableStatement moCsSQL = null;
     private CDConexionPostgres moCDCxnSQL = null;
+    private CECanal oCECanal;
+    
+    public CDCanalEmbebido(){
+         moCDCxnSQL = new CDConexionPostgres();
+        oCECanal = new CECanal();
+    }
     
     public Long totalRecordChannel() throws SQLException{
         Long totalRecord = 0L;
