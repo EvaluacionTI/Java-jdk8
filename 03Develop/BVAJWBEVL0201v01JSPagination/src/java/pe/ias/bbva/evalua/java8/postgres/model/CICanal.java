@@ -13,6 +13,7 @@ public interface CICanal {
     public List<CECanal> listAllChannel();
     public CECanal getChannelByCode(String psCodigo);
     
-    public ArrayList<CECanal> getChannelByPaginationWithArrayList(Long pageSize, Long paginationKey);
-    public List<CECanal> getChannelByPaginationWithList(Long pageSize, Long paginationKey);
+    public ArrayList<CECanal> getChannelByPaginationWithArrayList(Long numberRecordPerPage, Long currentPage);
+    public List<CECanal> getChannelByPaginationWithList(Long numberRecordPerPage, Long currentPage);
+    public Long getNumberOfRecord();
 }

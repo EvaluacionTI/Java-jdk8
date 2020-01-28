@@ -1,7 +1,7 @@
 <%-- 
-    Document   : EVL0101v01PaginarForma01
-    Created on : ene 23, 2020, 9:56:32 p.m.
-    Author     : Administrador
+    Document    : EVL0101v01PaginarForma01
+    Created on  : ene 23, 2020, 9:56:32 p.m.
+    Author          : ALDV
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -14,32 +14,15 @@
     <body>
         <h1>Paginar solo con JSP sin CSS and BD Embebida Postgres</h1>
         <hr>
-        <form id="idQueryPagination" method="GET" action="paginarBDEmbebido">
-            <table>
-                <thead>
-                    <tr>
-                        <td>First</td>
-                        <td>Next</td>
-                        <td>Previous</td>
-                        <td>Last</td>
-                    </tr>
-                    <tr><td>N°</td>
-                        <td>Código</td>
-                        <td>Descripción</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td>First</td>
-                        <td>Next</td>
-                        <td>Previous</td>
-                        <td>Last</td>
-                    </tr>                    
-                </tfoot>
-            </table>
+        <form id="idQueryPagination" method="GET" action="frmPaginarBDEmbebido">
+            <input type="hidden" name="vCurrentPage" value="1"/>
+            <label for="records">Select record per page :</label>
+            <select id="idRecord" name="vRecordPage">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+            </select>
         </form>
+        <button type="submit">List Channels</button>
     </body>
 </html>

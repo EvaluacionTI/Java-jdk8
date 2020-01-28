@@ -2,10 +2,16 @@ package pe.ias.bbva.evalua.java8.postgres.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pe.ias.bbva.evalua.java8.postgres.entity.CECanal;
+import pe.ias.bbva.evalua.java8.postgres.entity.CEConstDataBase;
+import pe.ias.bbva.evalua.java8.postgres.entity.CEPagination;
+import pe.ias.bbva.evalua.java8.postgres.entity.CEPaginationLink;
+import pe.ias.bbva.evalua.java8.postgres.model.impl.CDCanalEmbebido;
 
 public class CSCanal extends HttpServlet {
 
@@ -21,6 +27,18 @@ public class CSCanal extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        Long currentPage = (request.getParameter("vCurrentPage")==null) ? CEConstDataBase.DF_CURRENT_PAGE:Long.valueOf(request.getParameter("vCurrentPage"));;
+        Long recordByPage = (request.getParameter("vRecordPage")==null)? CEConstDataBase.DF_RECORD_PAGE: Long.valueOf(request.getParameter("vRecordPage"));
+        
+        CDCanalEmbebido oCDCanal = new CDCanalEmbebido();
+        List<CECanal> oListCanal = oCDCanal.getChannelByPaginationWithList(recordByPage, currentPage);
+        Long numbeTotalRows = oCDCanal.getNumberOfRecord();
+        CEPagination oCEPagination = createPagination(recordByPage, currentPage, numbeTotalRows);
+        
+        request.setAttribute("vListCanal", oListCanal);
+        request.setAttribute("vPagination", oCEPagination);
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -74,4 +92,25 @@ public class CSCanal extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
+    
+    private CEPagination createPagination(Long pRecordByPage, Long pCurrentPage, Long pNumbeTotalRows){
+        CEPagination oCEPagination = new CEPagination();
+        CEPaginationLink oCEPaginationLink = new CEPaginationLink();
+        
+        Long numberOfPages = pNumbeTotalRows / pRecordByPage;
+        if (numberOfPages % pRecordByPage > 0){
+            numberOfPages++;
+        }
+        
+        oCEPagination.setCurrentPage(pCurrentPage);
+        oCEPagination.setNumberPage(numberOfPages);
+        oCEPagination.setRecordPage(pRecordByPage);
+        oCEPagination.setNumberRows(pNumbeTotalRows);
+        
+        oCEPaginationLink.setFirst(0L);
+        
+        oCEPagination.setoCEPagiationLink(oCEPaginationLink);
+        
+        return oCEPagination;
+    }
 }
