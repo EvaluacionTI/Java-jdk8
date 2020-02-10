@@ -34,11 +34,13 @@ https://www.tutorialspoint.com/jsp/jsp_environment_setup.htm
                 </tr>
             </co:forEach>
         </div>
+        
         <div id="idNavegation">
             <co:if test="${vCurrentPage!=1}">
                 <a href="frmPaginarBDEmbebido?vRecordPage=${vRecordPage}&vCurrentPage=${vCurrentPage - 1}">Previos</a>
             </co:if>
 
+            <!-- Display Number Pages -->
             <co:forEach begin="1" end="${noOfPages}" var="vNumberPage">
                 <co:choose>
                     <co:when test="${vCurrentPage eq vNumberPage}">
@@ -49,7 +51,8 @@ https://www.tutorialspoint.com/jsp/jsp_environment_setup.htm
                     </co:choose>
                 </co:choose>
 
-            </co:forEach>    
+            </co:forEach>
+            <!-- Display Next Link -->
             <co:if test="${vCurrentPage lt noOfPages}">
                 <a href="frmPaginarBDEmbebido?vRecordPage=${vRecordPage}&vCurrentPage=${vCurrentPage + 1}">Next</a>
             </co:if>

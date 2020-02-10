@@ -33,6 +33,7 @@ public class CSCanal extends HttpServlet {
         
         CDCanalEmbebido oCDCanal = new CDCanalEmbebido();
         List<CECanal> oListCanal = oCDCanal.getChannelByPaginationWithList(recordByPage, currentPage);
+        
         Long numbeTotalRows = oCDCanal.getNumberOfRecord();
         CEPagination oCEPagination = createPagination(recordByPage, currentPage, numbeTotalRows);
         
@@ -94,20 +95,33 @@ public class CSCanal extends HttpServlet {
 
     
     private CEPagination createPagination(Long pRecordByPage, Long pCurrentPage, Long pNumbeTotalRows){
+        String queryPagination = "%s?pageSize=%d&paginationKey=%d";
+
         CEPagination oCEPagination = new CEPagination();
         CEPaginationLink oCEPaginationLink = new CEPaginationLink();
         
+        Long lFirst = 0L;
+	Long lNext = pCurrentPage + 1;
+	int lLast = (int) Math.ceil(pNumbeTotalRows / pRecordByPage); // page: 0, 1, 2, 3 ,4 ,5, 6, ...
+	Long lPrevious = pCurrentPage - 1;
+
+        oCEPaginationLink.setFirst(0L);
+        if (lNext < Long.valueOf(lLast)){
+            oCEPaginationLink.setNext(lNext);
+        }
+        if (lPrevious>0){
+            oCEPaginationLink.setPrevious(lPrevious);
+        }
+        oCEPaginationLink.setLast(Long.valueOf(lLast));
+        
         Long numberOfPages = pNumbeTotalRows / pRecordByPage;
-        if (numberOfPages % pRecordByPage > 0){
+        if ((numberOfPages % pRecordByPage)>0){
             numberOfPages++;
         }
-        
         oCEPagination.setCurrentPage(pCurrentPage);
         oCEPagination.setNumberPage(numberOfPages);
         oCEPagination.setRecordPage(pRecordByPage);
         oCEPagination.setNumberRows(pNumbeTotalRows);
-        
-        oCEPaginationLink.setFirst(0L);
         
         oCEPagination.setoCEPagiationLink(oCEPaginationLink);
         
