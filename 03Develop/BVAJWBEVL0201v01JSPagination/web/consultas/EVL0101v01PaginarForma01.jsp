@@ -22,6 +22,9 @@
                 <option value="10" selected>10</option>
                 <option value="15">15</option>
             </select>
+            <input type="hidden" name="vNumberPage" value="${vNumberPage}"/>
+            
+                
         </form>
         <button type="submit">List Channels</button>
     </body>

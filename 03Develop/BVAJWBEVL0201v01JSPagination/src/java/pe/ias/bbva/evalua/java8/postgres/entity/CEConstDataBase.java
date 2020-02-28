@@ -7,7 +7,7 @@ public class CEConstDataBase {
     
     public static final String DB_POSTGRES_CONTROLER = "org.postgresql.Driver";
     public static final String DB_POSTGRES_TYPE_DRIVER = "jdbc:postgresql:";
-    public static final String DB_POSTGRES_SERVER_DF = "//127.0.0.1:";
+    public static final String DB_POSTGRES_SERVER_DF = "//10.17.205.49:";
     public static final String DB_POSTGRES_PORT_DF = "5432";
     public static final String DB_POSTGRES_DF = "/AEMSADesarrollo";
     public static final String DB_POSTGRES_USER = "postgres";
