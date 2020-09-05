@@ -1,10 +1,12 @@
 package pe.unjfsc.fsi.java8.entity;
 
 public class CECovid19 {
+
 	private int day;
 	private int fallecido;
 	private int nacimiento;
 	private int contagio;
+        private int poblacion;
 
 	public int getDay() {
 		return day;
@@ -30,18 +32,19 @@ public class CECovid19 {
 	public void setContagio(int contagio) {
 		this.contagio = contagio;
 	}
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("CECovid19 [day=");
-		builder.append(day);
-		builder.append(", fallecido=");
-		builder.append(fallecido);
-		builder.append(", nacimiento=");
-		builder.append(nacimiento);
-		builder.append(", contagio=");
-		builder.append(contagio);
-		builder.append("]");
-		return builder.toString();
-	}
+
+    public int getPoblacion() {
+        return poblacion;
+    }
+
+    public void setPoblacion(int poblacion) {
+        this.poblacion = poblacion;
+    }
+
+    @Override
+    public String toString() {
+        return "CECovid19{" + "day=" + day + ", fallecido=" + fallecido + ", nacimiento=" + nacimiento + ", contagio=" + contagio + ", poblacion=" + poblacion + '}';
+    }
+    
+
 }

@@ -18,7 +18,13 @@ public class CVMostrarCovid {
 
         LOG.info("[EVL] Entidad Covid : {} ", oCECovid);
         LOG.info("[EVL] Entidad Proyectar : {} ", oCMProyectar);
-        oCECovid = oCMProyectar.proyectarCovid19();
+
+        LOG.info("[EVL] Fallecidos  : {} ", oCMProyectar.calcularFallecidos(10));
+        LOG.info("[EVL] Contagios   : {} ", oCMProyectar.calcularContagios(10));
+        LOG.info("[EVL] Nacimientos : {} ", oCMProyectar.calcularNacimientos(10));
+        LOG.info("[EVL] Poblacion   : {} ", oCMProyectar.calcularPoblacion(10));
+
+        oCECovid = oCMProyectar.proyectarCovid19(10);
         LOG.info("[EVL] Entidad Covid : {} ", oCECovid);
     }
 }
