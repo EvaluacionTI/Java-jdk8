@@ -11,6 +11,8 @@ public class CV03ValidarRotar {
         CUConvert oCURotar = new CUConvert();
         LOG.info("CUConvert : {}", oCURotar);
         LOG.info("Rotar : {}", oCURotar.rotarDerechaIzquierda("alex"));
+
+        LOG.info("Extraer : {}", oCURotar.extraerPrimerUltimaPosicion("alex"));
     }
     
 }

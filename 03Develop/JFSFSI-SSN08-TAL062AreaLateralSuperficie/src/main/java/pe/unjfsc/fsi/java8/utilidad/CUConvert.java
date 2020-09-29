@@ -7,26 +7,6 @@ public class CUConvert {
 
     private static final Logger LOG = LoggerFactory.getLogger("CUConvert");
 
-    protected String numeroLetras(int pNumero) {
-        String sNumeroLetra = null;
-
-        switch (pNumero) {
-            case 1:
-                sNumeroLetra = "Uno";
-                break;
-            case 2:
-                sNumeroLetra = "Dos";
-                break;
-            case 5:
-                sNumeroLetra = "Cinco";
-                break;
-            default:
-                sNumeroLetra = "Por definir";
-                break;
-        }
-        return sNumeroLetra;
-    }
-
     public String rotarDerechaIzquierda(String psCadena) {
         String sCadenaRotada = "";
         LOG.info(" psCadena {}", psCadena);
@@ -38,5 +18,14 @@ public class CUConvert {
         }
 
         return sCadenaRotada.trim();
+    }
+    
+    public String extraerPrimerUltimaPosicion(String psCadena){
+        
+        String sPrimera = psCadena.substring(0, 1);
+        String sUltima = psCadena.substring(psCadena.length()-1, psCadena.length());
+        LOG.info(" sPrimera {}", sPrimera);
+        LOG.info(" sUltima {}", sUltima);
+        return sPrimera + sUltima;
     }
 }

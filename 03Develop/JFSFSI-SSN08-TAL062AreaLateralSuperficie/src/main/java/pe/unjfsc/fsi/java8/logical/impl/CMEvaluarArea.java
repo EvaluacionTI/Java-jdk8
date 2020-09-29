@@ -14,7 +14,7 @@ import pe.unjfsc.fsi.java8.logical.CIEvaluarSuperficie;
 
 public class CMEvaluarArea implements CIEvaluarSuperficie {
 
-    public static final Logger LOG = LoggerFactory.getLogger("CMEvaluarAreaCMEvaluarArea");
+    public static final Logger LOG = LoggerFactory.getLogger("CMEvaluarArea");
     private CEAreaSuperficieLateral oCELsa, oCELsaRpta;
     private CEAreaTotalSuperficie oCETsa, oCETsaRpta;
     private CEMostrarDatos oMostrarRequest, oMostrarResponse;
@@ -28,6 +28,10 @@ public class CMEvaluarArea implements CIEvaluarSuperficie {
         oCELsa = poLSA;
         oCELsa.setRadio(radio);
         oCELsa.setDiametro(calcularDiametro(radio));
+        String letra = letraNumero(radio);
+        oCELsa.setRadioLetra(letra);
+        letra = letraNumero(calcularDiametro(radio));
+        oCELsa.setDiametroLetra(letra);
         return oCELsa;
     }
 
@@ -79,8 +83,22 @@ public class CMEvaluarArea implements CIEvaluarSuperficie {
         return DOS * pdRadio;
     }
 
-    protected double calcularAtequilatero(double pdRadio) {
-        return (Math.sqrt(TRES) * Math.pow(pdRadio, DOS)) / CUATRO;
+    protected double calcularAtequilatero(double pdLado) {
+        return (Math.sqrt(TRES) * Math.pow(pdLado, DOS)) / CUATRO;
+    }
+    
+    protected String letraNumero(double pdNumero){
+        String letra="";
+        int result = (int) pdNumero;
+        switch (result){
+            case 5:
+                letra="Cinco";
+                break;
+            case 10:
+                letra="DIEz";
+                break;
+        }
+        return letra;
     }
 
 }
