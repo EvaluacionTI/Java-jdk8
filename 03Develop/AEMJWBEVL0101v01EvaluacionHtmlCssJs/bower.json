@@ -1,0 +1,7 @@
+{
+    "name": "AEMJWBEVL0101v01EvaluacionHtmlCssJs", "version": "1.0.0", "main": "path/to/main.css", "ignore": [
+        ".jshintrc", "**/*.txt"
+    ], "dependencies": {
+    }, "devDependencies": {
+    }
+}
