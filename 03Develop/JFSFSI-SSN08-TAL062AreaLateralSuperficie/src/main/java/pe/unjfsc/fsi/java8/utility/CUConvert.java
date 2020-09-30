@@ -1,4 +1,4 @@
-package pe.unjfsc.fsi.java8.utilidad;
+package pe.unjfsc.fsi.java8.utility;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
