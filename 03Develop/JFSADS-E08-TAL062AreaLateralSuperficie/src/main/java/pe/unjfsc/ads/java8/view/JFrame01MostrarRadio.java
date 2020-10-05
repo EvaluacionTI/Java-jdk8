@@ -14,7 +14,6 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
     
     private CEAreaSuperficieLateral oCELsa;
     private CEAreaSuperficieLateral oCELsaResponse;
-    
     private CIEvaluarSuperficie oCIArea;
     
     public JFrame01MostrarRadio() {
