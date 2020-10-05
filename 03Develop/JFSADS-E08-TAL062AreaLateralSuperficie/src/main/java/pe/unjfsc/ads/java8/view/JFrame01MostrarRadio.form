@@ -43,11 +43,11 @@
                           <Component id="jTextFieldLSA" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextFieldPI" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextFieldAltura" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextFieldRadio" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextFieldTSA" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextFieldDiametro" alignment="0" max="32767" attributes="0"/>
                           <Component id="jTextFieldATE" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jTextFieldRotarIzquierdaDerecha" alignment="0" pref="81" max="32767" attributes="0"/>
+                          <Component id="jTextFieldRotarIzquierdaDerecha" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTextFieldRadio" alignment="0" min="-2" pref="156" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -77,7 +77,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="78" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

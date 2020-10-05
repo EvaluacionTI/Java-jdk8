@@ -9,16 +9,17 @@ import pe.unjfsc.ads.java8.entity.CEMostrarDatos;
 import pe.unjfsc.ads.java8.logical.CIEvaluarSuperficie;
 import pe.unjfsc.ads.java8.logical.impl.CMEvaluarArea;
 
-public class JFrameMostrarRadio extends javax.swing.JFrame {
-    private static final Logger LOG = LoggerFactory.getLogger("JFrameMostrarRadio");
+public class JFrame01MostrarRadio extends javax.swing.JFrame {
+    private static final Logger LOG = LoggerFactory.getLogger("JFrame01MostrarRadio");
     
     private CEAreaSuperficieLateral oCELsa;
-    private CEAreaTotalSuperficie oCETsa;
-    private CEMostrarDatos oCEMostrar, oCEMostrarResponse;
+    private CEAreaSuperficieLateral oCELsaResponse;
+    
     private CIEvaluarSuperficie oCIArea;
     
-    public JFrameMostrarRadio() {
+    public JFrame01MostrarRadio() {
         initComponents();
+        jTextFieldLSA.setText(String.valueOf(LSA));
     }
 
     @SuppressWarnings("unchecked")
@@ -136,11 +137,11 @@ public class JFrameMostrarRadio extends javax.swing.JFrame {
                             .addComponent(jTextFieldLSA)
                             .addComponent(jTextFieldPI)
                             .addComponent(jTextFieldAltura)
-                            .addComponent(jTextFieldRadio)
                             .addComponent(jTextFieldTSA)
                             .addComponent(jTextFieldDiametro)
                             .addComponent(jTextFieldATE)
-                            .addComponent(jTextFieldRotarIzquierdaDerecha, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE))))
+                            .addComponent(jTextFieldRotarIzquierdaDerecha)
+                            .addComponent(jTextFieldRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -160,7 +161,7 @@ public class JFrameMostrarRadio extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jTextFieldMayusculas)
                                 .addComponent(jTextFieldPrimerUltimoDigito, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)))))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -224,27 +225,27 @@ public class JFrameMostrarRadio extends javax.swing.JFrame {
 
     private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
         oCELsa = new CEAreaSuperficieLateral();
-        oCEMostrar = new CEMostrarDatos();
+        oCELsaResponse = new CEAreaSuperficieLateral();
         oCIArea = new CMEvaluarArea();
-        oCETsa = new CEAreaTotalSuperficie();
-        
-        oCELsa.setLsa(LSA);
+       
+        oCELsa.setLsa(Double.parseDouble(jTextFieldLSA.getText()));
         oCELsa.setAltura(Double.parseDouble(jTextFieldAltura.getText()));
+        LOG.info("[EVL] Objeto CEAreaSuperficieLateral creado : {}", oCELsa);
+        oCELsaResponse = oCIArea.calcularLSA(oCELsa);
+        LOG.info("[EVL] Objeto CEAreaSuperficieLateral enriquecido : {}", oCELsaResponse);
         
-        oCETsa.setoCELsa(oCELsa);
-        
-        oCEMostrar.setoCETsa(oCETsa);
-        LOG.info("oCEMostrar : {}", oCEMostrar );
-        oCEMostrarResponse = oCIArea.procesarData(oCEMostrar);
-        sendData(oCEMostrarResponse);
+        sendLsa(oCELsaResponse);
+
     }//GEN-LAST:event_jButtonCalcularActionPerformed
 
-    private void sendData(CEMostrarDatos poData){
-        jTextFieldLSA.setText(String.valueOf(poData.getoCETsa().getoCELsa().getLsa()));
-        jTextFieldPI.setText(String.valueOf(poData.getValorPI()));
-        jTextFieldRadio.setText(String.valueOf(poData.getoCETsa().getoCELsa().getRadio()));
+    private void sendLsa(CEAreaSuperficieLateral poLSA){
+        jTextFieldRadio.setText(String.valueOf(poLSA.getRadio()));
+        jTextFieldDiametro.setText(String.valueOf(poLSA.getDiametro()));
         
+        jTextFieldEnMinusculas.setText(poLSA.getRadioLetra());
+        jTextFieldMayusculas.setText(poLSA.getDiametroLetra());
     }
+    
     
     public static void main(String args[]) {
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -259,19 +260,20 @@ public class JFrameMostrarRadio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrame01MostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrame01MostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrame01MostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFrameMostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrame01MostrarRadio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFrameMostrarRadio().setVisible(true);
+                new JFrame01MostrarRadio().setVisible(true);
             }
         });
     }
