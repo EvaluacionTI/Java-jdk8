@@ -1,0 +1,30 @@
+a[href="#"]{
+    color: rosybrown;
+}
+a[title]{
+    font-weight: bold;
+}
+
+a[title=Buscador]{
+    color: greenyellow;
+}
+
+a[title="Pagina del curso"]{
+    color: red;
+}
+
+#manejo del idioma
+:lang(es){
+    font-style: italic;
+}
+
+#Manejo del contenido
+a.new:after{
+    content: " (Nuevo) ";
+    color: #000;
+}
+
+a.old:before{
+    content: " (DEP) ";
+    color: #000;
+}

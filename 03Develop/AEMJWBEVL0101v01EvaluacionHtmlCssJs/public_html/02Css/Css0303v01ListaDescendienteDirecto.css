@@ -1,0 +1,14 @@
+img.newDumpTrnk + span {
+    font-weight: bold;
+}
+
+li.letra:first-child{
+    font-size: 4em;
+}
+.letraCapital:first-letter{
+    font-size: 3em;
+}
+
+.cambioLinea:first-line{
+    font-size: 2em;
+}
