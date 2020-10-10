@@ -26,7 +26,6 @@ public class JFrameMostrarLista extends javax.swing.JFrame {
     }
 
     private String[][] loadData() {
-        oCEArray = new ArrayList<>();
         oCIRetiroAFP = new CMRetiroAFP25ArrayList();
         
         oCEArray = oCIRetiroAFP.consultaAllRetiroArrayList();
