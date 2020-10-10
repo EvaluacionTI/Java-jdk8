@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.fsi.java8.entity.CESaldoAfiliado;
 import pe.unjfsc.fsi.java8.logical.CIRetiroAFP25ArrayList;
+import pe.unjfsc.fsi.java8.logical.impl.CMRetiroAFP25ArrayList;
 
 public class JFrameMostrarLista extends javax.swing.JFrame {
 
@@ -13,22 +14,26 @@ public class JFrameMostrarLista extends javax.swing.JFrame {
     private CESaldoAfiliado oCESaldo;
     private ArrayList<CESaldoAfiliado> oCEArray;
     private CIRetiroAFP25ArrayList oCIRetiroAFP;
-    
+
     public JFrameMostrarLista() {
         initComponents();
-        DefaultTableModel oModelo = new DefaultTableModel();
+
         String[] aTitulo = {"id", "codigo", "saldo CIC"};
-       oModelo.setDataVector(loadData(), aTitulo);
         
-        jTableLista.setModel(oModelo);
+        DefaultTableModel oModel = new DefaultTableModel(loadData(), aTitulo);
+        
+        jTableLista.setModel(oModel);
     }
 
-    private String[][] loadData(){
+    private String[][] loadData() {
         oCEArray = new ArrayList<>();
+        oCIRetiroAFP = new CMRetiroAFP25ArrayList();
+        
         oCEArray = oCIRetiroAFP.consultaAllRetiroArrayList();
         LOG.info("[EVL] Numero collection : {}", oCEArray.size());
         return oCIRetiroAFP.convertArrayListToMatriz(oCEArray);
     }
+
     @SuppressWarnings("uncheR                                                                                                                                                                                                                 cked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -60,8 +65,8 @@ public class JFrameMostrarLista extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 101, Short.MAX_VALUE)
-                .addComponent(jScrollPaneLista, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 70, Short.MAX_VALUE)
+                .addComponent(jScrollPaneLista, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();

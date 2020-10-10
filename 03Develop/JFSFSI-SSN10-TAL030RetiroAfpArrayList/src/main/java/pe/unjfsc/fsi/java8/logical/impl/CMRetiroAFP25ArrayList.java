@@ -98,13 +98,13 @@ public class CMRetiroAFP25ArrayList implements CIRetiroAFP25ArrayList {
 
     @Override
     public String[][] convertArrayListToMatriz(ArrayList<CESaldoAfiliado> poLista) {
-        String[][] aDataResponse = new String[poLista.size()][2];
+        String[][] aDataResponse = new String[poLista.size()][3];
 
         int iRow = 0;
         for (CESaldoAfiliado oItem : poLista) {
             aDataResponse[iRow][0] = String.valueOf(oItem.getId());
-            aDataResponse[iRow][0] = oItem.getCodigoAfiliado();
-            aDataResponse[iRow][0] = String.valueOf(oItem.getSaldoCIC());
+            aDataResponse[iRow][1] = oItem.getCodigoAfiliado();
+            aDataResponse[iRow][2] = String.valueOf(oItem.getSaldoCIC());
             iRow++;
         }
         return aDataResponse;
