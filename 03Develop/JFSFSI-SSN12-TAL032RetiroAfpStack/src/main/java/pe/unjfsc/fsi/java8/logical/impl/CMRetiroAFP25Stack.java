@@ -1,21 +1,20 @@
 package pe.unjfsc.fsi.java8.logical.impl;
 
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Stack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.fsi.java8.entity.CESaldoAfiliado;
-import pe.unjfsc.fsi.java8.logical.CIRetiroAFP25ArrayList;
+import pe.unjfsc.fsi.java8.logical.CIRetiroAFP25Stack;
 
-public class CMRetiroAFP25ArrayList implements CIRetiroAFP25ArrayList {
+public class CMRetiroAFP25Stack implements CIRetiroAFP25Stack {
 
-    private static final Logger LOG = LoggerFactory.getLogger("CMRetiroAFP25ArrayList");
+    private static final Logger LOG = LoggerFactory.getLogger("CMRetiroAFP25Stack");
 
-    private ArrayList<CESaldoAfiliado> moListAfiliado;
+    private Stack<CESaldoAfiliado> moListAfiliado;
     private CESaldoAfiliado moCESaldoAfilidado;
 
-    public CMRetiroAFP25ArrayList() {
-        moListAfiliado = new ArrayList<>();
+    public CMRetiroAFP25Stack() {
+        moListAfiliado = new Stack<>();
 
         moListAfiliado.add(new CESaldoAfiliado(1, "2000", 2500.05));
         moListAfiliado.add(new CESaldoAfiliado(2, "2001", 3500.10));
@@ -42,61 +41,55 @@ public class CMRetiroAFP25ArrayList implements CIRetiroAFP25ArrayList {
     }
 
     @Override
-    public void saveRetiroArrayList(CESaldoAfiliado poCESaldoAfiliado) {
+    public void saveRetiroStack(CESaldoAfiliado poCESaldoAfiliado) {
         LOG.info("[EVL] Save new Saldo Afiliado :  {}", poCESaldoAfiliado);
         moListAfiliado.add(new CESaldoAfiliado(poCESaldoAfiliado.getId(), poCESaldoAfiliado.getCodigoAfiliado(), poCESaldoAfiliado.getSaldoCIC()));
     }
 
     @Override
-    public void updateRetiroArrayList(CESaldoAfiliado poCESaldoAfiliado) {
+    public void updateRetiroStack(CESaldoAfiliado poCESaldoAfiliado) {
         LOG.info("[EVL] Update Saldo Afiliado :  {}", poCESaldoAfiliado);
-        
+
         int iRow = 0;
-        Iterator<CESaldoAfiliado> it = moListAfiliado.iterator();
-        while (it.hasNext()) {
-            moCESaldoAfilidado = new CESaldoAfiliado();
-            moCESaldoAfilidado = it.next();
-            if (moCESaldoAfilidado.getId() == poCESaldoAfiliado.getId()) {
+        for (CESaldoAfiliado oItem : moListAfiliado) {
+            if (oItem.getId() == poCESaldoAfiliado.getId()) {
+                oItem.setCodigoAfiliado(poCESaldoAfiliado.getCodigoAfiliado());
+                oItem.setSaldoCIC(poCESaldoAfiliado.getSaldoCIC());
                 LOG.info("[EVL] value previus Saldo Afiliado :  {}", poCESaldoAfiliado);
-                moCESaldoAfilidado.setCodigoAfiliado(poCESaldoAfiliado.getCodigoAfiliado());
-                moCESaldoAfilidado.setSaldoCIC(poCESaldoAfiliado.getSaldoCIC());
-                LOG.info("[EVL] value previus Saldo Afiliado :  {}", moCESaldoAfilidado);
-                moListAfiliado.add(iRow, moCESaldoAfilidado);
-                LOG.info("[EVL] value new Saldo Afiliado :  {}", moListAfiliado);
+                moListAfiliado.add(iRow, oItem);
+                LOG.info("[EVL] value new Saldo Afiliado :  {}", oItem);
+                iRow++;
                 break;
             }
         }
     }
 
     @Override
-    public void deleteRetiroArrayList(int pId) {
+    public void deleteRetiroStack(int pId) {
         LOG.info("[EVL] Delete Id to Saldo Afiliado :  {}", pId);
-        Iterator<CESaldoAfiliado> it = moListAfiliado.iterator();
-        while (it.hasNext()) {
-            moCESaldoAfilidado = new CESaldoAfiliado();
-            moCESaldoAfilidado = it.next();
-            if (moCESaldoAfilidado.getId() == pId) {
-                moListAfiliado.remove(moCESaldoAfilidado);
+
+        for (CESaldoAfiliado oItem : moListAfiliado) {
+            if (oItem.getId() == pId) {
+                moListAfiliado.remove(oItem);
                 break;
             }
         }
     }
 
     @Override
-    public ArrayList<CESaldoAfiliado> consultaAllRetiroArrayList() {
+    public Stack<CESaldoAfiliado> consultaAllRetiroStack() {
         LOG.info("[EVL Query All Saldo Afiliado : {}", moListAfiliado.size());
         return moListAfiliado;
     }
 
     @Override
-    public CESaldoAfiliado consultaByIdRetiroArrayList(int pId) {
+    public CESaldoAfiliado consultaByIdRetiroStack(int pId) {
         LOG.info("[EVL Query by Id Saldo Afiliado : {}", pId);
-
-        Iterator<CESaldoAfiliado> it = moListAfiliado.iterator();
-        while (it.hasNext()) {
-            moCESaldoAfilidado = new CESaldoAfiliado();
-            moCESaldoAfilidado = it.next();
-            if (moCESaldoAfilidado.getId() == pId) {
+        
+         moCESaldoAfilidado = new CESaldoAfiliado();
+        for (CESaldoAfiliado oItem : moListAfiliado) {
+            if (oItem.getId() == pId) {
+                moCESaldoAfilidado = oItem;
                 break;
             }
         }
@@ -105,8 +98,8 @@ public class CMRetiroAFP25ArrayList implements CIRetiroAFP25ArrayList {
     }
 
     @Override
-    public String[][] convertArrayListToMatriz(ArrayList<CESaldoAfiliado> poLista) {
-        LOG.info("[EVL Convert LinkedList to Matriz : {}", poLista);
+    public String[][] convertStackToMatriz(Stack<CESaldoAfiliado> poLista) {
+        LOG.info("[EVL] Convert Stack to Matriz : {}", poLista);
         String[][] aDataResponse = new String[poLista.size()][3];
 
         int iRow = 0;
@@ -116,7 +109,8 @@ public class CMRetiroAFP25ArrayList implements CIRetiroAFP25ArrayList {
             aDataResponse[iRow][2] = String.valueOf(oItem.getSaldoCIC());
             iRow++;
         }
-        LOG.info("[EVL Matriz : {}", aDataResponse.length);
+        LOG.info("[EVL] Matriz : {}", aDataResponse.length);
         return aDataResponse;
     }
+
 }
