@@ -3,7 +3,6 @@ package pe.unjfsc.ads.java8.view;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.ads.java8.entity.CEAreaSuperficieLateral;
-import pe.unjfsc.ads.java8.entity.CEAreaTotalSuperficie;
 import static pe.unjfsc.ads.java8.entity.CEConstant.LSA;
 import pe.unjfsc.ads.java8.entity.CEMostrarDatos;
 import pe.unjfsc.ads.java8.logical.CIEvaluarSuperficie;
@@ -13,7 +12,7 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
     private static final Logger LOG = LoggerFactory.getLogger("JFrame01MostrarRadio");
     
     private CEAreaSuperficieLateral oCELsa;
-    private CEAreaSuperficieLateral oCELsaResponse;
+    private CEMostrarDatos oCEMostrar, oCEMostrarResponse;
     private CIEvaluarSuperficie oCIArea;
     
     public JFrame01MostrarRadio() {
@@ -40,15 +39,15 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
         jTextFieldTSA = new javax.swing.JTextField();
         jTextFieldDiametro = new javax.swing.JTextField();
         jTextFieldATE = new javax.swing.JTextField();
-        jTextFieldRotarIzquierdaDerecha = new javax.swing.JTextField();
+        jTextFieldRotarID = new javax.swing.JTextField();
         jButtonLimpiar = new javax.swing.JButton();
         jButtonCalcular = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jTextFieldEnMinusculas = new javax.swing.JTextField();
+        jTextFieldMinuscula = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextFieldMayusculas = new javax.swing.JTextField();
+        jTextFieldMayuscula = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        jTextFieldPrimerUltimoDigito = new javax.swing.JTextField();
+        jTextField1erUltCaracter = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,7 +84,7 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
 
         jTextFieldATE.setEditable(false);
 
-        jTextFieldRotarIzquierdaDerecha.setEditable(false);
+        jTextFieldRotarID.setEditable(false);
 
         jButtonLimpiar.setText("Limpiar");
         jButtonLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -103,15 +102,15 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
 
         jLabel9.setText("En minusculas");
 
-        jTextFieldEnMinusculas.setEditable(false);
+        jTextFieldMinuscula.setEditable(false);
 
         jLabel10.setText("En mayusculas");
 
-        jTextFieldMayusculas.setEditable(false);
+        jTextFieldMayuscula.setEditable(false);
 
         jLabel11.setText("1er, Ultimo digito");
 
-        jTextFieldPrimerUltimoDigito.setEditable(false);
+        jTextField1erUltCaracter.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -139,7 +138,7 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
                             .addComponent(jTextFieldTSA)
                             .addComponent(jTextFieldDiametro)
                             .addComponent(jTextFieldATE)
-                            .addComponent(jTextFieldRotarIzquierdaDerecha)
+                            .addComponent(jTextFieldRotarID)
                             .addComponent(jTextFieldRadio, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -149,8 +148,8 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addGap(10, 10, 10)
                             .addComponent(jLabel9)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                            .addComponent(jTextFieldEnMinusculas, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                            .addComponent(jTextFieldMinuscula, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,8 +157,8 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
                                 .addComponent(jLabel11))
                             .addGap(21, 21, 21)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jTextFieldMayusculas)
-                                .addComponent(jTextFieldPrimerUltimoDigito, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)))))
+                                .addComponent(jTextFieldMayuscula)
+                                .addComponent(jTextField1erUltCaracter, javax.swing.GroupLayout.DEFAULT_SIZE, 102, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -183,7 +182,7 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTextFieldRadio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel9)
-                        .addComponent(jTextFieldEnMinusculas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jTextFieldMinuscula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -197,13 +196,13 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jTextFieldATE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10)
-                    .addComponent(jTextFieldMayusculas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldMayuscula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jTextFieldRotarIzquierdaDerecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldRotarID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
-                    .addComponent(jTextFieldPrimerUltimoDigito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1erUltCaracter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonLimpiar)
@@ -219,30 +218,47 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldPIActionPerformed
 
     private void jButtonLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLimpiarActionPerformed
-
+        jTextFieldLSA.setText(String.valueOf(LSA));
+        jTextFieldPI.setText("");
+        jTextFieldAltura.setText("");
+        jTextFieldRadio.setText("");
+        jTextFieldTSA.setText("");
+        jTextFieldDiametro.setText("");
+        jTextFieldATE.setText("");
+        jTextFieldRotarID.setText("");
+        jTextFieldMinuscula.setText("");
+        jTextFieldMayuscula.setText("");
+        jTextField1erUltCaracter.setText("");
     }//GEN-LAST:event_jButtonLimpiarActionPerformed
 
     private void jButtonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCalcularActionPerformed
+        oCEMostrar = new CEMostrarDatos();
         oCELsa = new CEAreaSuperficieLateral();
-        oCELsaResponse = new CEAreaSuperficieLateral();
         oCIArea = new CMEvaluarArea();
-       
-        oCELsa.setLsa(Double.parseDouble(jTextFieldLSA.getText()));
-        oCELsa.setAltura(Double.parseDouble(jTextFieldAltura.getText()));
-        LOG.info("[EVL] Objeto CEAreaSuperficieLateral creado : {}", oCELsa);
-        oCELsaResponse = oCIArea.calcularLSA(oCELsa);
-        LOG.info("[EVL] Objeto CEAreaSuperficieLateral enriquecido : {}", oCELsaResponse);
         
-        sendLsa(oCELsaResponse);
+        oCELsa.setAltura(Double.parseDouble(jTextFieldAltura.getText()));
+        oCELsa.setLsa(Double.parseDouble(jTextFieldLSA.getText()));
+        oCEMostrar.setoCELsa(oCELsa);
+        LOG.info(" CEMostrarDatos Request : {}", oCEMostrar);
+        oCEMostrarResponse = new CEMostrarDatos();
+        oCEMostrarResponse = oCIArea.procesarData(oCEMostrar);
+        LOG.info(" CEMostrarDatos Response : {}", oCEMostrarResponse);
+        sendData(oCEMostrarResponse);
 
     }//GEN-LAST:event_jButtonCalcularActionPerformed
 
-    private void sendLsa(CEAreaSuperficieLateral poLSA){
-        jTextFieldRadio.setText(String.valueOf(poLSA.getRadio()));
-        jTextFieldDiametro.setText(String.valueOf(poLSA.getDiametro()));
-        
-        jTextFieldEnMinusculas.setText(poLSA.getRadioLetra());
-        jTextFieldMayusculas.setText(poLSA.getDiametroLetra());
+    private void sendData(CEMostrarDatos poData){
+        jTextFieldLSA.setText(String.valueOf(poData.getoCELsa().getLsa()));
+        jTextFieldPI.setText(String.valueOf(poData.getValorPI()));
+        jTextFieldAltura.setText(String.valueOf(poData.getoCELsa().getAltura()));
+        jTextFieldRadio.setText(String.valueOf(poData.getoCELsa().getRadio()));
+        jTextFieldTSA.setText(String.valueOf(poData.getoCETsa()));
+        jTextFieldDiametro.setText(String.valueOf(poData.getoCELsa().getDiametro()));
+        jTextFieldATE.setText(String.valueOf(poData.getoCETsa().getAte()));
+        jTextFieldRotarID.setText(poData.getRotarDerechaIzquierda());
+        jTextFieldMinuscula.setText(poData.getoCELsa().getRadioLetra());
+        jTextFieldMayuscula.setText(poData.getoCELsa().getDiametroLetra());
+        jTextField1erUltCaracter.setText(poData.getPrimerUltimoCaracter());
     }
     
     
@@ -291,16 +307,16 @@ public class JFrame01MostrarRadio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField jTextField1erUltCaracter;
     private javax.swing.JTextField jTextFieldATE;
     private javax.swing.JTextField jTextFieldAltura;
     private javax.swing.JTextField jTextFieldDiametro;
-    private javax.swing.JTextField jTextFieldEnMinusculas;
     private javax.swing.JTextField jTextFieldLSA;
-    private javax.swing.JTextField jTextFieldMayusculas;
+    private javax.swing.JTextField jTextFieldMayuscula;
+    private javax.swing.JTextField jTextFieldMinuscula;
     private javax.swing.JTextField jTextFieldPI;
-    private javax.swing.JTextField jTextFieldPrimerUltimoDigito;
     private javax.swing.JTextField jTextFieldRadio;
-    private javax.swing.JTextField jTextFieldRotarIzquierdaDerecha;
+    private javax.swing.JTextField jTextFieldRotarID;
     private javax.swing.JTextField jTextFieldTSA;
     // End of variables declaration//GEN-END:variables
 }

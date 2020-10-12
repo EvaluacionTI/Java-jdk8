@@ -4,101 +4,102 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pe.unjfsc.fsi.java8.entity.CEAreaSuperficieLateral;
 import pe.unjfsc.fsi.java8.entity.CEAreaTotalSuperficie;
-import static pe.unjfsc.fsi.java8.entity.CEConstant.CUATRO;
-import static pe.unjfsc.fsi.java8.entity.CEConstant.DOS;
-import static pe.unjfsc.fsi.java8.entity.CEConstant.LSA;
-import static pe.unjfsc.fsi.java8.entity.CEConstant.PI;
-import static pe.unjfsc.fsi.java8.entity.CEConstant.TRES;
+import pe.unjfsc.fsi.java8.entity.CEConstant;
 import pe.unjfsc.fsi.java8.entity.CEMostrarDatos;
 import pe.unjfsc.fsi.java8.logical.CIEvaluarSuperficie;
+import pe.unjfsc.fsi.java8.utility.CUConvert;
 
 public class CMEvaluarArea implements CIEvaluarSuperficie {
 
-    public static final Logger LOG = LoggerFactory.getLogger("CMEvaluarArea");
-    private CEAreaSuperficieLateral oCELsa, oCELsaRpta;
-    private CEAreaTotalSuperficie oCETsa, oCETsaRpta;
-    private CEMostrarDatos oMostrarRequest, oMostrarResponse;
+    private static final Logger LOG = LoggerFactory.getLogger("CMEvaluarArea");
+    private CEAreaSuperficieLateral oCELsa, oCELsaRequest;
+    private CEAreaTotalSuperficie oCETsa, oCETsaRpta, oCETsaRequest;
+    private CEMostrarDatos oCEMostrarDatos;
+    private CUConvert oCUConvert;
 
     @Override
     public CEAreaSuperficieLateral calcularLSA(CEAreaSuperficieLateral poLSA) {
         oCELsa = new CEAreaSuperficieLateral();
         double radio;
 
-        radio = poLSA.getLsa() / (DOS * PI * poLSA.getAltura());
-        oCELsa = poLSA;
+        LOG.info("[EVL] Receiver CEAreaSuperficieLateral : {}", poLSA);
+        radio = (poLSA.getLsa() / (CEConstant.DOS * CEConstant.PI * poLSA.getAltura()));
+        LOG.info("[EVL] radio obtenido : {}", radio);
+
+        oCELsa.setLsa(poLSA.getLsa());
+        oCELsa.setAltura(poLSA.getAltura());
         oCELsa.setRadio(radio);
         oCELsa.setDiametro(calcularDiametro(radio));
-        String letra = letraNumero(radio);
-        oCELsa.setRadioLetra(letra);
-        letra = letraNumero(calcularDiametro(radio));
-        oCELsa.setDiametroLetra(letra);
+        oCELsa.setRadioLetra(convertiNumeroLetra(radio));
+        oCELsa.setDiametroLetra(convertiNumeroLetra(calcularDiametro(radio)));
+
         return oCELsa;
     }
 
     @Override
     public CEAreaTotalSuperficie calcularTSA(CEAreaTotalSuperficie poTSA) {
         oCETsa = new CEAreaTotalSuperficie();
-        double dTsa = poTSA.getoCELsa().getLsa() + DOS * PI * Math.pow(poTSA.getoCELsa().getRadio(), DOS);
+
+        LOG.info("[EVL] Receiver CEAreaTotalSuperficie : {}", oCETsa);
+        double dAreaTSA = poTSA.getoCELsa().getLsa() + CEConstant.DOS * CEConstant.PI * Math.pow(poTSA.getoCELsa().getRadio(), CEConstant.DOS);
+        LOG.info("[EVL] Area TSA : {}", dAreaTSA);
 
         oCETsa = poTSA;
-        oCETsa.setTsa(dTsa);
-        oCETsa.setAte(calcularAtequilatero(poTSA.getoCELsa().getRadio()));
+        oCETsa.setTsa(dAreaTSA);
+        oCETsa.setAte(calcularAreaTriangulo(poTSA.getoCELsa().getRadio()));
+
         return oCETsa;
     }
 
     @Override
-    public CEMostrarDatos seeData(CEMostrarDatos poData) {
-        oMostrarResponse = new CEMostrarDatos();
-        oCELsa = new CEAreaSuperficieLateral();
-        oCELsaRpta = new CEAreaSuperficieLateral();
-        oCETsa = new CEAreaTotalSuperficie();
+    public CEMostrarDatos procesarData(CEMostrarDatos poData) {
+        oCEMostrarDatos = new CEMostrarDatos();
+        oCELsaRequest = new CEAreaSuperficieLateral();
+        oCETsaRequest = new CEAreaTotalSuperficie();
         oCETsaRpta = new CEAreaTotalSuperficie();
-        
-        LOG.info("CELsa Request : {}", oCELsa);
-        if (poData.getoCELsa().getLsa()==0){
-            oCELsa.setLsa(LSA);
-        }
-        oCELsa.setAltura(poData.getoCELsa().getAltura());
-        oCELsaRpta = calcularLSA(oCELsa);
-        LOG.info("CELsa Response : {}", oCELsaRpta);
+        oCUConvert = new CUConvert();
 
-        oCETsa.setoCELsa(oCELsaRpta);
-          LOG.info("CETsa Request : {}", oCETsa);
-          
-        oCETsaRpta = calcularTSA(oCETsa);
-        LOG.info("CETsa Response : {}", oCETsaRpta);
+        oCELsaRequest = calcularLSA(poData.getoCELsa());
+        oCETsaRequest.setoCELsa(oCELsaRequest);
 
-        oMostrarResponse.setoCELsa(oCELsaRpta);
-        oMostrarResponse.setoCETsa(oCETsaRpta);
-        oMostrarResponse.setValorPI(PI);
-        oMostrarResponse.setRotarIzquierdaDerecha("134");
-        oMostrarResponse.setEnMinuscula("Cien");
-        oMostrarResponse.setEnMayuscula("CATORCe");
-        oMostrarResponse.setPrimerUltimoCaracter("13");
+        oCETsaRpta = calcularTSA(oCETsaRequest);
 
-        return oMostrarResponse;
+        oCEMostrarDatos.setoCELsa(oCELsaRequest);
+        oCEMostrarDatos.setoCETsa(oCETsaRpta);
+        oCEMostrarDatos.setValorPI(CEConstant.PI);
+
+        String sNumero = String.valueOf(oCETsaRpta.getAte());
+        LOG.info("[EVL] Numero a utility : {}", sNumero);
+        oCEMostrarDatos.setRotarDerechaIzquierda(oCUConvert.rotarDerechaIzquierda(sNumero));
+        oCEMostrarDatos.setPrimerUltimoCaracter(oCUConvert.extraerPrimerUltimaPosicion(sNumero));
+
+        return oCEMostrarDatos;
     }
 
     protected double calcularDiametro(double pdRadio) {
-        return DOS * pdRadio;
+        return CEConstant.DOS * pdRadio;
     }
 
-    protected double calcularAtequilatero(double pdLado) {
-        return (Math.sqrt(TRES) * Math.pow(pdLado, DOS)) / CUATRO;
-    }
-    
-    protected String letraNumero(double pdNumero){
-        String letra="";
+    protected String convertiNumeroLetra(double pdNumero) {
+        String numeroLetra = "";
+
         int result = (int) pdNumero;
-        switch (result){
+        switch (result) {
             case 5:
-                letra="Cinco";
+                numeroLetra = "Cinco";
                 break;
             case 10:
-                letra="DIEz";
+                numeroLetra = "DIEz";
                 break;
         }
-        return letra;
+        return numeroLetra;
     }
+
+    protected double calcularAreaTriangulo(double pdLado) {
+        double areaTsa;
+        areaTsa = (Math.sqrt(CEConstant.TRES) * Math.pow(pdLado, CEConstant.DOS)) / CEConstant.CUATRO;
+        return areaTsa;
+    }
+
 
 }

@@ -1,0 +1,7 @@
+@startuml
+(Registro)
+(First usecase)
+(Another usecase) as (UC2)
+usecase UC3
+usecase (Last\n usecase) as UC4
+@enduml

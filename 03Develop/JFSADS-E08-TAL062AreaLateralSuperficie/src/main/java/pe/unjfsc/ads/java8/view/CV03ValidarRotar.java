@@ -10,7 +10,7 @@ public class CV03ValidarRotar {
     public static void main(String[] args) {
         CUConvert oCURotar = new CUConvert();
         LOG.info("CUConvert : {}", oCURotar);
-        LOG.info("Rotar : {}", oCURotar.rotarIzquierdaDerecha("alex"));
+        LOG.info("Rotar : {}", oCURotar.rotarDerechaIzquierda("alex"));
 
         LOG.info("Extraer : {}", oCURotar.extraerPrimerUltimaPosicion("alex"));
     }
