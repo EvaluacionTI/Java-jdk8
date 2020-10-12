@@ -1,7 +1,6 @@
 
 # NetBeans
 #==============================================================================
-*.xml
 *.mf
 *.policy
 *.properties
@@ -10,15 +9,58 @@ nbproject/private/
 lib/
 build/
 .svn/
+
+### Java ###
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
 #==============================================================================
 
 
 
-/Web02v01EvaluacionJsp/build/
-/Web02v01EvaluacionJsp/dist/
-/AEMJWBEVL0401v01EvaluacionJSTL/nbproject/private/
-/AEMJSEEVL0301v01EvaluacionJava-JDK8/build/
-/JavaApplication1/nbproject/private/
 
 
 /03Develop/AEMJSEEVL0201v01EvaluacionJavaIO-JDK8/dist/
