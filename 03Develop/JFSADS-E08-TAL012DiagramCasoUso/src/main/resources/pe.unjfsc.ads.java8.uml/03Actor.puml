@@ -1,0 +1,5 @@
+@startuml
+:Aportante:
+actor Banco
+actor :Funcionario\nAprobador:
+@enduml

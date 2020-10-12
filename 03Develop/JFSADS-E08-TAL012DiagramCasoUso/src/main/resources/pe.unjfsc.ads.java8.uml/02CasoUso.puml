@@ -1,0 +1,9 @@
+@startuml
+usecase RegistroSolicitud
+usecase VerificarSolicitud
+usecase AprobarSolicitud
+usecase ProgramarDesembolso
+usecase EnviarDesembolsoBanco
+usecase RecibirConfirmación
+usecase CerrarSolicitud
+@enduml

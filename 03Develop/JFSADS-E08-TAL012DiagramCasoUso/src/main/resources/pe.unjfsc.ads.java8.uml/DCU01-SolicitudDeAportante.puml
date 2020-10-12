@@ -1,0 +1,24 @@
+@startuml
+package "Solicitud de Aportante"{
+actor Aportante
+actor Banco
+actor Funcionario
+
+usecase (Registro de solicitudes) as Registro
+usecase (Verificar solicitudes) as Verificar
+usecase (Aprobar solicitudes) as Aprobar
+usecase (Programar Desembolsos) as Programar
+usecase (Enviar \n Desembolso \n al Banco) as Enviar
+usecase RecibirConfirmación as Recibir
+usecase CerrarSolicitud as Cerrar
+
+Aportante --> Registro
+Registro ---> Verificar
+Funcionario ---> Aprobar
+Verificar ---> Aprobar
+Aprobar --> Programar
+Programar --> Enviar
+Enviar --> Banco
+Banco --> Recibir
+Recibir --> Cerrar
+@enduml
