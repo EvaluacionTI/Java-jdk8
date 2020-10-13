@@ -58,10 +58,15 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="204" max="32767" attributes="0"/>
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -70,7 +75,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -79,6 +86,11 @@
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Asociaci&#xf3;n de AFP del Per&#xfa;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Registro de Solicitudes del Aportante"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -98,7 +110,7 @@
                   <Component id="jButtonConfirmar" min="-2" pref="105" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonSalir" min="-2" pref="105" max="-2" attributes="0"/>
-                  <EmptySpace pref="244" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -171,7 +183,7 @@
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jTextFieldCodigoUbigeo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="23" max="32767" attributes="0"/>
+                  <EmptySpace pref="19" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
