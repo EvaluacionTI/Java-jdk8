@@ -1,9 +1,26 @@
 package pe.unjfsc.ads.java8.view;
 
-public class JFrame01BoletoViaje extends javax.swing.JFrame {
+import javax.swing.JOptionPane;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import pe.unjfsc.ads.java8.entity.CE03Pasajero;
+import pe.unjfsc.ads.java8.entity.CE04BoletaViaje;
+import pe.unjfsc.ads.java8.logical.CIBoletoViaje;
+import pe.unjfsc.ads.java8.logical.impl.CMBoletoViaje;
 
+public final class JFrame01BoletoViaje extends javax.swing.JFrame {
+    private static final Logger LOG = LoggerFactory.getLogger("JFrame01BoletoViaje");
+    
+    private CE03Pasajero oCEPasajero;
+    private CE04BoletaViaje oCEBoletaViaje;
+    private CIBoletoViaje oCIBoleto;
+    
     public JFrame01BoletoViaje() {
         initComponents();
+        beginEnvironment();
+    }
+    
+    protected void beginEnvironment(){
         buttonGroupCiudadOrigen.add(jRadioButtonOrigenLima);
         buttonGroupCiudadOrigen.add(jRadioButtonOrigenChilca);
         buttonGroupCiudadOrigen.add(jRadioButtonOrigenBujama);
@@ -18,7 +35,6 @@ public class JFrame01BoletoViaje extends javax.swing.JFrame {
         buttonGroupCiudaDestino.add(jRadioButtonDestinoCanete);
         buttonGroupCiudaDestino.add(jRadioButtonDestinoImperial);
     }
-
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -456,7 +472,30 @@ public class JFrame01BoletoViaje extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGrabarActionPerformed
+        oCEPasajero = new CE03Pasajero();
+        oCEBoletaViaje = new CE04BoletaViaje();
+        oCIBoleto = new CMBoletoViaje();
         
+        oCEPasajero.setNumeroDNI(jTextFieldNroDNI.getText());
+        oCEPasajero.setApellido(jTextFieldApellidos.getText());
+        oCEPasajero.setNombre(jTextFieldNombres.getText());
+        oCEPasajero.setCelular(jTextFieldNroCelular.getText());
+        oCEPasajero.setCorreo(jTextFieldCorreo.getText());
+        LOG.info("[EVL] CEPasajero : {}", oCEPasajero);
+        
+        String sFecha = String.valueOf(jComboBoxDiaViaje.getSelectedIndex()) + "/" + String.valueOf(jComboBoxMesViaje.getSelectedIndex()) + "/" + jTextFieldAnoViaje.getText();
+        
+        oCEBoletaViaje.setSerie(jTextFieldSerie.getText());
+        oCEBoletaViaje.setoCEPasajero(oCEPasajero);
+        oCEBoletaViaje.setNumero(jTextFieldNumero.getText());
+        oCEBoletaViaje.setFechaViaje(sFecha);
+        oCEBoletaViaje.setHoraViaje(jTextFieldHoraViaje.getText());
+        oCEBoletaViaje.setNumeroAsiento(jTextFieldNroAsiento.getText());
+        oCEBoletaViaje.setImporte(Double.parseDouble(jTextFieldValorBoleto.getText()));
+        LOG.info("[EVL] CEBoletaViaje : {}", oCEBoletaViaje);
+                
+        String sRpta = oCIBoleto.saveBoletaViaje(oCEBoletaViaje);
+        JOptionPane.showConfirmDialog(rootPane, sRpta);
     }//GEN-LAST:event_jButtonGrabarActionPerformed
 
     private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
@@ -489,6 +528,8 @@ public class JFrame01BoletoViaje extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(JFrame01BoletoViaje.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
