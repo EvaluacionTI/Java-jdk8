@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html lang="es">
+    <head>
+        <title>[Evaluacion Html5, CSS y JS]</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Formulario Html5 Css Js</h1>
+        <hr>
+
+        <form id="idFrmRegister">
+            <p>
+                <label for="vNombre">Nombre (Obligatorio)</label>
+                <input id="idNombre" type="text" name="vNombre" placeholder="Illari"
+                       autocomplete="on"
+                       required
+                       />
+            </p>
+            <p>
+                <label for="vPass">Nombre (Obligatorio)</label>
+                <input id="idPassword" type="password" name="vPas" placeholder="aldv152027"
+                       pattern="{a-z}{3}{0-9}{4}"
+                       required
+                       />La contraseña debe tener 3 letras y 4 numeros en este orden
+                <!--  -->
+            </p>
+            <p>
+                <label for="vTel">Teléfono</label>
+                <input id="idTelefono" type="tel" name="vTel" placeholder="+15199999999"/>
+            </p>
+            <p>
+                <label for="vEmail">Correo</label>
+                <input id="idEmail" type="email" name="vEmail" placeholder="invertec@gmail.com"/>
+            </p>
+            <p>
+                <label for="vUrl">Pagina web</label>
+                <input id="idUrl" type="url" name="vUrl" placeholder="www.invertecaemsa.com"/>
+            </p>
+            <p>
+                <label for="vTema">Numero temas</label>
+                <input id="idUrl" type="number" name="vTema" placeholder="2" min="3" max="27" step="3"/>Solo impares entre 3 y 27
+            </p> 
+            <p>
+                <label for="vFechaEnvio">Fecha de envío</label>
+                <input id="idUrl" type="date" name="vFechaEnvio" min="2020-08-22"/>Fecha mínima 22/08/2020
+            </p>
+            <p>
+                <label for="vColor">Color del item</label>
+                <input id="idUrl" type="color" name="vColor" value="#1A33FF"/>
+            </p>
+            <p>
+                <label for="vSearch">Buscar</label>
+                <input id="idUrl" type="search" name="vSearch" />
+            </p>
+            <p>
+                <label for="vRange">Rango de valores</label>
+                <input id="idUrl" type="range" name="vRange" min="1" max="10"/>Mínimo 1 a 10
+            </p>
+            <fieldset>
+                <legend>Seleccionar una prioridad</legend>
+                <p><input id="idRadio" type="radio" name="vPrioridad" value="baja" checked="checked"/>Baja</p>
+                <p><input id="idRadio" type="radio" name="vPrioridad" value="media" />Media</p>
+                <p><input id="idRadio" type="radio" name="vPrioridad" value="alta" />Alta</p>
+            </fieldset>
+            <fieldset>
+                <legend>Seleccionar tipo de envio</legend>
+                <p><input id="idcheckbox" type="checkbox" name="vDeliveryType" value="urente"/>Urgente</p>
+                <p><input id="idcheckbox" type="checkbox" name="vDeliveryType" value="acuse"  checked="checked"/>Acuse</p>
+                <p><input id="idcheckbox" type="checkbox" name="vDeliveryType" value="reembolso" />Reembolso</p>
+            </fieldset>
+
+            <input type="submit" value="Procesar" />
+        </form>
+    </body>
+</html>
