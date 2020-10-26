@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : oct 19, 2020, 10:13:15 a.m.
+    Author     : Administrador
+*/
+/*
+    rgba (rojo, verde, azul, alpha)
+*/
+body{
+    font-family: verdana;
+    line-height: 1.4;
+}
+header{
+    background: #696;
+    padding: 1em;
+}
+h1{
+    background-color: rgba(149,199,245,0.50);
+    text-align: center;
+}
+h2{
+    background-color: rgba(79,129,189,0.25);
+    display: inline;
+}
+a{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+    padding: 0.3em 0.5em;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.6); /* Blanco y transparente 0.6 */
+    transition: background-color 1s linear;  /* Cuando haya un efecto en el enlace*/
+}
+
+form{
+    display: inline; /*Le quita el cambio de linea*/
+    margin-left: auto;
+    padding-left: 2em;
+    width: 100%;
+}
+
+label{
+    font-size: 24px;
+}
+
+input{
+    padding: 0.7em 0.5em;
+}
+
+button{
+    padding: 0.7em 1em;
+    cursor: pointer;
+}
+
+input, button{
+    font-size: 16px;
+    color: #000;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.3); /* Blanco y transparente 0.3*/
+    transition: background-color 1s linear;  /* Cuando haya un efecto en el enlace*/
+}
+/*
+    Genera el efecto que se hace más visible cuando se pasa el cursor sobre el elemento o cuando
+    el foco se encuentre alli
+*/
+a:hover, input:hover, button:hover, 
+a:focus, input:focus, button:focus{
+    background-color: #FFF;
+}
+
+a:focus, input:focus, button:focus{
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+    outline: 0;
+}
+
+input, button{
+    border: 0;
+}

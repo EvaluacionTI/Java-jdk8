@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : oct 19, 2020, 10:13:15 a.m.
+    Author     : Administrador
+*/
+/*
+    rgba (rojo, verde, azul, alpha)
+*/
+body{
+    font-family: verdana;
+    background-color: rgba(187, 180, 100, 0.5);
+    line-height: 1.4;
+}
+h1{
+    background-color: rgba(149,199,245,0.50);
+    font-weight: bold !important;
+    text-align: center;
+}
+p{
+    color:blue;
+}
