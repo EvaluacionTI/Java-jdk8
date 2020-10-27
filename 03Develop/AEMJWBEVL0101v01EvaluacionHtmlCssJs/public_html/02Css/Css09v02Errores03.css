@@ -1,8 +1,12 @@
 body{
-    font-size: 3em;
+    font-size: 1em;
     font-family: Verdana;
 }
 h1{
     font-family: Garamond;
     color: red;
+}
+
+#idContenido{
+    background-color: #cccccc; 
 }
