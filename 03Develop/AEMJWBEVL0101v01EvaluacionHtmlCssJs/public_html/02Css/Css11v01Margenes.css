@@ -1,0 +1,27 @@
+body{
+    font-size: 2em;
+    font-family: Verdana;
+}
+h1{
+    font-family: initial;
+    color: blue;
+}
+
+.margen-10, .margen-20, .margen-30, .margen-40{
+    border: 1px solid plum;
+}
+.margen-10{
+    margin: 10px;
+}
+
+.margen-20{
+    margin: 20px;
+}
+
+.margen-30{
+    margin: 30px;
+}
+
+.margen-40{
+    margin: 40px;
+}

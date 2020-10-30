@@ -1,0 +1,28 @@
+body{
+    font-size: 1em;
+    font-family: Verdana;
+}
+h1{
+    font-family: Garamond;
+    color: red;
+}
+
+#id1, #id2, #id3{
+    color:red;
+}
+
+ul li.important{
+    color:green;
+}
+
+ul li{
+    color:blue;
+}
+
+li.important{
+    color:yellow;
+}
+
+li{
+    color:purple;
+}

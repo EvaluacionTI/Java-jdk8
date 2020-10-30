@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>[Evaluacion Html5, CSS y JS]</title>
+        <meta charset="UTF-8">
+        <link href="../02Css/Css10v01Especificidad.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Especificidad Html5 Css Js</h1>
+        Se forma de 4 elementos, el cual se interpreta de menor a mayor importancia
+        <table>
+            <tr>
+                <td></td>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>#id</td>
+                <td>0</td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>ul li.important</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>ul li</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>li.important</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>li</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>style</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </table>
+        <br/>
+        <hr/>
+        <ul>
+            <li>Sin nada</li>
+            <li class="important">Con class</li>
+            <li id="id1">Con id</li>
+            <li id="id2" class="important">Con id y class</li>
+            <li id="id3" class="important" style="color: pink">Con id, class y style</li>
+        </ul>
+    </body>
+</html>
