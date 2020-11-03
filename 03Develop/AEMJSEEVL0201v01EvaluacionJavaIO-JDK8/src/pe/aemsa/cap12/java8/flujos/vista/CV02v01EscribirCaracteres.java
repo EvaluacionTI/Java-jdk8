@@ -37,8 +37,7 @@ public class CV02v01EscribirCaracteres {
             }
 
             if (resp == 's') {
-                System.out.println(
-                        "Escriba el texto que desea almacenar en el fichero:");
+                System.out.println("Escriba el texto que desea almacenar en el fichero:");
                 nbytes = System.in.read(buffer);
                 String str = new String(buffer, 0, nbytes);
                 fs = new FileWriter(fichero);

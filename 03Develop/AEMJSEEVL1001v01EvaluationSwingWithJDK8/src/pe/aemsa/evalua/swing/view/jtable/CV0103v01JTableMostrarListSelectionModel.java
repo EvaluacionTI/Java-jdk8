@@ -7,10 +7,10 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-public class CV0302v01JTableMostrarListSelectionModel {
+public class CV0103v01JTableMostrarListSelectionModel {
     private final JFrame oJFrameMain;
     
-    CV0302v01JTableMostrarListSelectionModel(){
+    CV0103v01JTableMostrarListSelectionModel(){
         oJFrameMain = new JFrame();
         
         String aData[][] = {
@@ -52,7 +52,7 @@ public class CV0302v01JTableMostrarListSelectionModel {
         oJFrameMain.setVisible(true);
     }
     public static void main(String[] args) {
-        CV0302v01JTableMostrarListSelectionModel oCVPrincipal = new CV0302v01JTableMostrarListSelectionModel();
+        CV0103v01JTableMostrarListSelectionModel oCVPrincipal = new CV0103v01JTableMostrarListSelectionModel();
     }
     
 }

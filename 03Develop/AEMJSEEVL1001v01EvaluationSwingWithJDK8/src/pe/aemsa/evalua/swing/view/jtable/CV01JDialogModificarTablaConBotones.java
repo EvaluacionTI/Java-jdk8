@@ -1,17 +1,17 @@
-
 package pe.aemsa.evalua.swing.view.jtable;
 
 import pe.aemsa.evalua.swing.view.jtable.impl.CD0101v01ModeloBaseTabla;
 import javax.swing.JButton;
 
-public class CV0201v01JFrameModificarTablaConBotones extends javax.swing.JFrame {
+public class CV01JDialogModificarTablaConBotones extends javax.swing.JDialog {
 
     CD0101v01ModeloBaseTabla oTabla = new CD0101v01ModeloBaseTabla();
 
-    public CV0201v01JFrameModificarTablaConBotones() {
+    public CV01JDialogModificarTablaConBotones(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
         initComponents();
-        
-         this.setLocationRelativeTo(this);
+
+        this.setLocationRelativeTo(null);
         oTabla.mostrarTabla(jTableMantenimiento);
     }
 
@@ -27,7 +27,7 @@ public class CV0201v01JFrameModificarTablaConBotones extends javax.swing.JFrame 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableMantenimiento = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jTableMantenimiento.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -51,10 +51,10 @@ public class CV0201v01JFrameModificarTablaConBotones extends javax.swing.JFrame 
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(13, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(13, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,20 +67,29 @@ public class CV0201v01JFrameModificarTablaConBotones extends javax.swing.JFrame 
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTableMantenimientoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableMantenimientoMouseClicked
+
         int column = jTableMantenimiento.getColumnModel().getColumnIndexAtX(evt.getX());
-        int row = evt.getY()/jTableMantenimiento.getRowHeight();
-        
-        if (row < jTableMantenimiento.getRowCount() && row > 0 && column < jTableMantenimiento.getColumnCount() && column >= 0){
+        int row = evt.getY() / jTableMantenimiento.getRowHeight();
+
+        if (row < jTableMantenimiento.getRowCount() && row > 0 && column < jTableMantenimiento.getColumnCount() && column >= 0) {
             Object value = jTableMantenimiento.getValueAt(row, column);
-            
-            if (value instanceof JButton){
+
+            if (value instanceof JButton) {
                 ((JButton) value).doClick();
                 JButton oBoton = (JButton) value;
-                
+
                 System.out.println("Objeto value " + value);
                 System.out.println("Click en el boton " + oBoton);
+
+                if (oBoton.getName().equals("m")) {
+                    System.out.println("Click en Modificar " + oBoton);
+                }
+                if (oBoton.getName().equals("e")) {
+                    System.out.println("Click en Eliminar " + oBoton);
+                }
             }
         }
+
     }//GEN-LAST:event_jTableMantenimientoMouseClicked
 
     /**
@@ -100,21 +109,28 @@ public class CV0201v01JFrameModificarTablaConBotones extends javax.swing.JFrame 
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV01JDialogModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV01JDialogModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV01JDialogModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CV0201v01JFrameModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CV01JDialogModificarTablaConBotones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
 
-        /* Create and display the form */
+        /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CV0201v01JFrameModificarTablaConBotones().setVisible(true);
+                CV01JDialogModificarTablaConBotones dialog = new CV01JDialogModificarTablaConBotones(new javax.swing.JFrame(), true);
+                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(java.awt.event.WindowEvent e) {
+                        System.exit(0);
+                    }
+                });
+                dialog.setVisible(true);
             }
         });
     }

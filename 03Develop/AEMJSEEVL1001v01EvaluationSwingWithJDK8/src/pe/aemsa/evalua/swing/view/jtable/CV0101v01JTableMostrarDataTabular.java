@@ -1,13 +1,12 @@
 package pe.aemsa.evalua.swing.view.jtable;
 
 import javax.swing.JFrame;
-import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
-public class CV0301v02JTableMostrarDataTabularJScrollPane {
+public class CV0101v01JTableMostrarDataTabular {
     private final JFrame oJFrameMain;
     
-    CV0301v02JTableMostrarDataTabularJScrollPane(){
+    CV0101v01JTableMostrarDataTabular(){
         oJFrameMain = new JFrame();
         
         String aData[][] = {
@@ -19,19 +18,16 @@ public class CV0301v02JTableMostrarDataTabularJScrollPane {
         
         String aTitulo[] = {"Código", "Nombre ", "Importe"};
         
-        JTable oJTable = new JTable(aData, aTitulo);
-        oJTable.setBounds(30, 40, 200, 300);
+        JTable oTabla = new JTable(aData, aTitulo);
         
-        JScrollPane oJScrollPane = new JScrollPane(oJTable);
-        oJFrameMain.add(oJScrollPane);
-        
+        oJFrameMain.add(oTabla);
         oJFrameMain.setTitle(".....[Evaluacion Swing - JTable].....");
         oJFrameMain.setResizable(false);
         oJFrameMain.setSize(800, 600);
         oJFrameMain.setVisible(true);
     }
     public static void main(String[] args) {
-        CV0301v02JTableMostrarDataTabularJScrollPane oCVPrincipal = new CV0301v02JTableMostrarDataTabularJScrollPane();
+        CV0101v01JTableMostrarDataTabular oCVPrincipal = new CV0101v01JTableMostrarDataTabular();
     }
     
 }

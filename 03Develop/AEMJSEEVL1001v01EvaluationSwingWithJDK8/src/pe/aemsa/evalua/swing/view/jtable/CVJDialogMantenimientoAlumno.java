@@ -3,11 +3,11 @@ package pe.aemsa.evalua.swing.view.jtable;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-public class CV0102v01JDialogMantenimientoAlumno extends javax.swing.JDialog {
+public class CVJDialogMantenimientoAlumno extends javax.swing.JDialog {
 
     DefaultTableModel oModelo = new DefaultTableModel();
 
-    public CV0102v01JDialogMantenimientoAlumno(java.awt.Frame parent, boolean modal) {
+    public CVJDialogMantenimientoAlumno(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
 
@@ -226,21 +226,23 @@ public class CV0102v01JDialogMantenimientoAlumno extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CVJDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CVJDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CVJDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CV0102v01JDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CVJDialogMantenimientoAlumno.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CV0102v01JDialogMantenimientoAlumno dialog = new CV0102v01JDialogMantenimientoAlumno(new javax.swing.JFrame(), true);
+                CVJDialogMantenimientoAlumno dialog = new CVJDialogMantenimientoAlumno(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
