@@ -10,7 +10,7 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class CV01ValidarRecurso {
+public class CV09ValidarRecurso {
 
     private static final Logger MOLOG = Logger.getLogger("CV0101v01ValidarRecurso");
 
@@ -18,7 +18,7 @@ public class CV01ValidarRecurso {
 
     public static void main(String[] args) throws IOException {
         MOLOG.info("[EVL] Begin");
-        CV01ValidarRecurso oMain = new CV01ValidarRecurso();
+        CV09ValidarRecurso oMain = new CV09ValidarRecurso();
         MOLOG.log(Level.INFO, "[EVL] Instancia : {0}", oMain);
         
         System.out.println(oMain.getFilePathToSave(FILE_PROPERTIES));
