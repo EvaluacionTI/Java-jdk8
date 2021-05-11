@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+    group = 'pe.isaengine.evalua.java15'
+
+mainClassName = 'pe.isaengine.evalua.java15.view.CVGenerarQR'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+}

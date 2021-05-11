@@ -5,7 +5,6 @@
  */
 package pe.aemsa.evalua.swing.view.jlist.impl;
 
-import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,7 +17,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
-import jdk.nashorn.internal.scripts.JS;
 
 /**
  *
